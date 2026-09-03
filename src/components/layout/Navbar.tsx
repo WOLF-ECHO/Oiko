@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Calendar, MessageCircle, Phone, ArrowRight } from "lucide-react";
+import { Menu, X, Calendar, ArrowRight } from "lucide-react";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,14 +36,14 @@ export default function Navbar() {
       <header
         className={`sticky top-0 z-50 transition-all duration-500 w-full ${
           isScrolled
-            ? "bg-[#0C0B0A]/90 backdrop-blur-xl border-b border-[#282622]/80 shadow-[0_10px_30px_rgba(0,0,0,0.8)] py-3.5"
-            : "bg-[#0C0B0A]/60 backdrop-blur-md border-b border-[#282622]/50 py-5"
+            ? "bg-[#0C0B0A]/95 backdrop-blur-xl border-b border-[#282622]/80 shadow-[0_10px_30px_rgba(0,0,0,0.8)] py-3.5"
+            : "bg-[#0C0B0A]/80 backdrop-blur-md border-b border-[#282622]/50 py-5"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-12 items-center gap-4">
-            {/* Left: Brand Identity (col-span-3) */}
-            <div className="lg:col-span-3 flex items-center justify-start">
+          <div className="flex items-center justify-between gap-6">
+            {/* Left: Brand Identity */}
+            <div className="flex items-center shrink-0">
               <Link href="/" className="group inline-flex flex-col items-start">
                 <span className="font-serif text-2xl sm:text-3xl tracking-[0.28em] text-[#F9F6F0] font-light group-hover:text-[#C5A880] transition-colors leading-none">
                   VELMORA
@@ -54,15 +54,15 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {/* Center: Perfectly Balanced Desktop Nav (col-span-6) */}
-            <nav className="hidden lg:flex items-center justify-center space-x-7 xl:space-x-8 lg:col-span-6">
+            {/* Center: Perfectly Balanced Desktop Nav */}
+            <nav className="hidden lg:flex items-center justify-center space-x-7 xl:space-x-9">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
                 return (
                   <Link
                     key={link.name}
                     href={link.href}
-                    className={`text-[11px] uppercase tracking-[0.2em] whitespace-nowrap transition-all relative py-1.5 flex items-center justify-center ${
+                    className={`text-[11.5px] uppercase tracking-[0.2em] whitespace-nowrap transition-all relative py-1 flex items-center justify-center ${
                       isActive
                         ? "text-[#C5A880] font-semibold"
                         : "text-[#C4BEB4] hover:text-[#F9F6F0]"
@@ -77,33 +77,11 @@ export default function Navbar() {
               })}
             </nav>
 
-            {/* Right: Actions & Phone Hotline (col-span-3) */}
-            <div className="hidden lg:flex items-center justify-end space-x-4 lg:col-span-3">
-              {/* Direct Phone link */}
-              <a
-                href="tel:0722033326"
-                className="text-[11px] tracking-wider text-[#C4BEB4] hover:text-[#C5A880] transition-colors flex items-center gap-1.5 whitespace-nowrap"
-                title="Ligne directe Casablanca"
-              >
-                <Phone className="w-3.5 h-3.5 text-[#C5A880]" />
-                <span className="font-medium">07 22 03 33 26</span>
-              </a>
-
-              {/* WhatsApp Concierge */}
-              <a
-                href="https://wa.me/212722033326?text=Bonjour%20VELMORA,%20je%20souhaite%20des%20renseignements%20sur%20vos%20collections."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 text-[#C4BEB4] hover:text-[#C5A880] hover:bg-[#1E1D1A] rounded-full border border-[#282622] transition-all"
-                title="WhatsApp Concierge"
-              >
-                <MessageCircle className="w-4 h-4 text-[#C5A880]" />
-              </a>
-
-              {/* Golden Pill CTA */}
+            {/* Right: Clean Golden Pill CTA (No overlapping phone number) */}
+            <div className="hidden lg:flex items-center justify-end shrink-0">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#C5A880] via-[#DEC5A5] to-[#C5A880] text-[#0C0B0A] text-[11px] font-bold tracking-[0.16em] uppercase hover:shadow-[0_0_20px_rgba(197,168,128,0.35)] transition-all hover:scale-105 active:scale-95 whitespace-nowrap shrink-0"
+                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#C5A880] via-[#DEC5A5] to-[#C5A880] text-[#0C0B0A] text-[11px] font-bold tracking-[0.16em] uppercase hover:shadow-[0_0_20px_rgba(197,168,128,0.35)] transition-all hover:scale-105 active:scale-95 whitespace-nowrap"
               >
                 <Calendar className="w-3.5 h-3.5" />
                 <span>Prendre RDV</span>
@@ -111,18 +89,10 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Controls */}
-            <div className="flex items-center justify-end space-x-2.5 lg:hidden">
-              <a
-                href="tel:0722033326"
-                className="p-2 rounded-full bg-[#161513] border border-[#282622] text-[#C5A880]"
-                aria-label="Appeler VELMORA"
-              >
-                <Phone className="w-4 h-4" />
-              </a>
-
+            <div className="flex items-center justify-end space-x-3 lg:hidden">
               <Link
                 href="/contact"
-                className="px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#C5A880] to-[#DEC5A5] text-[#0C0B0A] text-[10.5px] font-bold tracking-wider uppercase whitespace-nowrap"
+                className="px-4 py-1.5 rounded-full bg-gradient-to-r from-[#C5A880] to-[#DEC5A5] text-[#0C0B0A] text-[11px] font-bold tracking-wider uppercase whitespace-nowrap"
               >
                 RDV
               </Link>
@@ -164,18 +134,8 @@ export default function Navbar() {
               className="w-full py-3.5 rounded-full bg-gradient-to-r from-[#C5A880] to-[#DEC5A5] text-[#0C0B0A] text-center text-xs font-bold tracking-widest uppercase flex items-center justify-center gap-2 shadow-lg"
             >
               <Calendar className="w-4 h-4" />
-              Réserver une visite privée à Casablanca
+              Prendre Rendez-vous / Contacter
             </Link>
-
-            <a
-              href="https://wa.me/212722033326?text=Bonjour%20VELMORA,%20je%20souhaite%20des%20renseignements%20sur%20vos%20collections."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full py-3.5 rounded-full border border-[#C5A880]/40 text-[#C5A880] text-center text-xs font-medium tracking-widest uppercase flex items-center justify-center gap-2 hover:bg-[#C5A880]/10 transition-colors"
-            >
-              <MessageCircle className="w-4 h-4" />
-              WhatsApp Concierge (07 22 03 33 26)
-            </a>
 
             <div className="text-center text-[11px] text-[#8E877D] pt-2 space-y-1">
               <p>Showroom &amp; Studio : Boulevard d&apos;Anfa, Triangle d&apos;Or, Casablanca</p>

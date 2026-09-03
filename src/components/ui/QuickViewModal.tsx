@@ -23,7 +23,7 @@ export default function QuickViewModal({ product, onClose }: QuickViewModalProps
 
   const handleWhatsAppQuote = () => {
     const text = `Bonjour VELMORA, je souhaite recevoir un devis personnalisé pour : ${product.name} (${product.formattedPrice}). Finition : ${currentFabric?.name || currentMaterial?.name || "Standard"}.`;
-    window.open(`https://wa.me/212661234567?text=${encodeURIComponent(text)}`, "_blank");
+    window.open(`https://wa.me/212722033326?text=${encodeURIComponent(text)}`, "_blank");
   };
 
   return (
@@ -45,9 +45,10 @@ export default function QuickViewModal({ product, onClose }: QuickViewModalProps
               src={product.images[selectedImage] || product.images[0]}
               alt={product.name}
               fill
+              unoptimized
               className="object-cover transition-transform duration-500 hover:scale-105"
             />
-            <div className="absolute top-3 left-3 bg-[#0C0B0A]/80 backdrop-blur-md px-3 py-1 rounded-full border border-[#282622] text-[10px] uppercase tracking-wider text-[#C5A880]">
+            <div className="absolute top-3 left-3 bg-[#0C0B0A]/85 backdrop-blur-md px-3 py-1 rounded-full border border-[#282622] text-[10px] uppercase tracking-wider text-[#C5A880] font-medium">
               {product.universe}
             </div>
           </div>

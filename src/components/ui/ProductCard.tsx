@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Eye, ArrowUpRight, Sparkles } from "lucide-react";
+import { Eye, ArrowUpRight } from "lucide-react";
 import { Product } from "@/data/products";
 import QuickViewModal from "@/components/ui/QuickViewModal";
 
@@ -12,26 +12,31 @@ interface ProductCardProps {
   priority?: boolean;
 }
 
+const FALLBACK_IMAGE = "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200&auto=format&fit=crop";
+
 export default function ProductCard({ product, priority = false }: ProductCardProps) {
   const [quickViewOpen, setQuickViewOpen] = useState(false);
+  const [imgSrc, setImgSrc] = useState(product.images[0] || FALLBACK_IMAGE);
 
   return (
     <>
-      <div className="group relative flex flex-col bg-[#161513] rounded-2xl overflow-hidden border border-[#282622] hover:border-[#C5A880]/50 transition-all duration-500 hover:shadow-[0_15px_35px_rgba(0,0,0,0.8)]">
+      <div className="group relative flex flex-col bg-[#161513] rounded-2xl overflow-hidden border border-[#282622] hover:border-[#C5A880]/60 transition-all duration-500 hover:shadow-[0_20px_45px_rgba(0,0,0,0.85)] hover:-translate-y-1">
         {/* Image Container with Aspect Ratio */}
         <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#1E1D1A]">
           <Image
-            src={product.images[0]}
+            src={imgSrc}
             alt={product.name}
             fill
             priority={priority}
+            unoptimized
+            onError={() => setImgSrc(FALLBACK_IMAGE)}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           />
 
           {/* Badges */}
           <div className="absolute top-3 left-3 flex flex-col gap-1 z-10">
-            <span className="px-2.5 py-1 rounded-full bg-[#0C0B0A]/80 backdrop-blur-md text-[10px] tracking-wider uppercase text-[#C5A880] border border-[#282622]">
+            <span className="px-2.5 py-1 rounded-full bg-[#0C0B0A]/85 backdrop-blur-md text-[10px] tracking-wider uppercase text-[#C5A880] border border-[#282622]">
               {product.universe}
             </span>
             {product.limitedEdition && (
@@ -47,13 +52,13 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
           </div>
 
           {/* Quick View Button on Hover */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0C0B0A]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-4">
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0C0B0A]/85 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-4">
             <button
               onClick={(e) => {
                 e.preventDefault();
                 setQuickViewOpen(true);
               }}
-              className="w-full py-2.5 rounded-full bg-[#F9F6F0]/90 backdrop-blur-md text-[#0C0B0A] text-xs font-medium uppercase tracking-wider hover:bg-[#C5A880] transition-colors flex items-center justify-center gap-2 shadow-lg"
+              className="w-full py-2.5 rounded-full bg-[#F9F6F0]/95 backdrop-blur-md text-[#0C0B0A] text-xs font-semibold uppercase tracking-wider hover:bg-[#C5A880] transition-colors flex items-center justify-center gap-2 shadow-xl"
             >
               <Eye className="w-3.5 h-3.5" />
               <span>Aperçu rapide</span>
@@ -64,7 +69,7 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
         {/* Content Box */}
         <div className="p-5 flex flex-col flex-grow justify-between">
           <div>
-            <div className="flex items-center justify-between text-[11px] text-[#8E877D] uppercase tracking-wider mb-1">
+            <div className="flex items-center justify-between text-[11px] text-[#8E877D] uppercase tracking-wider mb-1.5">
               <span>{product.category}</span>
               <span>{product.leadTime.split("•")[0]}</span>
             </div>
@@ -81,7 +86,7 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
             </p>
           </div>
 
-          <div className="mt-4 pt-3 border-t border-[#282622] flex items-center justify-between">
+          <div className="mt-4 pt-3.5 border-t border-[#282622] flex items-center justify-between">
             <div>
               <span className="text-[10px] text-[#8E877D] uppercase tracking-wider block">
                 Prix indicatif

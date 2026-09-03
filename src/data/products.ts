@@ -52,9 +52,9 @@ export const PRODUCTS: Product[] = [
     description:
       "Pièce maîtresse du Salon VELMORA. Le Canapé Épure associe des proportions généreuses et des lignes basses sculpturales à une assise d'une profondeur enveloppante. Conçu pour ancrer l'espace avec une présence sereine.",
     story:
-      "Inspiré des formes minérales adoucies par le vent de l'Atlas marocain, ce modèle a été pensé pour réconcilier l'architecture contemporaine avec l'art de recevoir marocain. Chaque module est assemblé à la main par nos artisans tapissiers.",
+      "Inspiré des formes minérales adoucies par le vent de l'Atlas marocain, ce modèle réconcilie l'architecture contemporaine avec l'art de recevoir marocain. Confectionné sur mesure par nos artisans tapissiers pour notre showroom de Casablanca.",
     details: [
-      "Confection artisanale sur mesure dans notre atelier partenaire",
+      "Confection artisanale sur mesure dans notre atelier",
       "Déhoussable avec fermetures invisibles renforcées",
       "Pieds invisibles en retrait créant un effet de lévitation",
       "Traitement antitache haute performance écologique",
@@ -62,8 +62,8 @@ export const PRODUCTS: Product[] = [
     ],
     images: [
       "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1631679706909-1844bbd07221?q=80&w=1200&auto=format&fit=crop",
     ],
     featured: true,
     bestseller: true,
@@ -101,7 +101,8 @@ export const PRODUCTS: Product[] = [
       "Livraison avec gants blancs et certificat de conformité",
     ],
     images: [
-      "https://images.unsplash.com/photo-1580481077195-c3a821a58875?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1200&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?q=80&w=1200&auto=format&fit=crop",
     ],
     featured: true,
@@ -135,8 +136,9 @@ export const PRODUCTS: Product[] = [
       "Installation par deux livreurs spécialisés offerte",
     ],
     images: [
-      "https://images.unsplash.com/photo-1533779283484-84e14c8cbcf0?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1615529182904-14819c35db37?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1530018607912-eff2daa1bac4?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1200&auto=format&fit=crop",
     ],
     featured: true,
     bestseller: true,
@@ -157,14 +159,14 @@ export const PRODUCTS: Product[] = [
     description:
       "Une œuvre murale en relief où la matière prend vie sous les ombres portées. Inspirée des strates géologiques marocaines, cette composition abstraite structure un mur avec une présence artistique souveraine.",
     story:
-      "Créée en collaboration avec notre atelier d'artistes plasticiens à Marrakech. Les textures en empâtements de chaux et sables naturels vibrent au fil de la journée selon la trajectoire du soleil.",
+      "Créée en collaboration avec notre atelier d'artistes plasticiens à Casablanca. Les textures en empâtements de chaux et sables naturels vibrent au fil de la journée selon la trajectoire du soleil.",
     details: [
       "Pièce unique signée et délivrée avec certificat d'authenticité",
       "Système de fixation invisible haute sécurité pour charges lourdes fourni",
       "Accompagnement de pose et orientation lumineuse par notre décorateur",
     ],
     images: [
-      "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=1200&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=1200&auto=format&fit=crop",
     ],
     featured: true,
@@ -190,9 +192,9 @@ export const PRODUCTS: Product[] = [
       { name: "Terre Cuite Minérale", hex: "#A8624E", desc: "Chaleur organique" },
     ],
     description:
-      "Des courbes douces et rassurantes inspirées par l'ondulation des dunes de Merzouga. Ce fauteuil pivotant ou fixe offre une assise généreuse propice à la lecture et à la contemplation.",
+      "Des courbes douces et rassurantes inspirées par l'ondulation des dunes. Ce fauteuil pivotant ou fixe offre une assise généreuse propice à la lecture et à la contemplation.",
     story:
-      "Conçu pour créer un point focal apaisant dans les salons décloisonnés des appartements et villas d'Anfa et du Souissi. Un équilibre parfait entre modernisme et volupté tactile.",
+      "Conçu pour créer un point focal apaisant dans les salons décloisonnés des appartements et villas d'Anfa à Casablanca. Un équilibre parfait entre modernisme et volupté tactile.",
     details: [
       "Option socle pivotant invisible à 360°",
       "Double nappe de fibres anallergiques",
@@ -200,7 +202,7 @@ export const PRODUCTS: Product[] = [
     ],
     images: [
       "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1592078615290-033ee584e267?q=80&w=1200&auto=format&fit=crop",
     ],
     bestseller: true,
   },
@@ -223,12 +225,12 @@ export const PRODUCTS: Product[] = [
       "La rigueur du dessin s'efface devant la richesse des textures : le bois travaillé à la flamme dialogue avec la douceur crayeuse du travertin.",
     details: [
       "Pieds cannelés taillés au tour à bois artisanal",
-      "Plateau amovible pour une manipulation et un déménagement aisés",
+      "Plateau amovible pour une manipulation aisée",
       "Dispositif de fixation murale invisible anti-basculement fourni",
     ],
     images: [
+      "https://images.unsplash.com/photo-1616046229478-9901c5536a45?q=80&w=1200&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1538688525198-9b88f6f53126?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1200&auto=format&fit=crop",
     ],
   },
   {
@@ -247,7 +249,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Une œuvre architecturale fonctionnelle. Le plateau organique repose en équilibre sur trois colonnes de diamètres distincts, créant une tension visuelle d'une élégance rare.",
     story:
-      "Chaque bloc de marbre est taillé dans la masse avant d'être adouci à l'eau par nos maîtres marbriers. Une signature intemporelle pour les intérieurs les plus exigeants de Casablanca et Marrakech.",
+      "Chaque bloc de marbre est taillé dans la masse avant d'être adouci à l'eau par nos maîtres marbriers. Une signature intemporelle pour les intérieurs les plus exigeants de Casablanca.",
     details: [
       "Marbre sélectionné pour l'harmonie de son veinage blanc contrasté",
       "Plaque de signature incrustée en laiton",
@@ -275,7 +277,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Un miroir de pied ou mural aux proportions élancées. Le cadre en laiton épais présente de légères irrégularités artisanales qui lui confèrent une patine noble et vivante.",
     story:
-      "Façonné par les artisans dinandiers de Fès selon un dessin contemporain épuré dessiné par le studio VELMORA. Il agrandit l'espace tout en diffusant une lumière chaude.",
+      "Façonné par des artisans dinandiers selon un dessin contemporain épuré dessiné par le studio VELMORA Casablanca. Il agrandit l'espace tout en diffusant une lumière chaude.",
     details: [
       "Miroir haute définition sans distorsion avec film de sécurité au dos",
       "Pose au sol adossée ou suspension horizontale / verticale",
@@ -283,7 +285,7 @@ export const PRODUCTS: Product[] = [
     ],
     images: [
       "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1615873968403-89e068629265?q=80&w=1200&auto=format&fit=crop",
     ],
   },
   {
@@ -337,7 +339,7 @@ export const PRODUCTS: Product[] = [
     ],
     images: [
       "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200&auto=format&fit=crop",
     ],
     limitedEdition: true,
     editionCount: 12,
@@ -365,8 +367,8 @@ export const PRODUCTS: Product[] = [
       "Système d'accrochage sécurisé et niveau à bulle intégrés",
     ],
     images: [
-      "https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?q=80&w=1200&auto=format&fit=crop",
     ],
     limitedEdition: true,
     editionCount: 1,
@@ -387,7 +389,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Une pièce basse d'une pureté géométrique absolue. Les sangles en cuir sellier patiné à la main soutiennent un matelas d'assise capitonné de lin épais.",
     story:
-      "Dessiné pour ponctuer le pied d'un lit, structurer une entrée ou servir d'assise conviviale dans un salon de réception.",
+      "Dessiné pour ponctuer le pied d'un lit, structurer une entrée ou servir d'assise conviviale dans un salon de réception à Casablanca.",
     details: [
       "Cuir pleine fleur sélectionné qui s'embellit avec les années",
       "Assemblages traditionnels à queues d'aronde apparentes",
@@ -395,7 +397,7 @@ export const PRODUCTS: Product[] = [
     ],
     images: [
       "https://images.unsplash.com/photo-1538688525198-9b88f6f53126?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1580481077195-c3a821a58875?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?q=80&w=1200&auto=format&fit=crop",
     ],
   },
 ];
@@ -406,7 +408,7 @@ export const SHOWROOM_ZONES = [
     name: "La Galerie",
     tagline: "L'art mural et les pièces sculpturales",
     description:
-      "L'espace d'accueil où les œuvres grand format, les bas-reliefs et les pièces iconiques Signature dialoguent sous un éclairage scénographique précis.",
+      "L'espace d'accueil de notre showroom à Casablanca où les œuvres grand format, les bas-reliefs et les pièces iconiques Signature dialoguent sous un éclairage scénographique précis.",
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
     highlights: ["Bas-reliefs en chaux", "Sculptures marbre et laiton", "Luminaires monumentaux"],
   },
@@ -424,7 +426,7 @@ export const SHOWROOM_ZONES = [
     name: "La Matière",
     tagline: "Matériauthèque tactile et sensorielle",
     description:
-      "Plus de 120 échantillons physiques à toucher : travertins, marbres de l'Atlas, noyers huilés, bouclés italiens, lins lavés et finitions laiton.",
+      "Plus de 120 échantillons physiques à toucher dans notre showroom de Casablanca : travertins, marbres de l'Atlas, noyers huilés, bouclés italiens, lins lavés et finitions laiton.",
     image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1200&auto=format&fit=crop",
     highlights: ["Échantillons nomades", "Nuanciers tissus exclusifs", "Tests de résistance"],
   },
@@ -442,8 +444,8 @@ export const SHOWROOM_ZONES = [
     name: "L'Édition du Moment",
     tagline: "La scène tournante des créateurs",
     description:
-      "Un espace renouvelé tous les trimestres mettant en lumière un artiste plasticien marocain ou international invité à réinventer l'art d'habiter.",
-    image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?q=80&w=1200&auto=format&fit=crop",
+      "Un espace renouvelé tous les trimestres mettant en lumière un artiste plasticien invité à réinventer l'art d'habiter.",
+    image: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=1200&auto=format&fit=crop",
     highlights: ["Séries numérotées", "Vernissages privés", "Rencontres collectionneurs"],
   },
 ];

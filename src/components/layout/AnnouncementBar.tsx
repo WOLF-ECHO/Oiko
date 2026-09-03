@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 
 export default function AnnouncementBar() {
   return (
@@ -14,7 +14,7 @@ export default function AnnouncementBar() {
           </span>
           <span className="text-[#6E675E]">•</span>
           <span className="text-[#8E877D]">
-            Nouvelle collection disponible au Showroom de Casablanca
+            Showroom &amp; Studio au Boulevard d&apos;Anfa, Casablanca
           </span>
         </div>
 
@@ -26,13 +26,19 @@ export default function AnnouncementBar() {
             href="/contact"
             className="hidden sm:inline-flex items-center gap-1 text-[#C5A880] hover:text-[#DEC5A5] transition-colors font-medium underline underline-offset-4"
           >
-            Réserver une visite
+            Réserver une visite privée
             <ArrowRight className="w-3 h-3" />
           </Link>
         </div>
 
         <div className="hidden lg:flex items-center gap-3 text-[11px] text-[#8E877D]">
-          <span>Casablanca • Rabat • Marrakech</span>
+          <a
+            href="tel:0722033326"
+            className="text-[#C5A880] hover:text-[#DEC5A5] transition-colors flex items-center gap-1 font-medium"
+          >
+            <Phone className="w-3 h-3" />
+            <span>07 22 03 33 26</span>
+          </a>
         </div>
       </div>
     </div>

@@ -9,8 +9,9 @@ export function JsonLdOrganization() {
     legalName: "VELMORA Maison de Design & d'Art SARL",
     url: "https://velmora.ma",
     logo: "https://velmora.ma/logo-velmora.png",
+    email: "koncept.morocco@gmail.com",
     description:
-      "Maison marocaine de mobilier contemporain haut de gamme, pièces sculpturales et art mural à Casablanca, Rabat et Marrakech.",
+      "Maison marocaine de mobilier contemporain haut de gamme, pièces sculpturales et art mural au Boulevard d'Anfa à Casablanca.",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Boulevard d'Anfa, Triangle d'Or",
@@ -21,7 +22,7 @@ export function JsonLdOrganization() {
     contactPoint: [
       {
         "@type": "ContactPoint",
-        telephone: "+212-661-234567",
+        telephone: "+212-722033326",
         contactType: "customer service",
         areaServed: "MA",
         availableLanguage: ["French", "Arabic", "English"],
@@ -45,13 +46,14 @@ export function JsonLdLocalBusiness() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "HomeGoodsStore",
-    name: "VELMORA Showroom Casablanca",
+    name: "VELMORA Showroom & Studio Casablanca",
     image: [
       "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200&auto=format&fit=crop",
     ],
     "@id": "https://velmora.ma/#casablanca-showroom",
     url: "https://velmora.ma/showroom",
-    telephone: "+212-661-234567",
+    telephone: "+212-722033326",
+    email: "koncept.morocco@gmail.com",
     priceRange: "$$$$",
     address: {
       "@type": "PostalAddress",
@@ -146,7 +148,7 @@ export function JsonLdFaq() {
         name: "Où se trouve le showroom VELMORA au Maroc ?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Notre premier showroom 'La Galerie Habitable' est situé au Boulevard d'Anfa à Casablanca. Les visites privées se font sur rendez-vous pour offrir un accueil personnalisé et une étude d'aménagement dédiée.",
+          text: "Notre showroom 'La Galerie Habitable' et studio de conception se situe exclusivement au Boulevard d'Anfa à Casablanca. Les visites privées se font sur rendez-vous en contactant le 07 22 03 33 26 ou par email à koncept.morocco@gmail.com.",
         },
       },
       {

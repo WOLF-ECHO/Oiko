@@ -98,6 +98,8 @@ export const metadata: Metadata = {
   },
 };
 
+import LuxuryScrollProgress from "@/components/ui/LuxuryScrollProgress";
+
 export default function RootLayout({
   children,
 }: {
@@ -113,6 +115,7 @@ export default function RootLayout({
         <JsonLdLocalBusiness />
       </head>
       <body className="min-h-screen bg-[#0C0B0A] text-[#EFECE6] font-sans flex flex-col selection:bg-[#C5A880] selection:text-[#0C0B0A]">
+        <LuxuryScrollProgress />
         <AnnouncementBar />
         <Navbar />
         <main className="flex-grow">{children}</main>

@@ -48,7 +48,7 @@ export default function ProductDetailClient({
     const text = `Bonjour VELMORA, je suis intéressé(e) par la pièce ${product.name} (${product.formattedPrice}).
 Finition souhaitée : ${currentFabric?.name || currentMaterial?.name || "Standard"}.
 Pourriez-vous me transmettre la fiche technique et les disponibilités de livraison ?`;
-    window.open(`https://wa.me/212661234567?text=${encodeURIComponent(text)}`, "_blank");
+    window.open(`https://wa.me/212722033326?text=${encodeURIComponent(text)}`, "_blank");
   };
 
   return (
@@ -78,13 +78,14 @@ Pourriez-vous me transmettre la fiche technique et les disponibilités de livrai
             {/* Main Featured Image */}
             <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-[#161513] border border-[#282622]">
               <Image
-                src={product.images[activeImage]}
+                src={product.images[activeImage] || "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200&auto=format&fit=crop"}
                 alt={product.name}
                 fill
                 priority
+                unoptimized
                 className="object-cover transition-transform duration-700 hover:scale-105"
               />
-              <div className="absolute top-4 left-4 bg-[#0C0B0A]/80 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-[#282622] text-[11px] text-[#C5A880] uppercase tracking-wider">
+              <div className="absolute top-4 left-4 bg-[#0C0B0A]/85 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-[#282622] text-[11px] text-[#C5A880] uppercase tracking-wider font-medium">
                 {product.universe}
               </div>
 
@@ -108,7 +109,7 @@ Pourriez-vous me transmettre la fiche technique et les disponibilités de livrai
                         : "border-[#282622] opacity-60 hover:opacity-100"
                     }`}
                   >
-                    <Image src={img} alt="" fill className="object-cover" />
+                    <Image src={img} alt="" fill unoptimized className="object-cover" />
                   </button>
                 ))}
               </div>

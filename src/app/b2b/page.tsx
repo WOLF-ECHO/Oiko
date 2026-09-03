@@ -115,8 +115,10 @@ export default function B2BPage() {
             </div>
 
             <div className="p-4 rounded-xl bg-[#0C0B0A] border border-[#282622] flex items-center justify-between text-xs text-[#8E877D]">
-              <span>Directeur des Partenariats B2B :</span>
-              <span className="text-[#C5A880] font-medium">+212 (0) 6 61 23 45 67</span>
+              <span>Directeur des Partenariats B2B (Casablanca) :</span>
+              <a href="tel:0722033326" className="text-[#C5A880] font-medium hover:underline">
+                07 22 03 33 26
+              </a>
             </div>
           </div>
 
@@ -133,7 +135,7 @@ export default function B2BPage() {
                 </p>
                 <div className="pt-4">
                   <a
-                    href="https://wa.me/212661234567?text=Bonjour%20VELMORA,%20je%20viens%20de%20remplir%20ma%20demande%20partenaire%20B2B."
+                    href="https://wa.me/212722033326?text=Bonjour%20VELMORA,%20je%20viens%20de%20remplir%20ma%20demande%20partenaire%20B2B."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#C5A880] text-[#0C0B0A] text-xs font-semibold uppercase tracking-wider"

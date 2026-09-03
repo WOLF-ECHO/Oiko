@@ -29,7 +29,7 @@ export default function Footer() {
               « VELMORA ne vend pas seulement du mobilier. La marque compose des espaces où le design rencontre l&apos;art. »
             </h3>
             <p className="text-sm text-[#8E877D] max-w-lg leading-relaxed">
-              Maison marocaine de mobilier contemporain, de décoration et d&apos;expression artistique. Confection sur commande, matières nobles et finitions d&apos;exception.
+              Maison marocaine de mobilier contemporain, de pièces architecturales et d&apos;expression artistique. Showroom &amp; Studio de conception situés à Casablanca.
             </p>
           </div>
 
@@ -39,7 +39,7 @@ export default function Footer() {
                 Le Cercle Privé VELMORA
               </h4>
               <p className="text-xs text-[#8E877D] leading-relaxed">
-                Recevez en avant-première les lancements de nouveaux chapitres, les invitations aux vernissages du showroom et les séries d&apos;art limitées.
+                Recevez en avant-première les lancements de nouveaux chapitres, les invitations aux vernissages de notre showroom à Casablanca et les séries d&apos;art limitées.
               </p>
 
               {subscribed ? (
@@ -52,7 +52,7 @@ export default function Footer() {
                   <input
                     type="email"
                     required
-                    placeholder="Votre adresse email professionnelle ou personnelle"
+                    placeholder="Votre adresse email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="flex-grow bg-[#0C0B0A] border border-[#282622] rounded-full px-4 py-3 text-xs text-[#F9F6F0] placeholder-[#6E675E] focus:outline-none focus:border-[#C5A880] transition-colors"
@@ -114,7 +114,7 @@ export default function Footer() {
             <ul className="space-y-2.5 text-xs text-[#8E877D]">
               <li>
                 <Link href="/showroom" className="hover:text-[#C5A880] transition-colors">
-                  La Galerie Habitable
+                  La Galerie Habitable (Showroom)
                 </Link>
               </li>
               <li>
@@ -140,37 +140,41 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 3: Showroom Casablanca */}
+          {/* Col 3: Showroom Casablanca UNIQUEMENT */}
           <div className="space-y-4">
             <h5 className="text-[11px] uppercase tracking-[0.25em] text-[#F9F6F0] font-semibold">
-              Showroom Casablanca
+              Showroom &amp; Studio
             </h5>
             <div className="space-y-2 text-xs text-[#8E877D] leading-relaxed">
               <p className="flex items-start gap-2">
                 <MapPin className="w-3.5 h-3.5 text-[#C5A880] shrink-0 mt-0.5" />
-                <span>Angle Bd d&apos;Anfa &amp; Rue Bab Mansour, Triangle d&apos;Or, Casablanca</span>
+                <span>Angle Boulevard d&apos;Anfa &amp; Rue Bab Mansour, Triangle d&apos;Or, Casablanca</span>
               </p>
               <p className="text-[11px]">Mardi au Samedi : 10h00 - 19h30</p>
-              <p className="text-[11px] text-[#C5A880]">Sur rendez-vous privé recommandé</p>
+              <p className="text-[11px] text-[#C5A880] font-medium">Sur rendez-vous privé</p>
             </div>
           </div>
 
-          {/* Col 4: Service & Logistique Maroc */}
+          {/* Col 4: Contacts Officiels */}
           <div className="space-y-4">
             <h5 className="text-[11px] uppercase tracking-[0.25em] text-[#F9F6F0] font-semibold">
-              Conciergerie &amp; Livraison
+              Contact &amp; Conciergerie
             </h5>
             <div className="space-y-2 text-xs text-[#8E877D]">
-              <p className="flex items-center gap-2 text-[#C4BEB4]">
+              <p className="flex items-center gap-2 text-[#F9F6F0]">
                 <Phone className="w-3.5 h-3.5 text-[#C5A880]" />
-                <span>+212 (0) 5 22 00 11 22</span>
+                <a href="tel:0722033326" className="hover:text-[#C5A880] transition-colors font-medium">
+                  07 22 03 33 26
+                </a>
               </p>
               <p className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-[#C5A880]" />
-                <span>concierge@velmora.ma</span>
+                <a href="mailto:koncept.morocco@gmail.com" className="hover:text-[#C5A880] transition-colors">
+                  koncept.morocco@gmail.com
+                </a>
               </p>
               <p className="text-[11px] text-[#8E877D] pt-1">
-                Livraison gants blancs : Casablanca, Rabat, Marrakech, Tanger, Fès, Agadir.
+                Livraison gants blancs : Casablanca, Rabat, Marrakech, Tanger, Fès et tout le Maroc.
               </p>
             </div>
           </div>
@@ -200,9 +204,9 @@ export default function Footer() {
         {/* Bottom Legal & Copyright */}
         <div className="pt-8 border-t border-[#282622]/60 flex flex-col md:flex-row items-center justify-between text-xs text-[#6E675E] gap-4">
           <div className="flex items-center gap-4">
-            <span>&copy; {new Date().getFullYear()} VELMORA Maison de Design SARL. Tous droits réservés.</span>
+            <span>&copy; {new Date().getFullYear()} VELMORA Maison de Design SARL. Casablanca, Maroc.</span>
             <span className="hidden sm:inline">•</span>
-            <span className="hidden sm:inline">Marque déposée OMPIC (Royaume du Maroc)</span>
+            <span className="hidden sm:inline">Marque déposée OMPIC</span>
           </div>
 
           <div className="flex items-center space-x-6 text-xs">

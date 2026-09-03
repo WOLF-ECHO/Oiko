@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { MessageCircle, X, Send, Sparkles, Clock, CheckCircle2 } from "lucide-react";
+import { MessageCircle, X, Send, Sparkles, Clock } from "lucide-react";
 
 export default function WhatsAppConcierge() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +28,7 @@ export default function WhatsAppConcierge() {
 
   const handleSendPrompt = (promptText: string) => {
     const encoded = encodeURIComponent(promptText);
-    window.open(`https://wa.me/212661234567?text=${encoded}`, "_blank");
+    window.open(`https://wa.me/212722033326?text=${encoded}`, "_blank");
     setIsOpen(false);
   };
 
@@ -36,7 +36,7 @@ export default function WhatsAppConcierge() {
     e.preventDefault();
     if (!customMsg.trim()) return;
     const encoded = encodeURIComponent(customMsg);
-    window.open(`https://wa.me/212661234567?text=${encoded}`, "_blank");
+    window.open(`https://wa.me/212722033326?text=${encoded}`, "_blank");
     setCustomMsg("");
     setIsOpen(false);
   };
@@ -47,7 +47,7 @@ export default function WhatsAppConcierge() {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="group relative flex items-center gap-2.5 px-4 py-3 rounded-full bg-[#161513] text-[#F9F6F0] border border-[#C5A880]/40 shadow-[0_10px_30px_rgba(0,0,0,0.8)] hover:border-[#C5A880] transition-all hover:scale-105 active:scale-95"
+          className="group relative flex items-center gap-2.5 px-4 py-3 rounded-full bg-[#161513] text-[#F9F6F0] border border-[#C5A880]/50 shadow-[0_10px_35px_rgba(0,0,0,0.85)] hover:border-[#C5A880] transition-all hover:scale-105 active:scale-95"
           aria-label="Ouvrir la conciergerie WhatsApp"
         >
           <span className="relative flex h-3 w-3">
@@ -55,8 +55,8 @@ export default function WhatsAppConcierge() {
             <span className="relative inline-flex rounded-full h-3 w-3 bg-[#C5A880]" />
           </span>
           <MessageCircle className="w-5 h-5 text-[#C5A880]" />
-          <span className="text-xs tracking-wider uppercase font-medium hidden sm:inline text-[#EFECE6]">
-            Conciergerie VELMORA
+          <span className="text-xs tracking-wider uppercase font-semibold hidden sm:inline text-[#EFECE6]">
+            Conciergerie (07 22 03 33 26)
           </span>
         </button>
       )}
@@ -72,11 +72,11 @@ export default function WhatsAppConcierge() {
               </div>
               <div>
                 <h4 className="text-xs uppercase tracking-widest text-[#F9F6F0] font-semibold">
-                  Conciergerie Privée
+                  Conciergerie VELMORA
                 </h4>
                 <div className="flex items-center gap-1.5 text-[10px] text-[#C5A880]">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                  <span>En ligne • Réponse en quelques minutes</span>
+                  <span>Casablanca • Réponse instantanée</span>
                 </div>
               </div>
             </div>
@@ -93,12 +93,12 @@ export default function WhatsAppConcierge() {
           {/* Body */}
           <div className="p-4 space-y-3">
             <p className="text-xs text-[#C4BEB4] leading-relaxed">
-              Bienvenue chez VELMORA. Comment pouvons-nous accompagner votre projet aujourd&apos;hui ?
+              Bienvenue chez VELMORA Casablanca. Comment pouvons-nous accompagner votre projet ?
             </p>
 
             <div className="space-y-2 pt-1">
               <span className="text-[10px] uppercase tracking-wider text-[#8E877D] font-medium block">
-                Demandes fréquentes :
+                Demandes rapides :
               </span>
               {quickPrompts.map((item, idx) => (
                 <button
@@ -134,9 +134,9 @@ export default function WhatsAppConcierge() {
           <div className="bg-[#0C0B0A] px-4 py-2.5 border-t border-[#282622] flex items-center justify-between text-[10px] text-[#8E877D]">
             <span className="flex items-center gap-1">
               <Clock className="w-3 h-3 text-[#C5A880]" />
-              7j/7 • 9h00 à 21h00
+              7j/7 • 07 22 03 33 26
             </span>
-            <span>WhatsApp sécurisé</span>
+            <span>Casablanca</span>
           </div>
         </div>
       )}

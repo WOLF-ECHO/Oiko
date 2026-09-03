@@ -194,7 +194,7 @@ function CollectionsContent() {
           </div>
 
           <a
-            href="https://wa.me/212661234567?text=Bonjour%20VELMORA,%20je%20souhaite%20commander%20une%20pièce%20sur%20mesure."
+            href="https://wa.me/212722033326?text=Bonjour%20VELMORA,%20je%20souhaite%20commander%20une%20pièce%20sur%20mesure."
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-3.5 rounded-full bg-gradient-to-r from-[#C5A880] to-[#DEC5A5] text-[#0C0B0A] text-xs font-semibold tracking-wider uppercase hover:scale-105 transition-transform shrink-0"

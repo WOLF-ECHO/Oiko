@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
 import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import AnnouncementBar from "@/components/layout/AnnouncementBar";
 import WhatsAppConcierge from "@/components/layout/WhatsAppConcierge";
 import { JsonLdOrganization, JsonLdLocalBusiness } from "@/components/seo/JsonLd";
+import LuxuryScrollProgress from "@/components/ui/LuxuryScrollProgress";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-serif",
@@ -21,65 +22,62 @@ const jakarta = Plus_Jakarta_Sans({
   display: "swap",
 });
 
-export const viewport: Viewport = {
-  themeColor: "#0C0B0A",
-  width: "device-width",
-  initialScale: 1,
-};
-
 export const metadata: Metadata = {
-  metadataBase: new URL("https://velmora.ma"),
+  metadataBase: new URL("https://oikos.ma"),
   title: {
-    default: "VELMORA | Maison Marocaine de Mobilier Contemporain & d'Art",
-    template: "%s | VELMORA Maroc",
+    default: "OÏKOS • Maison de Design & d'Art | L'Art d'Habiter Casablanca",
+    template: "%s | OÏKOS Maison de Design",
   },
   description:
-    "Maison marocaine de mobilier contemporain d'exception, pièces sculpturales et art mural. Showrooms privés à Casablanca et Rabat. Créations sur-mesure, matières nobles et livraison gants blancs au Maroc.",
+    "OÏKOS est une maison marocaine de mobilier contemporain d'exception, d'architecture intérieure et d'artisanat d'art. Showroom et Studio au Boulevard d'Anfa à Casablanca. Configurateur 3D sur mesure, livraison et installation gants blancs partout au Maroc.",
   keywords: [
+    "OÏKOS",
+    "OÏKOS Maroc",
+    "OÏKOS Casablanca",
+    "oikos maison de design",
     "mobilier haut de gamme maroc",
-    "meuble design casablanca",
-    "mobilier contemporain maroc",
+    "configurateur 3d mobilier maroc",
     "canapé sur mesure casablanca",
-    "table basse travertin maroc",
-    "architecte interieur maroc",
-    "galerie mobilier art rabat",
-    "velmora maroc",
-    "mobilier quiet luxury maroc",
-    "décoration d'intérieur marrakech",
+    "table travertin maroc",
+    "architecte d'intérieur casablanca",
+    "meuble contemporain maroc",
+    "décoration de luxe maroc",
+    "art mural chaux maroc",
+    "quiet luxury maroc",
+    "boulevard d'anfa mobilier",
   ],
-  authors: [{ name: "VELMORA Studio" }],
-  creator: "VELMORA",
-  publisher: "VELMORA Maison de Design",
+  authors: [{ name: "OÏKOS Maison de Design" }],
+  creator: "OÏKOS",
+  publisher: "OÏKOS SARL",
   formatDetection: {
     email: true,
     address: true,
     telephone: true,
   },
   openGraph: {
-    type: "website",
-    locale: "fr_MA",
-    alternateLocale: ["en_US", "ar_MA"],
-    url: "https://velmora.ma",
-    siteName: "VELMORA",
-    title: "VELMORA | Maison Marocaine de Mobilier Contemporain & d'Art",
+    title: "OÏKOS • Maison de Design & d'Art | Casablanca",
     description:
-      "L'Art d'Habiter. Pièces de mobilier contemporain sculpturales, toiles d'art et aménagement d'exception au Maroc. Showroom à Casablanca.",
+      "Des espaces qui ont une âme. Plus qu'un intérieur, un art de vivre. Mobilier contemporain d'exception, studio 3D et pièces sculpturales à Casablanca.",
+    url: "https://oikos.ma",
+    siteName: "OÏKOS Maison de Design",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1600&auto=format&fit=crop",
-        width: 1600,
-        height: 900,
-        alt: "VELMORA - Galerie Habitable Casablanca",
+        url: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200&auto=format&fit=crop",
+        width: 1200,
+        height: 630,
+        alt: "OÏKOS Maison de Design Casablanca",
       },
     ],
+    locale: "fr_MA",
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "VELMORA | Maison Marocaine de Mobilier Contemporain & d'Art",
+    title: "OÏKOS • Maison de Design | L'Art d'Habiter",
     description:
-      "Mobilier contemporain d'exception, marbre, travertin et art mural au Maroc. Showroom Casablanca.",
+      "Maison marocaine de mobilier d'exception, architecture intérieure et configurateur 3D à Casablanca.",
     images: [
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200&auto=format&fit=crop",
     ],
   },
   robots: {
@@ -94,11 +92,9 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://velmora.ma",
+    canonical: "https://oikos.ma",
   },
 };
-
-import LuxuryScrollProgress from "@/components/ui/LuxuryScrollProgress";
 
 export default function RootLayout({
   children,

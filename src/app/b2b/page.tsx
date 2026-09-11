@@ -102,13 +102,13 @@ export default function B2BPage() {
               Hôtels Boutiques, Villas d&apos;Exception &amp; Espaces Corporate
             </h2>
             <p className="text-xs sm:text-sm text-[#C4BEB4] leading-relaxed">
-              Que vous conceviez les suites d&apos;un riad contemporain à Marrakech, le salon d&apos;une villa à Anfa ou l&apos;espace de direction d&apos;un groupe à Casablanca, VELMORA adapte ses volumes et réalise des pièces Signature exclusives.
+              Que vous conceviez les suites d&apos;un riad contemporain à Marrakech, le salon d&apos;une villa à Anfa ou l&apos;espace de direction d&apos;un groupe à Casablanca, OÏKOS adapte ses volumes et réalise des pièces Signature exclusives.
             </p>
 
             <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden border border-[#282622] mt-4">
               <Image
                 src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop"
-                alt="Projets d'architecture VELMORA Maroc"
+                alt="Projets d'architecture OÏKOS Maroc"
                 fill
                 className="object-cover"
               />
@@ -135,7 +135,7 @@ export default function B2BPage() {
                 </p>
                 <div className="pt-4">
                   <a
-                    href="https://wa.me/212722033326?text=Bonjour%20VELMORA,%20je%20viens%20de%20remplir%20ma%20demande%20partenaire%20B2B."
+                    href="https://wa.me/212722033326?text=Bonjour%20OÏKOS,%20je%20viens%20de%20remplir%20ma%20demande%20partenaire%20B2B."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#C5A880] text-[#0C0B0A] text-xs font-semibold uppercase tracking-wider"
@@ -278,7 +278,7 @@ export default function B2BPage() {
                     className="rounded border-[#282622] text-[#C5A880] focus:ring-[#C5A880]"
                   />
                   <label htmlFor="sampleBox" className="text-xs text-[#C4BEB4] cursor-pointer">
-                    Je souhaite recevoir gratuitement la Box d&apos;échantillons VELMORA à mon agence.
+                    Je souhaite recevoir gratuitement la Box d&apos;échantillons OÏKOS à mon agence.
                   </label>
                 </div>
 

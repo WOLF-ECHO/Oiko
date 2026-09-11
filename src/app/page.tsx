@@ -37,7 +37,7 @@ export default function HomePage() {
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
             src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop"
-            alt="VELMORA - Galerie Habitable Casablanca"
+            alt="OÏKOS - Maison de Design Casablanca"
             fill
             priority
             unoptimized
@@ -52,7 +52,7 @@ export default function HomePage() {
           <ScrollReveal yOffset={20} duration={0.9}>
             <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#161513]/85 backdrop-blur-md border border-[#C5A880]/40 text-xs text-[#C5A880] tracking-widest uppercase shadow-[0_0_20px_rgba(197,168,128,0.2)]">
               <span className="w-1.5 h-1.5 rounded-full bg-[#C5A880] animate-ping" />
-              <span>Maison de Mobilier &amp; d&apos;Art • Casablanca</span>
+              <span>Maison de Design &amp; Mobilier d&apos;Art • Casablanca</span>
             </div>
           </ScrollReveal>
 
@@ -62,33 +62,33 @@ export default function HomePage() {
                 L&apos;ART D&apos;HABITER
               </h1>
               <p className="font-serif italic text-xl sm:text-2xl md:text-3xl text-[#DEC5A5] font-light">
-                Chapitre 01 : Géométrie Douce
+                Des espaces qui ont une âme. Plus qu&apos;un intérieur, un art de vivre.
               </p>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={0.25} yOffset={20} duration={1}>
             <p className="max-w-2xl mx-auto text-sm sm:text-base text-[#C4BEB4] font-light leading-relaxed">
-              Des formes à contempler. Des pièces à vivre. VELMORA façonne des intérieurs d&apos;exception où le design contemporain dialogue avec la noblesse des matières brutes. Showroom &amp; Studio à Casablanca.
+              Des formes à contempler. Des pièces à vivre. OÏKOS façonne des intérieurs d&apos;exception où le design contemporain dialogue avec la noblesse des matières brutes. Showroom &amp; Studio à Casablanca.
             </p>
           </ScrollReveal>
 
           <ScrollReveal delay={0.35} yOffset={20} duration={1}>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <Link
-                href="/collections"
+                href="/configurateur"
                 className="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-[#C5A880] via-[#DEC5A5] to-[#C5A880] text-[#0C0B0A] text-xs font-bold tracking-[0.2em] uppercase hover:shadow-[0_0_30px_rgba(197,168,128,0.45)] transition-all hover:scale-105 flex items-center justify-center gap-2"
               >
-                <span>Découvrir la Collection</span>
-                <ArrowRight className="w-4 h-4" />
+                <Sparkles className="w-4 h-4" />
+                <span>Configurateur 3D Studio</span>
               </Link>
 
               <Link
-                href="/showroom"
+                href="/collections"
                 className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#161513]/90 backdrop-blur-md border border-[#282622] hover:border-[#C5A880] text-[#F9F6F0] text-xs font-semibold tracking-[0.2em] uppercase transition-all hover:bg-[#1E1D1A] flex items-center justify-center gap-2"
               >
-                <Compass className="w-4 h-4 text-[#C5A880]" />
-                <span>Visiter le Showroom Casablanca</span>
+                <span>Découvrir la Collection</span>
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </ScrollReveal>
@@ -150,7 +150,7 @@ export default function HomePage() {
               chapter="01"
               eyebrow="Manifeste de Marque"
               title="« Nous ne créons pas seulement du mobilier. Nous composons des espaces où le design rencontre l'art. »"
-              subtitle="Chez VELMORA, chaque pièce répond à une exigence : allier la pureté sculpturale d'une œuvre à la douceur intime d'un meuble fait pour être habité au quotidien."
+              subtitle="Chez OÏKOS, chaque pièce répond à une exigence : allier la pureté sculpturale d'une œuvre à la douceur intime d'un meuble fait pour être habité au quotidien."
             />
           </ScrollReveal>
 
@@ -189,6 +189,108 @@ export default function HomePage() {
                   Un protocole rigoureux en 7 points : conformité stricte des cotes, solidité éprouvée, délais maîtrisés et livraison gants blancs partout au Maroc.
                 </p>
               </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* 3.5 3D CONFIGURATOR STUDIO HIGHLIGHT */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0C0B0A] via-[#141311] to-[#0C0B0A] border-t border-[#282622] relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#C5A880]/5 blur-[120px] rounded-full pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto space-y-12 relative z-10">
+          <ScrollReveal>
+            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+              <div>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#161513] border border-[#C5A880]/30 text-[11px] text-[#C5A880] uppercase tracking-widest mb-4">
+                  <Sparkles className="w-3 h-3 text-[#C5A880]" />
+                  <span>Studio Numérique 3D • Temps Réel</span>
+                </div>
+                <h2 className="font-serif text-3xl sm:text-5xl text-[#F9F6F0] font-light tracking-tight">
+                  Le Configurateur 3D OÏKOS
+                </h2>
+                <p className="mt-3 text-sm sm:text-base text-[#C4BEB4] max-w-2xl font-light">
+                  Personnalisez chaque création selon les exigences de votre espace. Dimensions ajustables au centimètre, matériauthèque tactile en rendu PBR, calcul de prix instantané et transmission directe à notre conciergerie.
+                </p>
+              </div>
+
+              <Link
+                href="/configurateur"
+                className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-gradient-to-r from-[#C5A880] to-[#DEC5A5] text-[#0C0B0A] text-xs font-bold tracking-[0.2em] uppercase hover:shadow-[0_0_30px_rgba(197,168,128,0.4)] transition-all hover:scale-105 shrink-0"
+              >
+                <span>Entrer dans le Studio 3D</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <ScrollReveal delay={0.1}>
+              <Link
+                href="/configurateur?category=sofas"
+                className="group relative p-6 rounded-2xl bg-[#161513]/90 border border-[#282622] hover:border-[#C5A880]/60 transition-all duration-300 block hover:-translate-y-1"
+              >
+                <div className="text-[10px] uppercase tracking-[0.25em] text-[#8E877D] mb-1">01 • Salon</div>
+                <h3 className="font-serif text-xl text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">Canapés d&apos;Élite</h3>
+                <p className="text-xs text-[#8E877D] mt-2 mb-4 leading-relaxed">
+                  ASTRA, ÉPURE &amp; DUNE. Méridiennes, lins d&apos;Italie et bouclés d&apos;alpaga.
+                </p>
+                <div className="flex items-center justify-between text-xs text-[#C5A880] font-medium pt-3 border-t border-[#282622]/60">
+                  <span>Dès 28 500 DH</span>
+                  <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </div>
+              </Link>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.2}>
+              <Link
+                href="/configurateur?category=armchairs"
+                className="group relative p-6 rounded-2xl bg-[#161513]/90 border border-[#282622] hover:border-[#C5A880]/60 transition-all duration-300 block hover:-translate-y-1"
+              >
+                <div className="text-[10px] uppercase tracking-[0.25em] text-[#8E877D] mb-1">02 • Assises</div>
+                <h3 className="font-serif text-xl text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">Fauteuils Sculpturaux</h3>
+                <p className="text-xs text-[#8E877D] mt-2 mb-4 leading-relaxed">
+                  GALBE, KROMA &amp; SOLIS. Bases pivotantes, cuirs pleine fleur &amp; velours mohair.
+                </p>
+                <div className="flex items-center justify-between text-xs text-[#C5A880] font-medium pt-3 border-t border-[#282622]/60">
+                  <span>Dès 11 900 DH</span>
+                  <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </div>
+              </Link>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.3}>
+              <Link
+                href="/configurateur?category=tables"
+                className="group relative p-6 rounded-2xl bg-[#161513]/90 border border-[#282622] hover:border-[#C5A880]/60 transition-all duration-300 block hover:-translate-y-1"
+              >
+                <div className="text-[10px] uppercase tracking-[0.25em] text-[#8E877D] mb-1">03 • Minéral &amp; Bois</div>
+                <h3 className="font-serif text-xl text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">Tables Basses &amp; Repas</h3>
+                <p className="text-xs text-[#8E877D] mt-2 mb-4 leading-relaxed">
+                  MONOLITHE, ATLAS &amp; HORIZON. Travertin Navona, Marbre Marquina &amp; Noyer massif.
+                </p>
+                <div className="flex items-center justify-between text-xs text-[#C5A880] font-medium pt-3 border-t border-[#282622]/60">
+                  <span>Dès 14 500 DH</span>
+                  <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </div>
+              </Link>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.4}>
+              <Link
+                href="/configurateur?category=beds"
+                className="group relative p-6 rounded-2xl bg-[#161513]/90 border border-[#282622] hover:border-[#C5A880]/60 transition-all duration-300 block hover:-translate-y-1"
+              >
+                <div className="text-[10px] uppercase tracking-[0.25em] text-[#8E877D] mb-1">04 • Chambre</div>
+                <h3 className="font-serif text-xl text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">Lits Architecturaux</h3>
+                <p className="text-xs text-[#8E877D] mt-2 mb-4 leading-relaxed">
+                  ALCÔVE, STRATE &amp; SERENA. Têtes de lit capitonnées, chevets intégrés &amp; liseuses laiton.
+                </p>
+                <div className="flex items-center justify-between text-xs text-[#C5A880] font-medium pt-3 border-t border-[#282622]/60">
+                  <span>Dès 26 000 DH</span>
+                  <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </div>
+              </Link>
             </ScrollReveal>
           </div>
         </div>
@@ -249,7 +351,7 @@ export default function HomePage() {
               >
                 <Image
                   src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=800&auto=format&fit=crop"
-                  alt="VELMORA Living"
+                  alt="OÏKOS Living"
                   fill
                   unoptimized
                   className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-65 group-hover:opacity-85"
@@ -260,7 +362,7 @@ export default function HomePage() {
                     70% de la Maison
                   </span>
                   <h3 className="font-serif text-2xl text-[#F9F6F0] mt-1 group-hover:text-[#C5A880] transition-colors">
-                    VELMORA Living
+                    OÏKOS Living
                   </h3>
                   <p className="text-xs text-[#C4BEB4] mt-2 line-clamp-3 leading-relaxed">
                     Canapés modulaires enveloppants, tables basses en travertin, consoles et miroirs dessinés pour habiter vos réceptions.
@@ -281,7 +383,7 @@ export default function HomePage() {
               >
                 <Image
                   src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?q=80&w=800&auto=format&fit=crop"
-                  alt="VELMORA Signature"
+                  alt="OÏKOS Signature"
                   fill
                   unoptimized
                   className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-65 group-hover:opacity-85"
@@ -292,7 +394,7 @@ export default function HomePage() {
                     20% Différenciation
                   </span>
                   <h3 className="font-serif text-2xl text-[#F9F6F0] mt-1 group-hover:text-[#C5A880] transition-colors">
-                    VELMORA Signature
+                    OÏKOS Signature
                   </h3>
                   <p className="text-xs text-[#C4BEB4] mt-2 line-clamp-3 leading-relaxed">
                     Pièces sculpturales monumentales, marbres taillés d&apos;un bloc, finitions laiton et sur-mesure de prestige.
@@ -313,7 +415,7 @@ export default function HomePage() {
               >
                 <Image
                   src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=800&auto=format&fit=crop"
-                  alt="VELMORA Art"
+                  alt="OÏKOS Art"
                   fill
                   unoptimized
                   className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-65 group-hover:opacity-85"
@@ -324,7 +426,7 @@ export default function HomePage() {
                     10% Identité Culturelle
                   </span>
                   <h3 className="font-serif text-2xl text-[#F9F6F0] mt-1 group-hover:text-[#C5A880] transition-colors">
-                    VELMORA Art
+                    OÏKOS Art
                   </h3>
                   <p className="text-xs text-[#C4BEB4] mt-2 line-clamp-3 leading-relaxed">
                     Bas-reliefs en chaux naturelle, toiles texturées aux ocres de l&apos;Ourika et grands formats muraux certifiés.
@@ -345,7 +447,7 @@ export default function HomePage() {
               >
                 <Image
                   src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop"
-                  alt="VELMORA Éditions"
+                  alt="OÏKOS Éditions"
                   fill
                   unoptimized
                   className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-65 group-hover:opacity-85"
@@ -356,7 +458,7 @@ export default function HomePage() {
                     Rareté &amp; Collaboration
                   </span>
                   <h3 className="font-serif text-2xl text-[#F9F6F0] mt-1 group-hover:text-[#C5A880] transition-colors">
-                    VELMORA Éditions
+                    OÏKOS Éditions
                   </h3>
                   <p className="text-xs text-[#C4BEB4] mt-2 line-clamp-3 leading-relaxed">
                     Objets d&apos;art et paravents produits en séries limitées numérotées, nés de résidences de créateurs au Maroc.
@@ -465,7 +567,7 @@ export default function HomePage() {
                   </Link>
 
                   <a
-                    href="https://wa.me/212722033326?text=Bonjour%20VELMORA,%20je%20souhaite%20visiter%20la%20Galerie%20Habitable%20à%20Casablanca."
+                    href="https://wa.me/212722033326?text=Bonjour%20OÏKOS,%20je%20souhaite%20visiter%20la%20Galerie%20Habitable%20à%20Casablanca."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-6 py-3 rounded-full border border-[#C5A880]/40 text-[#C5A880] text-xs font-medium tracking-wider uppercase text-center hover:bg-[#C5A880]/10 transition-colors flex items-center justify-center gap-2"
@@ -524,14 +626,14 @@ export default function HomePage() {
             <div className="lg:col-span-5 relative aspect-square rounded-2xl overflow-hidden border border-[#282622]">
               <Image
                 src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop"
-                alt="Partenariats Architectes VELMORA"
+                alt="Partenariats Architectes OÏKOS"
                 fill
                 unoptimized
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
                 <p className="text-xs text-[#EFECE6] italic">
-                  « VELMORA a apporté la signature sculpturale indispensable pour notre projet de villa à Anfa Supérieur. »
+                  « OÏKOS a apporté la signature sculpturale indispensable pour notre projet de villa à Anfa Supérieur. »
                 </p>
               </div>
             </div>
@@ -613,7 +715,7 @@ export default function HomePage() {
             <SectionHeading
               chapter="06"
               eyebrow="Questions Fréquentes"
-              title="Commander Chez VELMORA au Maroc"
+              title="Commander Chez OÏKOS au Maroc"
               subtitle="Tout ce que vous devez savoir sur nos visites de showroom à Casablanca, la confection sur mesure, les modalités d'acompte et nos livraisons."
             />
           </ScrollReveal>
@@ -622,7 +724,7 @@ export default function HomePage() {
             <details className="group bg-[#161513] border border-[#282622] rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden">
               <summary className="flex cursor-pointer items-center justify-between gap-1.5 text-[#F9F6F0]">
                 <h3 className="text-sm sm:text-base font-serif">
-                  Où se trouve le showroom VELMORA et comment réserver une visite ?
+                  Où se trouve le showroom OÏKOS et comment réserver une visite ?
                 </h3>
                 <span className="text-[#C5A880] transition group-open:-rotate-180">
                   <ArrowRight className="w-4 h-4 rotate-90" />
@@ -704,7 +806,7 @@ export default function HomePage() {
               </Link>
 
               <a
-                href="https://wa.me/212722033326?text=Bonjour%20VELMORA,%20je%20souhaite%20un%20rendez-vous%20personnalisé."
+                href="https://wa.me/212722033326?text=Bonjour%20OÏKOS,%20je%20souhaite%20un%20rendez-vous%20personnalisé."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-8 py-4 rounded-full border border-[#C5A880]/50 text-[#C5A880] hover:bg-[#C5A880]/10 text-xs font-semibold tracking-[0.2em] uppercase transition-colors flex items-center justify-center gap-2"

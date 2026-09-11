@@ -80,7 +80,7 @@ export default function ContactPage() {
             <SectionHeading
               chapter="Conciergerie &bull; Casablanca"
               eyebrow="Rendez-Vous &bull; Appel &bull; Visite"
-              title="Planifier Votre Échange avec VELMORA"
+              title="Planifier Votre Échange avec OÏKOS"
               subtitle="Réservez une visite privée de notre showroom au Boulevard d'Anfa à Casablanca, planifiez un rappel téléphonique immédiat ou une séance de conseil à distance."
             />
           </div>
@@ -119,7 +119,7 @@ export default function ContactPage() {
 
                 <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
                   <a
-                    href={`https://wa.me/212722033326?text=Bonjour%20VELMORA,%20je%20viens%20de%20réserver%20un%20RDV%20pour%20${encodeURIComponent(formData.firstName)}%20au%20Showroom%20Casablanca.`}
+                    href={`https://wa.me/212722033326?text=Bonjour%20OÏKOS,%20je%20viens%20de%20réserver%20un%20RDV%20pour%20${encodeURIComponent(formData.firstName)}%20au%20Showroom%20Casablanca.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-8 py-3.5 rounded-full bg-gradient-to-r from-[#C5A880] to-[#DEC5A5] text-[#0C0B0A] text-xs font-bold uppercase tracking-wider flex items-center gap-2 hover:scale-105 transition-transform"
@@ -409,7 +409,7 @@ export default function ContactPage() {
                 Contactez notre studio directement par WhatsApp ou par téléphone pour un devis express ou caler un créneau en direct.
               </p>
               <a
-                href="https://wa.me/212722033326?text=Bonjour%20VELMORA,%20je%20souhaite%20un%20conseil%20pour%20mon%20projet%20d'intérieur."
+                href="https://wa.me/212722033326?text=Bonjour%20OÏKOS,%20je%20souhaite%20un%20conseil%20pour%20mon%20projet%20d'intérieur."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-3.5 rounded-full bg-[#C5A880] text-[#0C0B0A] text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-[#DEC5A5] transition-colors"

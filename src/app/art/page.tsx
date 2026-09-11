@@ -7,9 +7,9 @@ import ProductCard from "@/components/ui/ProductCard";
 import { Sparkles, Palette, ShieldCheck, ArrowRight, Award } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Art Contemporain & Éditions Numérotées | VELMORA",
+  title: "Art Contemporain & Éditions Numérotées | OÏKOS",
   description:
-    "Explorez la collection VELMORA Art : bas-reliefs à la chaux naturelle marocaine, toiles texturées aux pigments d'ocre et sculptures murales signées pour des intérieurs de caractère.",
+    "Explorez la collection OÏKOS Art : bas-reliefs à la chaux naturelle marocaine, toiles texturées aux pigments d'ocre et sculptures murales signées pour des intérieurs de caractère.",
 };
 
 export default function ArtPage() {
@@ -24,7 +24,7 @@ export default function ArtPage() {
             chapter="Art &bull; Galerie &bull; Éditions"
             eyebrow="Expression Artistique"
             title="L&apos;Écho Mural : Quand le Meuble Devient Œuvre"
-            subtitle="Chez VELMORA, nous refusons les murs muets. Nos toiles grand format et bas-reliefs minéraux sont créés en écho intime avec nos silhouettes de mobilier."
+            subtitle="Chez OÏKOS, nous refusons les murs muets. Nos toiles grand format et bas-reliefs minéraux sont créés en écho intime avec nos silhouettes de mobilier."
           />
         </div>
 
@@ -32,7 +32,7 @@ export default function ArtPage() {
         <div className="relative aspect-[21/9] w-full rounded-3xl overflow-hidden border border-[#282622] bg-[#161513]">
           <Image
             src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=2000&auto=format&fit=crop"
-            alt="Galerie d'Art Contemporain VELMORA"
+            alt="Galerie d'Art Contemporain OÏKOS"
             fill
             priority
             className="object-cover"
@@ -118,12 +118,12 @@ export default function ArtPage() {
               Vous êtes Artiste Plasticien ou Céramiste ?
             </h3>
             <p className="text-xs text-[#C4BEB4] leading-relaxed">
-              VELMORA accueille chaque trimestre un créateur pour co-signer une édition limitée et exposer au cœur de la Galerie Habitable à Casablanca.
+              OÏKOS accueille chaque trimestre un créateur pour co-signer une édition limitée et exposer au cœur de la Galerie Habitable à Casablanca.
             </p>
           </div>
 
           <a
-            href="mailto:art@velmora.ma?subject=Candidature%20Résidence%20VELMORA%20Art"
+            href="mailto:koncept.morocco@gmail.com?subject=Candidature%20Résidence%20OÏKOS%20Art"
             className="px-8 py-3.5 rounded-full bg-[#C5A880] text-[#0C0B0A] text-xs font-semibold uppercase tracking-wider hover:bg-[#DEC5A5] transition-colors shrink-0"
           >
             Proposer une collaboration

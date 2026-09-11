@@ -45,7 +45,7 @@ export default function ProductDetailClient({
   };
 
   const handleWhatsApp = () => {
-    const text = `Bonjour VELMORA, je suis intéressé(e) par la pièce ${product.name} (${product.formattedPrice}).
+    const text = `Bonjour OÏKOS, je suis intéressé(e) par la pièce ${product.name} (${product.formattedPrice}).
 Finition souhaitée : ${currentFabric?.name || currentMaterial?.name || "Standard"}.
 Pourriez-vous me transmettre la fiche technique et les disponibilités de livraison ?`;
     window.open(`https://wa.me/212722033326?text=${encodeURIComponent(text)}`, "_blank");

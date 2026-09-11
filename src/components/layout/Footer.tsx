@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Phone, MapPin, Mail } from "lucide-react";
+import { ArrowRight, CheckCircle2, Phone, MapPin, Mail, Sparkles } from "lucide-react";
+import OikosLogo from "@/components/ui/OikosLogo";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -21,31 +22,31 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Newsletter & Brand Statement */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-[#282622]/80">
-          <div className="lg:col-span-6 space-y-4">
-            <span className="text-xs uppercase tracking-[0.3em] text-[#C5A880] font-medium">
-              L&apos;Art d&apos;Habiter
-            </span>
-            <h3 className="font-serif text-3xl sm:text-4xl text-[#F9F6F0] font-light leading-tight">
-              « VELMORA ne vend pas seulement du mobilier. La marque compose des espaces où le design rencontre l&apos;art. »
+          <div className="lg:col-span-6 space-y-5">
+            <OikosLogo variant="horizontal" />
+
+            <h3 className="font-serif text-3xl sm:text-4xl text-[#F9F6F0] font-light leading-tight mt-3">
+              « Des espaces qui ont une âme. Plus qu&apos;un intérieur, un art de vivre. »
             </h3>
-            <p className="text-sm text-[#8E877D] max-w-lg leading-relaxed">
-              Maison marocaine de mobilier contemporain, de pièces architecturales et d&apos;expression artistique. Showroom &amp; Studio de conception situés à Casablanca.
+
+            <p className="text-xs sm:text-sm text-[#8E877D] max-w-lg leading-relaxed">
+              OÏKOS est une maison marocaine de mobilier contemporain d&apos;exception, d&apos;architecture intérieure et d&apos;expression artistique. Showroom &amp; Studio de conception au Boulevard d&apos;Anfa, Casablanca.
             </p>
           </div>
 
           <div className="lg:col-span-6 flex flex-col justify-end">
             <div className="bg-[#161513] p-6 sm:p-8 rounded-2xl border border-[#282622] space-y-4">
               <h4 className="text-base text-[#F9F6F0] font-medium">
-                Le Cercle Privé VELMORA
+                Le Cercle Privé OÏKOS
               </h4>
               <p className="text-xs text-[#8E877D] leading-relaxed">
-                Recevez en avant-première les lancements de nouveaux chapitres, les invitations aux vernissages de notre showroom à Casablanca et les séries d&apos;art limitées.
+                Recevez en avant-première les lancements de collections, les invitations aux vernissages privés du showroom de Casablanca et les séries d&apos;art limitées.
               </p>
 
               {subscribed ? (
                 <div className="flex items-center gap-2 text-sm text-[#C5A880] bg-[#C5A880]/10 p-3 rounded-lg border border-[#C5A880]/20">
                   <CheckCircle2 className="w-4 h-4" />
-                  <span>Votre inscription est confirmée. Bienvenue dans l&apos;univers VELMORA.</span>
+                  <span>Votre inscription est confirmée. Bienvenue dans l&apos;univers OÏKOS.</span>
                 </div>
               ) : (
                 <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3">
@@ -72,7 +73,7 @@ export default function Footer() {
 
         {/* Navigation & Address Columns */}
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 py-16">
-          {/* Col 1: Univers */}
+          {/* Col 1: Collections */}
           <div className="space-y-4">
             <h5 className="text-[11px] uppercase tracking-[0.25em] text-[#F9F6F0] font-semibold">
               Collections
@@ -80,22 +81,22 @@ export default function Footer() {
             <ul className="space-y-2.5 text-xs text-[#8E877D]">
               <li>
                 <Link href="/collections?universe=Living" className="hover:text-[#C5A880] transition-colors">
-                  VELMORA Living
+                  OÏKOS Living
                 </Link>
               </li>
               <li>
                 <Link href="/collections?universe=Signature" className="hover:text-[#C5A880] transition-colors">
-                  VELMORA Signature
+                  OÏKOS Signature
                 </Link>
               </li>
               <li>
                 <Link href="/collections?universe=Art" className="hover:text-[#C5A880] transition-colors">
-                  VELMORA Art &amp; Toiles
+                  OÏKOS Art &amp; Toiles
                 </Link>
               </li>
               <li>
                 <Link href="/collections?universe=Éditions" className="hover:text-[#C5A880] transition-colors">
-                  VELMORA Éditions Limitées
+                  Éditions Limitées
                 </Link>
               </li>
               <li>
@@ -106,12 +107,18 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 2: Maison & Savoir-faire */}
+          {/* Col 2: Studio & Outils 3D */}
           <div className="space-y-4">
             <h5 className="text-[11px] uppercase tracking-[0.25em] text-[#F9F6F0] font-semibold">
-              La Maison
+              Studio &amp; 3D
             </h5>
             <ul className="space-y-2.5 text-xs text-[#8E877D]">
+              <li>
+                <Link href="/configurateur" className="text-[#C5A880] hover:text-[#DEC5A5] transition-colors flex items-center gap-1 font-medium">
+                  <Sparkles className="w-3 h-3" />
+                  <span>Configurateur 3D Studio</span>
+                </Link>
+              </li>
               <li>
                 <Link href="/showroom" className="hover:text-[#C5A880] transition-colors">
                   La Galerie Habitable (Showroom)
@@ -120,11 +127,6 @@ export default function Footer() {
               <li>
                 <Link href="/atelier" className="hover:text-[#C5A880] transition-colors">
                   L&apos;Atelier &amp; Savoir-Faire
-                </Link>
-              </li>
-              <li>
-                <Link href="/art" className="hover:text-[#C5A880] transition-colors">
-                  Artistes &amp; Résidences
                 </Link>
               </li>
               <li>
@@ -140,7 +142,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 3: Showroom Casablanca UNIQUEMENT */}
+          {/* Col 3: Showroom Casablanca */}
           <div className="space-y-4">
             <h5 className="text-[11px] uppercase tracking-[0.25em] text-[#F9F6F0] font-semibold">
               Showroom &amp; Studio
@@ -174,6 +176,9 @@ export default function Footer() {
                 </a>
               </p>
               <p className="text-[11px] text-[#8E877D] pt-1">
+                Site officiel : <strong className="text-[#F9F6F0]">oikos.ma</strong>
+              </p>
+              <p className="text-[11px] text-[#8E877D]">
                 Livraison gants blancs : Casablanca, Rabat, Marrakech, Tanger, Fès et tout le Maroc.
               </p>
             </div>
@@ -182,7 +187,7 @@ export default function Footer() {
           {/* Col 5: Engagements */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1 space-y-4">
             <h5 className="text-[11px] uppercase tracking-[0.25em] text-[#F9F6F0] font-semibold">
-              Excellence VELMORA
+              Excellence OÏKOS
             </h5>
             <div className="space-y-2 text-[11px] text-[#8E877D]">
               <div className="border border-[#282622] p-2.5 rounded-lg bg-[#0C0B0A]">
@@ -191,11 +196,11 @@ export default function Footer() {
               </div>
               <div className="border border-[#282622] p-2.5 rounded-lg bg-[#0C0B0A]">
                 <span className="text-[#C5A880] font-bold block text-sm">&lt; 3%</span>
-                <span>Taux de défaut cible strict</span>
+                <span>Taux de défaut strict</span>
               </div>
               <div className="border border-[#282622] p-2.5 rounded-lg bg-[#0C0B0A]">
                 <span className="text-[#C5A880] font-bold block text-sm">48h</span>
-                <span>Délai de réponse SAV maximal</span>
+                <span>Matériauthèque expédiée</span>
               </div>
             </div>
           </div>
@@ -204,8 +209,8 @@ export default function Footer() {
         {/* Bottom Legal & Copyright */}
         <div className="pt-8 border-t border-[#282622]/60 flex flex-col md:flex-row items-center justify-between text-xs text-[#6E675E] gap-4">
           <div className="flex items-center gap-4">
-            <span>&copy; {new Date().getFullYear()} VELMORA Maison de Design SARL. Casablanca, Maroc.</span>
-            <span className="hidden sm:inline">•</span>
+            <span>&copy; {new Date().getFullYear()} OÏKOS Maison de Design SARL. Casablanca, Maroc.</span>
+            <span className="hidden sm:inline">&bull;</span>
             <span className="hidden sm:inline">Marque déposée OMPIC</span>
           </div>
 
@@ -225,7 +230,7 @@ export default function Footer() {
               <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
               </svg>
-              <span>@velmora.maroc</span>
+              <span>@oikos.ma</span>
             </a>
           </div>
         </div>

@@ -50,7 +50,7 @@ export const PRODUCTS: Product[] = [
       { name: "Chêne Ébénisé Noir", hex: "#1D1A18", desc: "Finition noire brossée" },
     ],
     description:
-      "Pièce maîtresse du Salon VELMORA. Le Canapé Épure associe des proportions généreuses et des lignes basses sculpturales à une assise d'une profondeur enveloppante. Conçu pour ancrer l'espace avec une présence sereine.",
+      "Pièce maîtresse du Salon OÏKOS. Le Canapé Épure associe des proportions généreuses et des lignes basses sculpturales à une assise d'une profondeur enveloppante. Conçu pour ancrer l'espace avec une présence sereine.",
     story:
       "Inspiré des formes minérales adoucies par le vent de l'Atlas marocain, ce modèle réconcilie l'architecture contemporaine avec l'art de recevoir marocain. Confectionné sur mesure par nos artisans tapissiers pour notre showroom de Casablanca.",
     details: [
@@ -72,7 +72,7 @@ export const PRODUCTS: Product[] = [
     id: "vlm-002",
     slug: "fauteuil-galbe-solaire",
     name: "Fauteuil Galbe Solaire",
-    subtitle: "Édition Sculpturale • VELMORA Signature",
+    subtitle: "Édition Sculpturale • OÏKOS Signature",
     universe: "Signature",
     category: "Fauteuils",
     price: 14500,
@@ -147,7 +147,7 @@ export const PRODUCTS: Product[] = [
     id: "vlm-004",
     slug: "bas-relief-mineral-n4",
     name: "Bas-Relief Minéral N°04",
-    subtitle: "VELMORA Art • Édition Signée",
+    subtitle: "OÏKOS Art • Édition Signée",
     universe: "Art",
     category: "Art mural",
     price: 18500,
@@ -237,7 +237,7 @@ export const PRODUCTS: Product[] = [
     id: "vlm-007",
     slug: "table-sculpture-atlas",
     name: "Table Sculpture Atlas",
-    subtitle: "Pièce Monumentale • VELMORA Signature",
+    subtitle: "Pièce Monumentale • OÏKOS Signature",
     universe: "Signature",
     category: "Tables basses",
     price: 34000,
@@ -277,7 +277,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Un miroir de pied ou mural aux proportions élancées. Le cadre en laiton épais présente de légères irrégularités artisanales qui lui confèrent une patine noble et vivante.",
     story:
-      "Façonné par des artisans dinandiers selon un dessin contemporain épuré dessiné par le studio VELMORA Casablanca. Il agrandit l'espace tout en diffusant une lumière chaude.",
+      "Façonné par des artisans dinandiers selon un dessin contemporain épuré dessiné par le studio OÏKOS Casablanca. Il agrandit l'espace tout en diffusant une lumière chaude.",
     details: [
       "Miroir haute définition sans distorsion avec film de sécurité au dos",
       "Pose au sol adossée ou suspension horizontale / verticale",
@@ -360,7 +360,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Un champ de forces minéral où se superposent textures épaisses et lavis évanescents. Cette pièce confère immédiatement à l'espace une profondeur muséale.",
     story:
-      "Réalisée par l'artiste peintre associé au studio VELMORA pour le Chapitre 01. Une méditation visuelle sur les contrastes d'ombre et de lumière propre au sud marocain.",
+      "Réalisée par l'artiste peintre associé au studio OÏKOS pour le Chapitre 01. Une méditation visuelle sur les contrastes d'ombre et de lumière propre au sud marocain.",
     details: [
       "Certificat d'authenticité et biographie de l'artiste inclus",
       "Caisse américaine en chêne teinté noir mat",
@@ -414,7 +414,7 @@ export const SHOWROOM_ZONES = [
   },
   {
     id: "salon",
-    name: "Le Salon VELMORA",
+    name: "Le Salon OÏKOS",
     tagline: "L'expérience living grandeur nature",
     description:
       "Une véritable pièce à vivre reconstituée où tester le confort réel des canapés modulaires, des tables en travertin et apprécier l'harmonie des proportions.",

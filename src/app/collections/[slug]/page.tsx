@@ -22,15 +22,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!product) {
     return {
-      title: "Pièce introuvable | VELMORA",
+      title: "Pièce introuvable | OÏKOS",
     };
   }
 
   return {
-    title: `${product.name} | VELMORA Maroc`,
+    title: `${product.name} | OÏKOS Maroc`,
     description: `${product.name} - ${product.subtitle}. Confection contemporaine sur mesure au Maroc. ${product.description.slice(0, 150)}...`,
     openGraph: {
-      title: `${product.name} | VELMORA Maison de Mobilier`,
+      title: `${product.name} | OÏKOS Maison de Design`,
       description: product.description,
       images: [
         {

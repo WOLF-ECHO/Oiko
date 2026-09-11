@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 
 export default function AnnouncementBar() {
   return (
@@ -10,9 +10,9 @@ export default function AnnouncementBar() {
         <div className="hidden md:flex items-center gap-2">
           <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#C5A880] animate-pulse" />
           <span className="tracking-wider uppercase text-[11px] text-[#C5A880] font-medium">
-            Chapitre 01 : Géométrie Douce
+            OÏKOS &bull; Maison de Design
           </span>
-          <span className="text-[#6E675E]">•</span>
+          <span className="text-[#6E675E]">&bull;</span>
           <span className="text-[#8E877D]">
             Showroom &amp; Studio au Boulevard d&apos;Anfa, Casablanca
           </span>
@@ -20,13 +20,15 @@ export default function AnnouncementBar() {
 
         <div className="flex items-center justify-center w-full md:w-auto text-center gap-4">
           <span className="text-[#EFECE6] font-light">
-            Livraison &amp; installation avec gants blancs partout au Maroc
+            Livraison &amp; installation gants blancs partout au Maroc
           </span>
+
           <Link
-            href="/contact"
-            className="inline-flex items-center gap-1 text-[#C5A880] hover:text-[#DEC5A5] transition-colors font-medium underline underline-offset-4"
+            href="/configurateur"
+            className="hidden sm:inline-flex items-center gap-1 text-[#C5A880] hover:text-[#DEC5A5] transition-colors font-medium underline underline-offset-4"
           >
-            Réserver une visite privée
+            <Sparkles className="w-3 h-3" />
+            <span>Configurateur 3D Studio</span>
             <ArrowRight className="w-3 h-3" />
           </Link>
         </div>

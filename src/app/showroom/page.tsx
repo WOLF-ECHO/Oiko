@@ -7,9 +7,9 @@ import { SHOWROOM_ZONES } from "@/data/products";
 import { MapPin, Calendar, Clock, Phone, Sparkles, Compass, ArrowRight, ShieldCheck, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Le Showroom Casablanca • La Galerie Habitable | VELMORA",
+  title: "Le Showroom Casablanca • La Galerie Habitable | OÏKOS",
   description:
-    "Découvrez 'La Galerie Habitable' et le Studio de Conception de VELMORA au Boulevard d'Anfa à Casablanca. Un showroom contemporain unique au Maroc. Visites privées sur rendez-vous au 07 22 03 33 26.",
+    "Découvrez 'La Galerie Habitable' et le Studio de Conception de OÏKOS au Boulevard d'Anfa à Casablanca. Un showroom contemporain unique au Maroc. Visites privées sur rendez-vous au 07 22 03 33 26.",
 };
 
 export default function ShowroomPage() {
@@ -33,7 +33,7 @@ export default function ShowroomPage() {
           <div className="relative aspect-[21/9] w-full rounded-3xl overflow-hidden border border-[#282622] bg-[#161513]">
             <Image
               src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop"
-              alt="Showroom VELMORA Casablanca"
+              alt="Showroom OÏKOS Casablanca"
               fill
               priority
               unoptimized
@@ -45,7 +45,7 @@ export default function ShowroomPage() {
                 Boulevard d&apos;Anfa, Casablanca
               </span>
               <h3 className="font-serif text-2xl sm:text-4xl text-[#F9F6F0] font-light">
-                Le Studio &amp; La Galerie Vivante de VELMORA
+                Le Studio &amp; La Galerie Vivante de OÏKOS
               </h3>
             </div>
           </div>

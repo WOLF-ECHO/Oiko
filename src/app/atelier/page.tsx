@@ -5,9 +5,9 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import { ShieldCheck, CheckCircle2, Clock, Sparkles, Truck, Layers, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "L'Atelier & Savoir-Faire | VELMORA",
+  title: "L'Atelier & Savoir-Faire | OÏKOS",
   description:
-    "Découvrez les coulisses de confection VELMORA : alliance entre l'artisanat marocain d'art, l'ingénierie contemporaine et un protocole qualité strict en 7 étapes.",
+    "Découvrez les coulisses de confection OÏKOS : alliance entre l'artisanat marocain d'art, l'ingénierie contemporaine et un protocole qualité strict en 7 étapes.",
 };
 
 export default function AtelierPage() {
@@ -66,7 +66,7 @@ export default function AtelierPage() {
         <div className="relative aspect-[21/9] w-full rounded-3xl overflow-hidden border border-[#282622] bg-[#161513]">
           <Image
             src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?q=80&w=2000&auto=format&fit=crop"
-            alt="Atelier d'ébénisterie et tapisserie VELMORA"
+            alt="Atelier d'ébénisterie et tapisserie OÏKOS"
             fill
             priority
             className="object-cover"
@@ -122,7 +122,7 @@ export default function AtelierPage() {
               Protocole Opérationnel
             </span>
             <h3 className="font-serif text-3xl sm:text-4xl text-[#F9F6F0] font-light">
-              Le Parcours d&apos;une Création VELMORA
+              Le Parcours d&apos;une Création OÏKOS
             </h3>
             <p className="text-xs text-[#C4BEB4] leading-relaxed">
               De la première esquisse au showroom jusqu&apos;à la dépose dans votre salon, chaque étape est documentée et maîtrisée.

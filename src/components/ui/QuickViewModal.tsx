@@ -22,7 +22,7 @@ export default function QuickViewModal({ product, onClose }: QuickViewModalProps
   const currentMaterial = product.materialOptions ? product.materialOptions[selectedMaterial] : null;
 
   const handleWhatsAppQuote = () => {
-    const text = `Bonjour VELMORA, je souhaite recevoir un devis personnalisé pour : ${product.name} (${product.formattedPrice}). Finition : ${currentFabric?.name || currentMaterial?.name || "Standard"}.`;
+    const text = `Bonjour OÏKOS, je souhaite recevoir un devis personnalisé pour : ${product.name} (${product.formattedPrice}). Finition : ${currentFabric?.name || currentMaterial?.name || "Standard"}.`;
     window.open(`https://wa.me/212722033326?text=${encodeURIComponent(text)}`, "_blank");
   };
 

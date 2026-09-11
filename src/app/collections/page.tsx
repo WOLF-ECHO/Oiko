@@ -55,7 +55,7 @@ function CollectionsContent() {
           <SectionHeading
             chapter="Catalogue"
             eyebrow="Chapitre 01 &bull; Pièces Numérotées"
-            title="Les Collections VELMORA"
+            title="Les Collections OÏKOS"
             subtitle="Explorez nos créations contemporaines de mobilier, pièces architecturales et œuvres murales pensées pour transcender les intérieurs marocains."
           />
         </div>
@@ -78,7 +78,7 @@ function CollectionsContent() {
                       : "bg-[#0C0B0A] text-[#C4BEB4] hover:text-[#F9F6F0] hover:bg-[#1E1D1A]"
                   }`}
                 >
-                  {u === "All" ? "Tous les univers" : `VELMORA ${u}`}
+                  {u === "All" ? "Tous les univers" : `OÏKOS ${u}`}
                 </button>
               ))}
             </div>
@@ -194,7 +194,7 @@ function CollectionsContent() {
           </div>
 
           <a
-            href="https://wa.me/212722033326?text=Bonjour%20VELMORA,%20je%20souhaite%20commander%20une%20pièce%20sur%20mesure."
+            href="https://wa.me/212722033326?text=Bonjour%20OÏKOS,%20je%20souhaite%20commander%20une%20pièce%20sur%20mesure."
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-3.5 rounded-full bg-gradient-to-r from-[#C5A880] to-[#DEC5A5] text-[#0C0B0A] text-xs font-semibold tracking-wider uppercase hover:scale-105 transition-transform shrink-0"

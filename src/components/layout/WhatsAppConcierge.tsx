@@ -10,19 +10,19 @@ export default function WhatsAppConcierge() {
   const quickPrompts = [
     {
       title: "Visite Showroom Casablanca",
-      text: "Bonjour VELMORA, je souhaite planifier une visite privée au showroom de Casablanca.",
+      text: "Bonjour OÏKOS, je souhaite planifier une visite privée au showroom du Boulevard d'Anfa à Casablanca.",
     },
     {
-      title: "Devis pour mon salon",
-      text: "Bonjour, j'aimerais recevoir des conseils et un devis personnalisé pour l'aménagement de mon intérieur.",
+      title: "Devis Configurateur 3D",
+      text: "Bonjour OÏKOS, j'ai configuré un modèle sur votre studio 3D et je souhaite valider un devis personnalisé.",
     },
     {
       title: "Demande Échantillons (Architecte)",
-      text: "Bonjour l'équipe VELMORA, je suis architecte d'intérieur et je souhaite recevoir votre matériauthèque d'échantillons.",
+      text: "Bonjour l'équipe OÏKOS, je suis architecte d'intérieur et je souhaite recevoir votre matériauthèque sous 48h.",
     },
     {
-      title: "Catalogue Chapitre 01 (PDF)",
-      text: "Bonjour, pourriez-vous me transmettre le catalogue complet Chapitre 01 en format PDF ?",
+      title: "Catalogue Mobilier OÏKOS (PDF)",
+      text: "Bonjour, pourriez-vous me transmettre le catalogue complet OÏKOS en format PDF ?",
     },
   ];
 
@@ -56,7 +56,7 @@ export default function WhatsAppConcierge() {
           </span>
           <MessageCircle className="w-5 h-5 text-[#C5A880]" />
           <span className="text-xs tracking-wider uppercase font-semibold hidden sm:inline text-[#EFECE6]">
-            Conciergerie (07 22 03 33 26)
+            Conciergerie OÏKOS
           </span>
         </button>
       )}
@@ -72,11 +72,11 @@ export default function WhatsAppConcierge() {
               </div>
               <div>
                 <h4 className="text-xs uppercase tracking-widest text-[#F9F6F0] font-semibold">
-                  Conciergerie VELMORA
+                  Conciergerie OÏKOS
                 </h4>
                 <div className="flex items-center gap-1.5 text-[10px] text-[#C5A880]">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                  <span>Casablanca • Réponse instantanée</span>
+                  <span>Casablanca &bull; Réponse instantanée</span>
                 </div>
               </div>
             </div>
@@ -93,7 +93,7 @@ export default function WhatsAppConcierge() {
           {/* Body */}
           <div className="p-4 space-y-3">
             <p className="text-xs text-[#C4BEB4] leading-relaxed">
-              Bienvenue chez VELMORA Casablanca. Comment pouvons-nous accompagner votre projet ?
+              Bienvenue chez OÏKOS Casablanca. Comment pouvons-nous accompagner votre projet d&apos;intérieur ?
             </p>
 
             <div className="space-y-2 pt-1">
@@ -134,9 +134,9 @@ export default function WhatsAppConcierge() {
           <div className="bg-[#0C0B0A] px-4 py-2.5 border-t border-[#282622] flex items-center justify-between text-[10px] text-[#8E877D]">
             <span className="flex items-center gap-1">
               <Clock className="w-3 h-3 text-[#C5A880]" />
-              7j/7 • 07 22 03 33 26
+              7j/7 &bull; 07 22 03 33 26
             </span>
-            <span>Casablanca</span>
+            <span>oikos.ma</span>
           </div>
         </div>
       )}

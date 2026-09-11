@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { PRODUCTS } from "@/data/products";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://velmora.ma";
+  const baseUrl = "https://oikos.ma";
 
   const staticRoutes: MetadataRoute.Sitemap = [
     {
@@ -10,6 +10,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/configurateur`,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.95,
     },
     {
       url: `${baseUrl}/collections`,

@@ -32,6 +32,7 @@ export default function ProductDetailClient({
   const [selectedFabric, setSelectedFabric] = useState(0);
   const [selectedMaterial, setSelectedMaterial] = useState(0);
   const [copied, setCopied] = useState(false);
+  const isCutout = product.category === "Chaises";
 
   const currentFabric = product.fabricOptions ? product.fabricOptions[selectedFabric] : null;
   const currentMaterial = product.materialOptions ? product.materialOptions[selectedMaterial] : null;
@@ -83,7 +84,7 @@ Pourriez-vous me transmettre la fiche technique et les disponibilités de livrai
                 fill
                 priority
                 unoptimized
-                className="object-cover transition-transform duration-700 hover:scale-105"
+                className={`${isCutout ? "object-contain p-8 sm:p-12" : "object-cover"} transition-transform duration-700 hover:scale-105`}
               />
               <div className="absolute top-4 left-4 bg-[#0C0B0A]/85 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-[#282622] text-[11px] text-[#C5A880] uppercase tracking-wider font-medium">
                 {product.universe}

@@ -17,7 +17,7 @@ function CollectionsContent() {
   const [sortBy, setSortBy] = useState<"featured" | "price-asc" | "price-desc">("featured");
 
   const universes = ["All", "Living", "Signature", "Art", "Éditions"];
-  const categories = ["All", "Canapés", "Fauteuils", "Tables basses", "Consoles & Miroirs", "Luminaires", "Art mural"];
+  const categories = ["All", "Canapés", "Fauteuils", "Chaises", "Tables basses", "Consoles & Miroirs", "Luminaires", "Art mural"];
 
   const filteredProducts = useMemo(() => {
     return PRODUCTS.filter((product) => {

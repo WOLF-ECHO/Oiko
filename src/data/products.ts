@@ -1,10 +1,12 @@
+import { CHAIR_PRODUCTS } from "./chairs";
+
 export interface Product {
   id: string;
   slug: string;
   name: string;
   subtitle: string;
   universe: "Living" | "Signature" | "Art" | "Éditions";
-  category: "Canapés" | "Fauteuils" | "Tables basses" | "Consoles & Miroirs" | "Luminaires" | "Art mural";
+  category: "Canapés" | "Fauteuils" | "Chaises" | "Tables basses" | "Consoles & Miroirs" | "Luminaires" | "Art mural";
   price: number; // in MAD (DH)
   formattedPrice: string;
   leadTime: string;
@@ -24,7 +26,7 @@ export interface Product {
   editionCount?: number;
 }
 
-export const PRODUCTS: Product[] = [
+const BASE_PRODUCTS: Product[] = [
   {
     id: "vlm-001",
     slug: "canape-epure-modulaire",
@@ -401,6 +403,8 @@ export const PRODUCTS: Product[] = [
     ],
   },
 ];
+
+export const PRODUCTS: Product[] = [...BASE_PRODUCTS, ...CHAIR_PRODUCTS];
 
 export const SHOWROOM_ZONES = [
   {

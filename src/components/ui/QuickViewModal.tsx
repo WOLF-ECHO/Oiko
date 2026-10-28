@@ -18,6 +18,8 @@ export default function QuickViewModal({ product, onClose }: QuickViewModalProps
 
   if (!product) return null;
 
+  const isCutout = product.category === "Chaises";
+
   const currentFabric = product.fabricOptions ? product.fabricOptions[selectedFabric] : null;
   const currentMaterial = product.materialOptions ? product.materialOptions[selectedMaterial] : null;
 
@@ -46,7 +48,7 @@ export default function QuickViewModal({ product, onClose }: QuickViewModalProps
               alt={product.name}
               fill
               unoptimized
-              className="object-cover transition-transform duration-500 hover:scale-105"
+              className={`${isCutout ? "object-contain p-8" : "object-cover"} transition-transform duration-500 hover:scale-105`}
             />
             <div className="absolute top-3 left-3 bg-[#0C0B0A]/85 backdrop-blur-md px-3 py-1 rounded-full border border-[#282622] text-[10px] uppercase tracking-wider text-[#C5A880] font-medium">
               {product.universe}

@@ -107,18 +107,12 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 2: Studio & Outils 3D */}
+          {/* Col 2: Studio & Lieux */}
           <div className="space-y-4">
             <h5 className="text-[11px] uppercase tracking-[0.25em] text-[#F9F6F0] font-semibold">
-              Studio &amp; 3D
+              Studio &amp; Lieux
             </h5>
             <ul className="space-y-2.5 text-xs text-[#8E877D]">
-              <li>
-                <Link href="/configurateur" className="text-[#C5A880] hover:text-[#DEC5A5] transition-colors flex items-center gap-1 font-medium">
-                  <Sparkles className="w-3 h-3" />
-                  <span>Configurateur 3D Studio</span>
-                </Link>
-              </li>
               <li>
                 <Link href="/showroom" className="hover:text-[#C5A880] transition-colors">
                   La Galerie Habitable (Showroom)

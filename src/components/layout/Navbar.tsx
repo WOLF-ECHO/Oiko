@@ -6,6 +6,12 @@ import { usePathname } from "next/navigation";
 import { Menu, X, Calendar, Sparkles, ArrowRight } from "lucide-react";
 import OikosLogo from "@/components/ui/OikosLogo";
 
+interface NavLinkItem {
+  name: string;
+  href: string;
+  isSpecial?: boolean;
+}
+
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -23,9 +29,8 @@ export default function Navbar() {
     setMobileMenuOpen(false);
   }, [pathname]);
 
-  const navLinks = [
+  const navLinks: NavLinkItem[] = [
     { name: "Collections", href: "/collections" },
-    { name: "Configurateur 3D", href: "/configurateur", isSpecial: true },
     { name: "Le Showroom", href: "/showroom" },
     { name: "L'Atelier", href: "/atelier" },
     { name: "Espace B2B", href: "/b2b" },
@@ -79,14 +84,6 @@ export default function Navbar() {
             {/* Right: Golden Pill CTAs */}
             <div className="hidden lg:flex items-center justify-end space-x-3 shrink-0">
               <Link
-                href="/configurateur"
-                className="hidden md:inline-flex xl:hidden items-center gap-1.5 px-4 py-2 rounded-full border border-[#C5A880]/50 text-[#C5A880] text-[10.5px] font-semibold tracking-wider uppercase hover:bg-[#C5A880]/10 transition-colors"
-              >
-                <Sparkles className="w-3 h-3" />
-                <span>3D Studio</span>
-              </Link>
-
-              <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#C5A880] via-[#DEC5A5] to-[#C5A880] text-[#0C0B0A] text-[11px] font-bold tracking-[0.16em] uppercase hover:shadow-[0_0_20px_rgba(197,168,128,0.35)] transition-all hover:scale-105 active:scale-95 whitespace-nowrap"
               >
@@ -97,15 +94,6 @@ export default function Navbar() {
 
             {/* Mobile Controls */}
             <div className="flex items-center justify-end space-x-2.5 lg:hidden">
-              <Link
-                href="/configurateur"
-                className="p-2 rounded-full bg-[#161513] border border-[#C5A880]/40 text-[#C5A880]"
-                aria-label="Configurateur 3D"
-                title="Configurateur 3D"
-              >
-                <Sparkles className="w-4 h-4" />
-              </Link>
-
               <Link
                 href="/contact"
                 className="px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#C5A880] to-[#DEC5A5] text-[#0C0B0A] text-[10.5px] font-bold tracking-wider uppercase whitespace-nowrap"
@@ -152,14 +140,6 @@ export default function Navbar() {
           </div>
 
           <div className="mt-auto pt-8 border-t border-[#282622] space-y-3">
-            <Link
-              href="/configurateur"
-              className="w-full py-3.5 rounded-full bg-[#161513] border border-[#C5A880] text-[#C5A880] text-center text-xs font-bold tracking-widest uppercase flex items-center justify-center gap-2 hover:bg-[#C5A880]/10 transition-colors"
-            >
-              <Sparkles className="w-4 h-4" />
-              Lancer le Configurateur 3D
-            </Link>
-
             <Link
               href="/contact"
               className="w-full py-3.5 rounded-full bg-gradient-to-r from-[#C5A880] to-[#DEC5A5] text-[#0C0B0A] text-center text-xs font-bold tracking-widest uppercase flex items-center justify-center gap-2 shadow-lg"

@@ -75,7 +75,7 @@ export default function QuickViewModal({ product, onClose }: QuickViewModalProps
           <div className="mt-4 pt-4 border-t border-[#282622] flex items-center justify-between text-xs text-[#8E877D]">
             <span className="flex items-center gap-1.5">
               <ShieldCheck className="w-4 h-4 text-[#C5A880]" />
-              Garantie 5 ans &amp; Certificat
+              Garantie 6 mois &amp; Certificat
             </span>
             <span className="flex items-center gap-1.5">
               <Clock className="w-4 h-4 text-[#C5A880]" />

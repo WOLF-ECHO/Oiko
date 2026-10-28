@@ -58,7 +58,7 @@ export const PRODUCTS: Product[] = [
       "Déhoussable avec fermetures invisibles renforcées",
       "Pieds invisibles en retrait créant un effet de lévitation",
       "Traitement antitache haute performance écologique",
-      "Garantie structurelle de 5 ans",
+      "Garantie atelier de 6 mois",
     ],
     images: [
       "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1200&auto=format&fit=crop",
@@ -95,7 +95,7 @@ export const PRODUCTS: Product[] = [
     story:
       "Né de la volonté d'introduire des œuvres fonctionnelles dans l'habitat moderne. Le galbe parfait du dossier nécessite 18 heures de façonnage manuel par nos cintreurs et maîtres ferronniers.",
     details: [
-      "Structure cintrée garantie 10 ans",
+      "Garantie atelier de 6 mois",
       "Plaque laiton numérotée sous l'assise",
       "Confort d'assise mi-ferme ergonomique",
       "Livraison avec gants blancs et certificat de conformité",

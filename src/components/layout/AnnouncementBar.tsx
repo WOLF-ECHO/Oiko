@@ -24,11 +24,10 @@ export default function AnnouncementBar() {
           </span>
 
           <Link
-            href="/configurateur"
+            href="/contact"
             className="hidden sm:inline-flex items-center gap-1 text-[#C5A880] hover:text-[#DEC5A5] transition-colors font-medium underline underline-offset-4"
           >
-            <Sparkles className="w-3 h-3" />
-            <span>Configurateur 3D Studio</span>
+            <span>Prendre RDV Showroom</span>
             <ArrowRight className="w-3 h-3" />
           </Link>
         </div>

@@ -44,7 +44,7 @@ export default function AtelierPage() {
     },
     {
       num: "07",
-      title: "Validation Client & Garantie 5 Ans",
+      title: "Validation Client & Garantie 6 Mois",
       desc: "Signature conjointe du procès-verbal de réception, remise du certificat d'authenticité signé et guide d'entretien des matières nobles.",
     },
   ];

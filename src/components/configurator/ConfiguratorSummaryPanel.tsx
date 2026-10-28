@@ -171,7 +171,7 @@ export default function ConfiguratorSummaryPanel({
         </div>
         <div className="flex items-center gap-2">
           <ShieldCheck className="w-3.5 h-3.5 text-[#C5A880]" />
-          <span>Garantie d&apos;atelier OÏKOS de 5 ans</span>
+          <span>Garantie d&apos;atelier OÏKOS de 6 mois</span>
         </div>
       </div>
     </div>

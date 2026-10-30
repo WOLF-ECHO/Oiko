@@ -248,7 +248,7 @@ export default function HomePage() {
                 className="group relative h-[420px] rounded-2xl overflow-hidden border border-[#282622] hover:border-[#C5A880] transition-all duration-500 block"
               >
                 <Image
-                  src="/images/chairs-staged/staged-ch2-lucca.jpg"
+                  src="/images/backgrounds/bg-salle-manger.jpg"
                   alt="Collection Chaises OÏKOS"
                   fill
                   unoptimized
@@ -280,7 +280,7 @@ export default function HomePage() {
                 className="group relative h-[420px] rounded-2xl overflow-hidden border border-[#282622] hover:border-[#C5A880] transition-all duration-500 block"
               >
                 <Image
-                  src="/images/chairs-staged/staged-ch31-cosmo.jpg"
+                  src="/images/backgrounds/bg-lounge-suite.jpg"
                   alt="Collection Fauteuils OÏKOS"
                   fill
                   unoptimized

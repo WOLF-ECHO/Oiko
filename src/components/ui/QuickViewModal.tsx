@@ -44,7 +44,7 @@ export default function QuickViewModal({ product, onClose }: QuickViewModalProps
 
         {/* Left: Gallery & Image Preview */}
         <div className="w-full md:w-1/2 p-6 flex flex-col justify-between bg-[#0C0B0A] border-b md:border-b-0 md:border-r border-[#282622]">
-          <div className="relative aspect-[4/3] w-full rounded-xl overflow-hidden bg-[#1E1D1A]">
+          <div className={`relative aspect-[4/3] w-full rounded-xl overflow-hidden ${isCutout ? "bg-[radial-gradient(circle_at_50%_55%,#2B2822_0%,#171614_65%,#0E0D0C_100%)]" : "bg-[#1E1D1A]"}`}>
             <Image
               src={product.images[selectedImage] || product.images[0]}
               alt={product.name}

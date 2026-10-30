@@ -4,10 +4,18 @@ import { useState } from "react";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Phone, MapPin, Mail, Sparkles } from "lucide-react";
 import OikosLogo from "@/components/ui/OikosLogo";
+import LegalModal, { LegalTab } from "@/components/ui/LegalModal";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
+  const [legalModalOpen, setLegalModalOpen] = useState(false);
+  const [legalModalTab, setLegalModalTab] = useState<LegalTab>("mentions");
+
+  const openLegal = (tab: LegalTab) => {
+    setLegalModalTab(tab);
+    setLegalModalOpen(true);
+  };
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
@@ -213,13 +221,25 @@ export default function Footer() {
             <span className="hidden sm:inline">Marque déposée OMPIC</span>
           </div>
 
-          <div className="flex items-center space-x-6 text-xs">
-            <Link href="/contact" className="hover:text-[#C4BEB4] transition-colors">
-              Mentions Légales &amp; CNDP
-            </Link>
-            <Link href="/contact" className="hover:text-[#C4BEB4] transition-colors">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs">
+            <button
+              onClick={() => openLegal("mentions")}
+              className="hover:text-[#C5A880] transition-colors cursor-pointer"
+            >
+              Mentions Légales
+            </button>
+            <button
+              onClick={() => openLegal("cgv")}
+              className="hover:text-[#C5A880] transition-colors cursor-pointer"
+            >
               Conditions Générales de Vente
-            </Link>
+            </button>
+            <button
+              onClick={() => openLegal("confidentialite")}
+              className="hover:text-[#C5A880] transition-colors cursor-pointer"
+            >
+              Données Personnelles &amp; CNDP
+            </button>
             <a
               href="https://instagram.com"
               target="_blank"
@@ -234,6 +254,13 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+      {/* Interactive Legal Modal */}
+      <LegalModal
+        isOpen={legalModalOpen}
+        onClose={() => setLegalModalOpen(false)}
+        initialTab={legalModalTab}
+      />
     </footer>
   );
 }

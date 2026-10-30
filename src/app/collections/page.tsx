@@ -339,10 +339,10 @@ function CollectionsContent() {
               Atelier Sur-Mesure • Dar Bouazza, Casablanca
             </span>
             <h3 className="font-serif text-2xl sm:text-3xl text-[#F9F6F0]">
-              Un projet d&apos;aménagement complet ou sur mesure ?
+              Une création sur mesure ou un projet d&apos;aménagement complet ?
             </h3>
-            <p className="text-xs text-[#8E877D] max-w-xl">
-              Toutes nos chaises et fauteuils sont fabriqués à la commande dans vos teintes de bois et tissus. Découvrez également notre service de Conception Globale clés en main.
+            <p className="text-xs sm:text-sm text-[#8E877D] max-w-xl leading-relaxed">
+              Chacune de nos assises est confectionnée sur mesure au sein de notre atelier de Casablanca, selon les essences de bois nobles et les étoffes de votre choix. Découvrez également notre accompagnement en Conception Globale pour vos résidences et projets d&apos;exception.
             </p>
           </div>
 

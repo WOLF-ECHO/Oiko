@@ -2334,8 +2334,8 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
-      "/images/chairs-staged/staged-ch26-aria.jpg",
-      "/images/chairs/ch26-aria.jpg"
+      "/images/chairs-staged/staged-ch26-aria.png",
+      "/images/chairs/ch26-aria.png"
     ],
     "featured": true,
     "bestseller": false,

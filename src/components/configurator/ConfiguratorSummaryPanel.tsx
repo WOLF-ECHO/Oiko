@@ -167,7 +167,7 @@ export default function ConfiguratorSummaryPanel({
       <div className="pt-2 border-t border-[#282622] space-y-1.5 text-[10.5px] text-[#6E675E]">
         <div className="flex items-center gap-2">
           <Truck className="w-3.5 h-3.5 text-[#C5A880]" />
-          <span>Livraison gants blancs Casablanca &amp; tout le Maroc</span>
+          <span>Livraison &amp; installation soignée Casablanca &amp; tout le Maroc</span>
         </div>
         <div className="flex items-center gap-2">
           <ShieldCheck className="w-3.5 h-3.5 text-[#C5A880]" />

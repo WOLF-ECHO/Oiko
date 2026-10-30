@@ -184,7 +184,7 @@ export class ConfiguratorStorage {
       `🔖 Référence : ${config.configurationId}`,
     ].join("\n");
 
-    const closing = `Pourriez-vous me confirmer la faisabilité d'atelier et les délais de livraison gants blancs ?`;
+    const closing = `Pourriez-vous me confirmer la faisabilité d'atelier et les délais de livraison et d'installation ?`;
 
     return `${header}\n\n${intro}\n\n${details}\n\n${closing}`;
   }

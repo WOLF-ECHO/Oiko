@@ -79,7 +79,7 @@ export function JsonLdLocalBusiness() {
           "Saturday",
         ],
         opens: "10:00",
-        closes: "19:30",
+        closes: "19:00",
       },
     ],
     currenciesAccepted: "MAD",
@@ -164,7 +164,7 @@ export function JsonLdFaq() {
         name: "Quels sont les délais de fabrication et de livraison au Maroc ?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Nos pièces confectionnées sur commande demandent un délai moyen de 2 à 4 semaines. Nous assurons la livraison et l'installation avec gants blancs partout au Maroc (Casablanca, Rabat, Marrakech, Tanger, etc.).",
+          text: "Nos pièces confectionnées sur commande demandent un délai moyen de 2 à 4 semaines. Nous assurons la livraison et l'installation soignée à domicile partout au Maroc (Casablanca, Rabat, Marrakech, Tanger, etc.).",
         },
       },
       {

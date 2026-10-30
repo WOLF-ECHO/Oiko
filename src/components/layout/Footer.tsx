@@ -151,7 +151,7 @@ export default function Footer() {
                 <MapPin className="w-3.5 h-3.5 text-[#C5A880] shrink-0 mt-0.5" />
                 <span>Errahma Bloc 80 N°112, Dar Bouazza, Casablanca</span>
               </p>
-              <p className="text-[11px]">Mardi au Samedi : 10h00 - 19h30</p>
+              <p className="text-[11px]">Mardi au Samedi : 10h00 - 19h00</p>
               <p className="text-[11px] text-[#C5A880] font-medium">Sur rendez-vous privé</p>
             </div>
           </div>
@@ -178,7 +178,7 @@ export default function Footer() {
                 Site officiel : <strong className="text-[#F9F6F0]">oikos.ma</strong>
               </p>
               <p className="text-[11px] text-[#8E877D]">
-                Livraison gants blancs : Casablanca, Rabat, Marrakech, Tanger, Fès et tout le Maroc.
+                Livraison &amp; installation soignée : Casablanca, Rabat, Marrakech, Tanger, Fès et tout le Maroc.
               </p>
             </div>
           </div>

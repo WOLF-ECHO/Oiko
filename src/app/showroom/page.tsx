@@ -166,7 +166,7 @@ export default function ShowroomPage() {
                 </p>
                 <p className="flex items-center gap-3">
                   <Clock className="w-4 h-4 text-[#C5A880] shrink-0" />
-                  <span>Mardi au Samedi : 10h00 - 19h30 &bull; Dimanche &amp; Lundi sur demande spéciale</span>
+                  <span>Mardi au Samedi : 10h00 - 19h00 &bull; Dimanche &amp; Lundi sur demande spéciale</span>
                 </p>
               </div>
 

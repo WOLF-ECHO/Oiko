@@ -437,7 +437,7 @@ export default function ContactPage() {
                 </p>
                 <p className="flex items-center gap-2.5">
                   <Clock className="w-4 h-4 text-[#C5A880] shrink-0" />
-                  <span>Mardi au Samedi : 10h00 - 19h30</span>
+                  <span>Mardi au Samedi : 10h00 - 19h00</span>
                 </p>
                 <p className="flex items-center gap-2.5 text-[#F9F6F0]">
                   <Phone className="w-4 h-4 text-[#C5A880] shrink-0" />

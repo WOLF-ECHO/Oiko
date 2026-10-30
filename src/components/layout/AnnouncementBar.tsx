@@ -20,7 +20,7 @@ export default function AnnouncementBar() {
 
         <div className="flex items-center justify-center w-full md:w-auto text-center gap-4">
           <span className="text-[#EFECE6] font-light">
-            Livraison &amp; installation gants blancs partout au Maroc
+            Livraison &amp; installation soignée partout au Maroc
           </span>
 
           <Link

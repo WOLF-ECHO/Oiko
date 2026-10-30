@@ -86,7 +86,7 @@ export default function B2BPage() {
             </div>
             <h3 className="font-serif text-xl text-[#F9F6F0]">Interlocuteur Unique</h3>
             <p className="text-xs text-[#8E877D] leading-relaxed">
-              Un responsable dédié au suivi de vos chantiers au Maroc : validation des cotes, synchronisation des plannings de pose et coordination gants blancs.
+              Un responsable dédié au suivi de vos chantiers au Maroc : validation des cotes, synchronisation des plannings de pose et coordination complète de livraison et d&apos;installation.
             </p>
           </div>
         </div>

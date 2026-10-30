@@ -106,8 +106,8 @@ export default function HomePage() {
                 </a>
               </div>
               <div className="space-y-1">
-                <span className="text-[10px] text-[#8E877D] uppercase tracking-wider block">Service</span>
-                <span className="text-xs text-[#F9F6F0] font-medium block">Gants Blancs partout au Maroc</span>
+                <span className="text-[10px] text-[#8E877D] uppercase tracking-wider block">Livraison</span>
+                <span className="text-xs text-[#F9F6F0] font-medium block">Livraison &amp; Pose partout au Maroc</span>
               </div>
               <div className="space-y-1">
                 <span className="text-[10px] text-[#8E877D] uppercase tracking-wider block">Garantie</span>
@@ -135,7 +135,7 @@ export default function HomePage() {
           <span className="text-[#C5A880]">•</span>
           <span>Confection sur Mesure</span>
           <span className="text-[#C5A880]">•</span>
-          <span>Livraison Gants Blancs partout au Maroc</span>
+          <span>Livraison &amp; Installation soignée partout au Maroc</span>
           <span className="text-[#C5A880]">•</span>
           <span>Conciergerie : 07 22 03 33 26</span>
           <span className="text-[#C5A880]">•</span>
@@ -186,7 +186,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="font-serif text-xl text-[#F9F6F0]">Excellence d&apos;Atelier</h3>
                 <p className="text-xs text-[#8E877D] leading-relaxed">
-                  Un protocole rigoureux en 7 points : conformité stricte des cotes, solidité éprouvée, délais maîtrisés et livraison gants blancs partout au Maroc.
+                  Un protocole rigoureux en 7 points : conformité stricte des cotes, solidité éprouvée, délais maîtrisés et livraison avec installation soignée partout au Maroc.
                 </p>
               </div>
             </ScrollReveal>
@@ -245,14 +245,14 @@ export default function HomePage() {
             <ScrollReveal delay={0.1}>
               <Link
                 href="/collections?category=Chaises"
-                className="group relative h-[420px] rounded-2xl overflow-hidden border border-[#282622] hover:border-[#C5A880] transition-all duration-500 block bg-[radial-gradient(circle_at_50%_45%,#2B2822_0%,#141311_75%)]"
+                className="group relative h-[420px] rounded-2xl overflow-hidden border border-[#282622] hover:border-[#C5A880] transition-all duration-500 block"
               >
                 <Image
-                  src="/images/chairs/ch2-lucca.png"
+                  src="/images/chairs-staged/staged-ch2-lucca.jpg"
                   alt="Collection Chaises OÏKOS"
                   fill
                   unoptimized
-                  className="object-contain p-10 pb-28 transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0C0B0A] via-[#0C0B0A]/50 to-transparent" />
                 <div className="absolute inset-0 p-6 flex flex-col justify-end">
@@ -277,14 +277,14 @@ export default function HomePage() {
             <ScrollReveal delay={0.2}>
               <Link
                 href="/collections?category=Fauteuils"
-                className="group relative h-[420px] rounded-2xl overflow-hidden border border-[#282622] hover:border-[#C5A880] transition-all duration-500 block bg-[radial-gradient(circle_at_50%_45%,#2B2822_0%,#141311_75%)]"
+                className="group relative h-[420px] rounded-2xl overflow-hidden border border-[#282622] hover:border-[#C5A880] transition-all duration-500 block"
               >
                 <Image
-                  src="/images/chairs/ch31-cosmo.png"
+                  src="/images/chairs-staged/staged-ch31-cosmo.jpg"
                   alt="Collection Fauteuils OÏKOS"
                   fill
                   unoptimized
-                  className="object-contain p-10 pb-28 transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0C0B0A] via-[#0C0B0A]/50 to-transparent" />
                 <div className="absolute inset-0 p-6 flex flex-col justify-end">
@@ -576,7 +576,7 @@ export default function HomePage() {
                     {"★".repeat(5)}
                   </div>
                   <p className="text-xs text-[#C4BEB4] italic leading-relaxed">
-                    « En tant qu&apos;architecte d&apos;intérieur, trouver une maison capable de livrer des pièces sculpturales avec une rigueur de délai irréprochable au Maroc était inespéré. Mention spéciale au service gants blancs. »
+                    « En tant qu&apos;architecte d&apos;intérieur, trouver une maison capable de livrer des pièces sculpturales avec une rigueur de délai irréprochable au Maroc était inespéré. Mention spéciale au service de livraison et d&apos;installation soignée. »
                   </p>
                 </div>
                 <div className="pt-4 border-t border-[#282622]">
@@ -650,7 +650,7 @@ export default function HomePage() {
             <details className="group bg-[#161513] border border-[#282622] rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden">
               <summary className="flex cursor-pointer items-center justify-between gap-1.5 text-[#F9F6F0]">
                 <h3 className="text-sm sm:text-base font-serif">
-                  Comment fonctionne la livraison gants blancs ?
+                  Comment fonctionne la livraison et l&apos;installation à domicile ?
                 </h3>
                 <span className="text-[#C5A880] transition group-open:-rotate-180">
                   <ArrowRight className="w-4 h-4 rotate-90" />

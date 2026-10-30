@@ -39,7 +39,7 @@ export default function AtelierPage() {
     },
     {
       num: "06",
-      title: "Livraison Gants Blancs au Maroc",
+      title: "Livraison & Installation Soignée au Maroc",
       desc: "Équipe spécialisée en tenue de marque, déballage soigné, mise en place millimétrée dans votre salon et reprise de tous les emballages.",
     },
     {

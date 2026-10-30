@@ -32,10 +32,9 @@ export default function ProductDetailClient({
   const [selectedFabric, setSelectedFabric] = useState(0);
   const [selectedMaterial, setSelectedMaterial] = useState(0);
   const [copied, setCopied] = useState(false);
+  const currentImg = product.images[activeImage] || product.images[0];
   const isCutout =
-    product.category === "Chaises" ||
-    product.category === "Fauteuils" ||
-    product.images[0]?.startsWith("/images/chairs/");
+    currentImg?.startsWith("/images/chairs/") && !currentImg?.includes("/chairs-staged/");
 
   const currentFabric = product.fabricOptions ? product.fabricOptions[selectedFabric] : null;
   const currentMaterial = product.materialOptions ? product.materialOptions[selectedMaterial] : null;
@@ -273,7 +272,7 @@ Pourriez-vous me transmettre la fiche technique et les disponibilités de livrai
               <div className="flex items-start gap-3 text-xs text-[#8E877D]">
                 <Truck className="w-4 h-4 text-[#C5A880] shrink-0 mt-0.5" />
                 <div>
-                  <span className="text-[#F9F6F0] font-medium block">Livraison &amp; Installation Gants Blancs</span>
+                  <span className="text-[#F9F6F0] font-medium block">Livraison &amp; Installation Soignée à Domicile</span>
                   <span>Acheminement soigné, déballage et pose coordonnée à Casablanca, Rabat, Marrakech et tout le Maroc.</span>
                 </div>
               </div>

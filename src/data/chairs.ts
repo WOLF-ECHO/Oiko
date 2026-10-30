@@ -84,6 +84,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch1-nelly.jpg",
       "/images/chairs/ch1-nelly.png"
     ],
     "featured": true,
@@ -173,6 +174,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch2-lucca.jpg",
       "/images/chairs/ch2-lucca.png"
     ],
     "featured": false,
@@ -262,6 +264,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch3-oslo.jpg",
       "/images/chairs/ch3-oslo.png"
     ],
     "featured": false,
@@ -351,6 +354,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch4-siena.jpg",
       "/images/chairs/ch4-siena.png"
     ],
     "featured": true,
@@ -440,6 +444,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch5-bosa.jpg",
       "/images/chairs/ch5-bosa.png"
     ],
     "featured": false,
@@ -529,6 +534,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch6-alba.jpg",
       "/images/chairs/ch6-alba.png"
     ],
     "featured": false,
@@ -618,6 +624,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch7-lisboa.jpg",
       "/images/chairs/ch7-lisboa.png"
     ],
     "featured": false,
@@ -707,6 +714,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch8-ibiza.jpg",
       "/images/chairs/ch8-ibiza.png"
     ],
     "featured": false,
@@ -796,6 +804,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch9-sevilla.jpg",
       "/images/chairs/ch9-sevilla.png"
     ],
     "featured": false,
@@ -885,6 +894,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch10-porto.jpg",
       "/images/chairs/ch10-porto.png"
     ],
     "featured": false,
@@ -974,6 +984,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch11-kyoto.jpg",
       "/images/chairs/ch11-kyoto.png"
     ],
     "featured": false,
@@ -1063,6 +1074,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch12-aspen.jpg",
       "/images/chairs/ch12-aspen.png"
     ],
     "featured": false,
@@ -1152,6 +1164,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch13-luna.jpg",
       "/images/chairs/ch13-luna.png"
     ],
     "featured": false,
@@ -1241,6 +1254,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch14-noor.jpg",
       "/images/chairs/ch14-noor.png"
     ],
     "featured": false,
@@ -1330,6 +1344,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch15-milano.jpg",
       "/images/chairs/ch15-milano.png"
     ],
     "featured": true,
@@ -1419,6 +1434,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch16-nimo.jpg",
       "/images/chairs/ch16-nimo.png"
     ],
     "featured": false,
@@ -1508,6 +1524,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch17-oleandro.jpg",
       "/images/chairs/ch17-oleandro.png"
     ],
     "featured": false,
@@ -1597,6 +1614,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch18-vesper.jpg",
       "/images/chairs/ch18-vesper.png"
     ],
     "featured": false,
@@ -1686,6 +1704,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch19-bellagio.jpg",
       "/images/chairs/ch19-bellagio.png"
     ],
     "featured": false,
@@ -1775,6 +1794,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch20-riad.jpg",
       "/images/chairs/ch20-riad.png"
     ],
     "featured": false,
@@ -1864,6 +1884,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch21-roma.jpg",
       "/images/chairs/ch21-roma.png"
     ],
     "featured": false,
@@ -1953,6 +1974,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch22-florence.jpg",
       "/images/chairs/ch22-florence.png"
     ],
     "featured": false,
@@ -2042,6 +2064,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch23-capri.jpg",
       "/images/chairs/ch23-capri.png"
     ],
     "featured": false,
@@ -2131,6 +2154,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch24-camellia.jpg",
       "/images/chairs/ch24-camellia.png"
     ],
     "featured": false,
@@ -2220,6 +2244,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch25-windsor.jpg",
       "/images/chairs/ch25-windsor.png"
     ],
     "featured": false,
@@ -2309,6 +2334,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch26-aria.jpg",
       "/images/chairs/ch26-aria.jpg"
     ],
     "featured": true,
@@ -2398,6 +2424,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch27-kora.jpg",
       "/images/chairs/ch27-kora.png"
     ],
     "featured": false,
@@ -2487,6 +2514,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch28-vienna.jpg",
       "/images/chairs/ch28-vienna.png"
     ],
     "featured": false,
@@ -2576,6 +2604,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch29-verona.jpg",
       "/images/chairs/ch29-verona.png"
     ],
     "featured": false,
@@ -2665,6 +2694,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch30-zucca.jpg",
       "/images/chairs/ch30-zucca.png"
     ],
     "featured": false,
@@ -2754,6 +2784,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch31-cosmo.jpg",
       "/images/chairs/ch31-cosmo.png"
     ],
     "featured": true,
@@ -2843,6 +2874,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch32-esme.jpg",
       "/images/chairs/ch32-esme.png"
     ],
     "featured": false,
@@ -2932,6 +2964,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch33-sway.jpg",
       "/images/chairs/ch33-sway.png"
     ],
     "featured": false,
@@ -3021,6 +3054,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch34-amira.jpg",
       "/images/chairs/ch34-amira.png"
     ],
     "featured": false,
@@ -3110,6 +3144,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch35-arco.jpg",
       "/images/chairs/ch35-arco.png"
     ],
     "featured": false,
@@ -3199,6 +3234,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch36-ambra.jpg",
       "/images/chairs/ch36-ambra.png"
     ],
     "featured": false,
@@ -3288,6 +3324,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch37-oxford.jpg",
       "/images/chairs/ch37-oxford.png"
     ],
     "featured": false,
@@ -3377,6 +3414,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch38-bowie.jpg",
       "/images/chairs/ch38-bowie.png"
     ],
     "featured": false,
@@ -3466,6 +3504,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch39-oliva.jpg",
       "/images/chairs/ch39-oliva.png"
     ],
     "featured": false,
@@ -3555,6 +3594,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch40-louis.jpg",
       "/images/chairs/ch40-louis.png"
     ],
     "featured": false,
@@ -3644,6 +3684,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch41-haven.jpg",
       "/images/chairs/ch41-haven.png"
     ],
     "featured": false,
@@ -3733,6 +3774,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch42-mask.jpg",
       "/images/chairs/ch42-mask.png"
     ],
     "featured": false,
@@ -3822,6 +3864,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch43-edel.jpg",
       "/images/chairs/ch43-edel.png"
     ],
     "featured": false,
@@ -3911,6 +3954,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch44-kaja.jpg",
       "/images/chairs/ch44-kaja.png"
     ],
     "featured": false,
@@ -4000,6 +4044,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch45-orbit.jpg",
       "/images/chairs/ch45-orbit.png"
     ],
     "featured": false,
@@ -4089,6 +4134,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch46-rosso.jpg",
       "/images/chairs/ch46-rosso.png"
     ],
     "featured": false,
@@ -4178,6 +4224,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch47-terra.jpg",
       "/images/chairs/ch47-terra.png"
     ],
     "featured": false,
@@ -4267,6 +4314,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch48-lotus.jpg",
       "/images/chairs/ch48-lotus.png"
     ],
     "featured": false,
@@ -4356,6 +4404,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch49-tulum.jpg",
       "/images/chairs/ch49-tulum.png"
     ],
     "featured": false,
@@ -4445,6 +4494,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch50-patcha-boat.jpg",
       "/images/chairs/ch50-patcha-boat.png"
     ],
     "featured": true,
@@ -4534,6 +4584,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch51-patcha.jpg",
       "/images/chairs/ch51-patcha.png"
     ],
     "featured": false,
@@ -4623,6 +4674,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch52-patcha-roll.jpg",
       "/images/chairs/ch52-patcha-roll.png"
     ],
     "featured": false,
@@ -4712,6 +4764,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch53-dolce.jpg",
       "/images/chairs/ch53-dolce.png"
     ],
     "featured": false,
@@ -4801,6 +4854,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch54-torino.jpg",
       "/images/chairs/ch54-torino.png"
     ],
     "featured": false,
@@ -4890,6 +4944,7 @@ export const CHAIR_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     "images": [
+      "/images/chairs-staged/staged-ch55-helsinki.jpg",
       "/images/chairs/ch55-helsinki.png"
     ],
     "featured": false,

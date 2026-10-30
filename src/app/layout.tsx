@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: "%s | OÏKOS Maison de Design",
   },
   description:
-    "OÏKOS est une maison marocaine de mobilier contemporain d'exception, d'architecture intérieure et d'artisanat d'art. Showroom, Atelier et Studio à Dar Bouazza (Errahma Bloc 80 N°112), Casablanca. Conception Globale sur mesure, livraison et installation gants blancs partout au Maroc.",
+    "OÏKOS est une maison marocaine de mobilier contemporain d'exception, d'architecture intérieure et d'artisanat d'art. Showroom, Atelier et Studio à Dar Bouazza (Errahma Bloc 80 N°112), Casablanca. Conception Globale sur mesure, livraison et installation soignée partout au Maroc.",
   keywords: [
     "OÏKOS",
     "OÏKOS Maroc",

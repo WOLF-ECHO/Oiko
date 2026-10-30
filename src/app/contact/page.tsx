@@ -63,7 +63,7 @@ export default function ContactPage() {
   const getMeetingTypeLabel = () => {
     switch (meetingType) {
       case "showroom-casa":
-        return "Visite Privée Showroom Casablanca (Boulevard d'Anfa)";
+        return "Visite Privée Showroom & Atelier (Dar Bouazza, Casablanca)";
       case "video":
         return "Consultation Vidéo Décorateur (À distance)";
       case "call":
@@ -81,7 +81,7 @@ export default function ContactPage() {
               chapter="Conciergerie &bull; Casablanca"
               eyebrow="Rendez-Vous &bull; Appel &bull; Visite"
               title="Planifier Votre Échange avec OÏKOS"
-              subtitle="Réservez une visite privée de notre showroom au Boulevard d'Anfa à Casablanca, planifiez un rappel téléphonique immédiat ou une séance de conseil à distance."
+              subtitle="Réservez une visite privée de notre showroom & atelier à Dar Bouazza (Casablanca), planifiez un rappel téléphonique immédiat ou une séance de conseil à distance."
             />
           </div>
         </ScrollReveal>
@@ -156,10 +156,10 @@ export default function ContactPage() {
                       <MapPin className="w-5 h-5 text-[#C5A880] mb-3" />
                       <div>
                         <span className="text-xs font-semibold text-[#F9F6F0] block">
-                          Showroom Casablanca
+                          Showroom &amp; Atelier
                         </span>
                         <span className="text-[11px] text-[#8E877D] block mt-0.5">
-                          Visite privée au Bd d&apos;Anfa
+                          Dar Bouazza, Casablanca
                         </span>
                       </div>
                     </button>
@@ -423,17 +423,17 @@ export default function ContactPage() {
             <div className="bg-[#161513] border border-[#282622] rounded-3xl p-6 sm:p-8 space-y-5">
               <div>
                 <span className="text-[10px] uppercase tracking-[0.25em] text-[#C5A880] font-medium block">
-                  Showroom Flagship &amp; Studio
+                  Showroom, Atelier &amp; Studio
                 </span>
                 <h4 className="font-serif text-xl text-[#F9F6F0] mt-1">
-                  Casablanca • Triangle d&apos;Or
+                  Dar Bouazza • Casablanca
                 </h4>
               </div>
 
               <div className="space-y-3 text-xs text-[#8E877D]">
                 <p className="flex items-start gap-2.5">
                   <MapPin className="w-4 h-4 text-[#C5A880] shrink-0 mt-0.5" />
-                  <span>Angle Bd d&apos;Anfa &amp; Rue Bab Mansour, 20050 Casablanca</span>
+                  <span>Errahma Bloc 80 N°112, Dar Bouazza, Casablanca</span>
                 </p>
                 <p className="flex items-center gap-2.5">
                   <Clock className="w-4 h-4 text-[#C5A880] shrink-0" />
@@ -447,8 +447,8 @@ export default function ContactPage() {
                 </p>
                 <p className="flex items-center gap-2.5 text-[#F9F6F0]">
                   <Mail className="w-4 h-4 text-[#C5A880] shrink-0" />
-                  <a href="mailto:koncept.morocco@gmail.com" className="hover:text-[#C5A880] transition-colors">
-                    koncept.morocco@gmail.com
+                  <a href="mailto:oikosmaison@gmail.com" className="hover:text-[#C5A880] transition-colors">
+                    oikosmaison@gmail.com
                   </a>
                 </p>
               </div>

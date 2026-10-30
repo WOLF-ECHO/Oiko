@@ -7,9 +7,9 @@ import { SHOWROOM_ZONES } from "@/data/products";
 import { MapPin, Calendar, Clock, Phone, Sparkles, Compass, ArrowRight, ShieldCheck, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Le Showroom Casablanca • La Galerie Habitable | OÏKOS",
+  title: "Le Showroom & Atelier Casablanca • La Galerie Habitable | OÏKOS",
   description:
-    "Découvrez 'La Galerie Habitable' et le Studio de Conception de OÏKOS au Boulevard d'Anfa à Casablanca. Un showroom contemporain unique au Maroc. Visites privées sur rendez-vous au 07 22 03 33 26.",
+    "Découvrez 'La Galerie Habitable', l'Atelier et le Studio de Conception de OÏKOS à Dar Bouazza (Errahma Bloc 80 N°112), Casablanca. Visites privées sur rendez-vous au 07 22 03 33 26.",
 };
 
 export default function ShowroomPage() {
@@ -21,9 +21,9 @@ export default function ShowroomPage() {
           <div className="text-center space-y-4 max-w-4xl mx-auto">
             <SectionHeading
               chapter="Le Lieu Unique"
-              eyebrow="Casablanca &bull; Triangle d'Or"
-              title="La Galerie Habitable"
-              subtitle="Notre showroom et studio de conception exclusif au Boulevard d'Anfa à Casablanca. Un espace immersif où le mobilier contemporain, les matières brutes et l'art mural sont mis en scène pour vous projeter."
+              eyebrow="Dar Bouazza &bull; Casablanca"
+              title="La Galerie Habitable &amp; L'Atelier"
+              subtitle="Notre showroom, studio de conception et atelier de manufacture à Dar Bouazza (Errahma Bloc 80 N°112, Casablanca). Un espace immersif où nos chaises, fauteuils et matières nobles sont mis en scène."
             />
           </div>
         </ScrollReveal>
@@ -42,7 +42,7 @@ export default function ShowroomPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-[#0C0B0A] via-black/30 to-transparent" />
             <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10 max-w-xl space-y-2">
               <span className="px-3.5 py-1.5 rounded-full bg-[#0C0B0A]/85 backdrop-blur-md text-[11px] uppercase tracking-wider text-[#C5A880] border border-[#282622] font-medium">
-                Boulevard d&apos;Anfa, Casablanca
+                Errahma Bloc 80 N°112, Dar Bouazza • Casablanca
               </span>
               <h3 className="font-serif text-2xl sm:text-4xl text-[#F9F6F0] font-light">
                 Le Studio &amp; La Galerie Vivante de OÏKOS
@@ -147,10 +147,10 @@ export default function ShowroomPage() {
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#282622] pb-6">
               <div>
                 <span className="text-[10px] uppercase tracking-[0.25em] text-[#C5A880] font-medium block mb-1">
-                  Showroom Flagship &amp; Studio Unique
+                  Showroom, Atelier &amp; Studio Unique
                 </span>
                 <h3 className="font-serif text-3xl sm:text-4xl text-[#F9F6F0]">
-                  Casablanca • Triangle d&apos;Or
+                  Dar Bouazza • Casablanca
                 </h3>
               </div>
               <span className="px-3.5 py-1.5 rounded-full bg-emerald-950/70 border border-emerald-500/40 text-emerald-400 text-xs font-semibold tracking-wider uppercase self-start sm:self-auto">
@@ -162,7 +162,7 @@ export default function ShowroomPage() {
               <div className="space-y-4">
                 <p className="flex items-start gap-3">
                   <MapPin className="w-4 h-4 text-[#C5A880] shrink-0 mt-0.5" />
-                  <span>Angle Boulevard d&apos;Anfa &amp; Rue Bab Mansour, Triangle d&apos;Or, 20050 Casablanca</span>
+                  <span>Errahma Bloc 80 N°112, Dar Bouazza, Casablanca</span>
                 </p>
                 <p className="flex items-center gap-3">
                   <Clock className="w-4 h-4 text-[#C5A880] shrink-0" />
@@ -177,7 +177,7 @@ export default function ShowroomPage() {
                 </p>
                 <p className="flex items-center gap-3">
                   <Mail className="w-4 h-4 text-[#C5A880] shrink-0" />
-                  <span>Email : <strong className="text-[#F9F6F0]">koncept.morocco@gmail.com</strong></span>
+                  <span>Email : <strong className="text-[#F9F6F0]">oikosmaison@gmail.com</strong></span>
                 </p>
               </div>
             </div>
@@ -190,7 +190,7 @@ export default function ShowroomPage() {
                 Prendre rendez-vous au showroom
               </Link>
               <a
-                href="https://maps.google.com/?q=Boulevard+d+Anfa+Casablanca"
+                href="https://maps.google.com/?q=Errahma+Bloc+80+N112+Dar+Bouazza+Casablanca"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 py-4 rounded-full border border-[#282622] hover:border-[#C5A880] text-xs text-[#F9F6F0] tracking-wider uppercase text-center transition-colors flex items-center justify-center gap-2"

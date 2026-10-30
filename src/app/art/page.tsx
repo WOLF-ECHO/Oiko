@@ -123,7 +123,7 @@ export default function ArtPage() {
           </div>
 
           <a
-            href="mailto:koncept.morocco@gmail.com?subject=Candidature%20Résidence%20OÏKOS%20Art"
+            href="mailto:oikosmaison@gmail.com?subject=Candidature%20Résidence%20OÏKOS%20Art"
             className="px-8 py-3.5 rounded-full bg-[#C5A880] text-[#0C0B0A] text-xs font-semibold uppercase tracking-wider hover:bg-[#DEC5A5] transition-colors shrink-0"
           >
             Proposer une collaboration

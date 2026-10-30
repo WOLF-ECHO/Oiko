@@ -9,14 +9,14 @@ export function JsonLdOrganization() {
     legalName: "OÏKOS Maison de Design SARL",
     url: "https://oikos.ma",
     logo: "https://oikos.ma/logo-oikos.png",
-    email: "koncept.morocco@gmail.com",
+    email: "oikosmaison@gmail.com",
     description:
-      "Maison marocaine de mobilier contemporain d'exception, pièces sculpturales et architecture intérieure au Boulevard d'Anfa à Casablanca.",
+      "Maison marocaine de mobilier contemporain d'exception, pièces sculpturales et architecture intérieure à Dar Bouazza, Casablanca.",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Boulevard d'Anfa, Triangle d'Or",
+      streetAddress: "Errahma Bloc 80 N°112, Dar Bouazza",
       addressLocality: "Casablanca",
-      postalCode: "20050",
+      postalCode: "20220",
       addressCountry: "MA",
     },
     contactPoint: [
@@ -53,14 +53,14 @@ export function JsonLdLocalBusiness() {
     "@id": "https://oikos.ma/#casablanca-showroom",
     url: "https://oikos.ma/showroom",
     telephone: "+212-722033326",
-    email: "koncept.morocco@gmail.com",
+    email: "oikosmaison@gmail.com",
     priceRange: "$$$$",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Angle Boulevard d'Anfa & Rue de Bab Mansour",
+      streetAddress: "Errahma Bloc 80 N°112, Dar Bouazza",
       addressLocality: "Casablanca",
       addressRegion: "Casablanca-Settat",
-      postalCode: "20050",
+      postalCode: "20220",
       addressCountry: "MA",
     },
     geo: {
@@ -148,7 +148,7 @@ export function JsonLdFaq() {
         name: "Où se trouve le showroom OÏKOS au Maroc ?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Notre showroom 'La Galerie Habitable' et studio de conception se situe exclusivement au Boulevard d'Anfa à Casablanca. Les visites privées se font sur rendez-vous en contactant le 07 22 03 33 26 ou par email à koncept.morocco@gmail.com.",
+          text: "Notre showroom 'La Galerie Habitable', notre atelier et notre studio de conception se situent à Errahma Bloc 80 N°112, Dar Bouazza, Casablanca. Les visites privées se font sur rendez-vous en contactant le 07 22 03 33 26 ou par email à oikosmaison@gmail.com.",
         },
       },
       {

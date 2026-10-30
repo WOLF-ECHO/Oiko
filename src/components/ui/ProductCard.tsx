@@ -17,13 +17,22 @@ const FALLBACK_IMAGE = "https://images.unsplash.com/photo-1618221195710-dd6b41fa
 export default function ProductCard({ product, priority = false }: ProductCardProps) {
   const [quickViewOpen, setQuickViewOpen] = useState(false);
   const [imgSrc, setImgSrc] = useState(product.images[0] || FALLBACK_IMAGE);
-  const isCutout = product.category === "Chaises";
+  const isCutout =
+    product.category === "Chaises" ||
+    product.category === "Fauteuils" ||
+    product.images[0]?.startsWith("/images/chairs/");
 
   return (
     <>
       <div className="group relative flex flex-col bg-[#161513] rounded-2xl overflow-hidden border border-[#282622] hover:border-[#C5A880]/60 transition-all duration-500 hover:shadow-[0_20px_45px_rgba(0,0,0,0.85)] hover:-translate-y-1">
         {/* Image Container with Aspect Ratio */}
-        <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#1E1D1A]">
+        <div
+          className={`relative aspect-[4/5] w-full overflow-hidden ${
+            isCutout
+              ? "bg-[radial-gradient(circle_at_50%_55%,#2B2822_0%,#171614_65%,#0E0D0C_100%)]"
+              : "bg-[#1E1D1A]"
+          }`}
+        >
           <Image
             src={imgSrc}
             alt={product.name}

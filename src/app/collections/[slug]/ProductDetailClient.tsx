@@ -32,7 +32,10 @@ export default function ProductDetailClient({
   const [selectedFabric, setSelectedFabric] = useState(0);
   const [selectedMaterial, setSelectedMaterial] = useState(0);
   const [copied, setCopied] = useState(false);
-  const isCutout = product.category === "Chaises";
+  const isCutout =
+    product.category === "Chaises" ||
+    product.category === "Fauteuils" ||
+    product.images[0]?.startsWith("/images/chairs/");
 
   const currentFabric = product.fabricOptions ? product.fabricOptions[selectedFabric] : null;
   const currentMaterial = product.materialOptions ? product.materialOptions[selectedMaterial] : null;
@@ -77,7 +80,13 @@ Pourriez-vous me transmettre la fiche technique et les disponibilités de livrai
           {/* Left Column: Image Gallery */}
           <div className="lg:col-span-7 space-y-4">
             {/* Main Featured Image */}
-            <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-[#161513] border border-[#282622]">
+            <div
+              className={`relative aspect-[4/3] w-full rounded-2xl overflow-hidden border border-[#282622] ${
+                isCutout
+                  ? "bg-[radial-gradient(circle_at_50%_55%,#2B2822_0%,#171614_65%,#0E0D0C_100%)]"
+                  : "bg-[#161513]"
+              }`}
+            >
               <Image
                 src={product.images[activeImage] || "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200&auto=format&fit=crop"}
                 alt={product.name}

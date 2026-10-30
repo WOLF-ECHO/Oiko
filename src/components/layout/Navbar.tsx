@@ -31,6 +31,7 @@ export default function Navbar() {
 
   const navLinks: NavLinkItem[] = [
     { name: "Collections", href: "/collections" },
+    { name: "Conception Globale", href: "/conception-globale", isSpecial: true },
     { name: "Le Showroom", href: "/showroom" },
     { name: "L'Atelier", href: "/atelier" },
     { name: "Espace B2B", href: "/b2b" },
@@ -149,8 +150,8 @@ export default function Navbar() {
             </Link>
 
             <div className="text-center text-[11px] text-[#8E877D] pt-2 space-y-1">
-              <p>Showroom &amp; Studio : Boulevard d&apos;Anfa, Triangle d&apos;Or, Casablanca</p>
-              <p className="text-[#C5A880]">koncept.morocco@gmail.com &bull; oikos.ma</p>
+              <p>Showroom &amp; Atelier : Errahma Bloc 80 N°112, Dar Bouazza, Casablanca</p>
+              <p className="text-[#C5A880]">oikosmaison@gmail.com &bull; oikos.ma</p>
             </div>
           </div>
         </div>

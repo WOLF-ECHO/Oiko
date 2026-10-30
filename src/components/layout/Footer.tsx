@@ -30,7 +30,7 @@ export default function Footer() {
             </h3>
 
             <p className="text-xs sm:text-sm text-[#8E877D] max-w-lg leading-relaxed">
-              OÏKOS est une maison marocaine de mobilier contemporain d&apos;exception, d&apos;architecture intérieure et d&apos;expression artistique. Showroom &amp; Studio de conception au Boulevard d&apos;Anfa, Casablanca.
+              OÏKOS est une maison marocaine de mobilier contemporain d&apos;exception, d&apos;architecture intérieure et d&apos;expression artistique. Showroom, Atelier &amp; Studio de conception à Dar Bouazza, Casablanca.
             </p>
           </div>
 
@@ -80,8 +80,13 @@ export default function Footer() {
             </h5>
             <ul className="space-y-2.5 text-xs text-[#8E877D]">
               <li>
-                <Link href="/collections?universe=Living" className="hover:text-[#C5A880] transition-colors">
-                  OÏKOS Living
+                <Link href="/collections?category=Chaises" className="hover:text-[#C5A880] transition-colors">
+                  Collection Chaises
+                </Link>
+              </li>
+              <li>
+                <Link href="/collections?category=Fauteuils" className="hover:text-[#C5A880] transition-colors">
+                  Collection Fauteuils
                 </Link>
               </li>
               <li>
@@ -90,18 +95,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/collections?universe=Art" className="hover:text-[#C5A880] transition-colors">
-                  OÏKOS Art &amp; Toiles
-                </Link>
-              </li>
-              <li>
-                <Link href="/collections?universe=Éditions" className="hover:text-[#C5A880] transition-colors">
-                  Éditions Limitées
+                <Link href="/collections?universe=Living" className="hover:text-[#C5A880] transition-colors">
+                  OÏKOS Living
                 </Link>
               </li>
               <li>
                 <Link href="/collections" className="hover:text-[#C5A880] transition-colors">
-                  Chapitre 01 : Géométrie Douce
+                  Tout le Catalogue (55 modèles)
                 </Link>
               </li>
             </ul>
@@ -110,9 +110,14 @@ export default function Footer() {
           {/* Col 2: Studio & Lieux */}
           <div className="space-y-4">
             <h5 className="text-[11px] uppercase tracking-[0.25em] text-[#F9F6F0] font-semibold">
-              Studio &amp; Lieux
+              Studio &amp; Services
             </h5>
             <ul className="space-y-2.5 text-xs text-[#8E877D]">
+              <li>
+                <Link href="/conception-globale" className="text-[#C5A880] hover:underline transition-colors font-medium">
+                  Conception Globale (Clés en Main)
+                </Link>
+              </li>
               <li>
                 <Link href="/showroom" className="hover:text-[#C5A880] transition-colors">
                   La Galerie Habitable (Showroom)
@@ -139,12 +144,12 @@ export default function Footer() {
           {/* Col 3: Showroom Casablanca */}
           <div className="space-y-4">
             <h5 className="text-[11px] uppercase tracking-[0.25em] text-[#F9F6F0] font-semibold">
-              Showroom &amp; Studio
+              Showroom &amp; Atelier
             </h5>
             <div className="space-y-2 text-xs text-[#8E877D] leading-relaxed">
               <p className="flex items-start gap-2">
                 <MapPin className="w-3.5 h-3.5 text-[#C5A880] shrink-0 mt-0.5" />
-                <span>Angle Boulevard d&apos;Anfa &amp; Rue Bab Mansour, Triangle d&apos;Or, Casablanca</span>
+                <span>Errahma Bloc 80 N°112, Dar Bouazza, Casablanca</span>
               </p>
               <p className="text-[11px]">Mardi au Samedi : 10h00 - 19h30</p>
               <p className="text-[11px] text-[#C5A880] font-medium">Sur rendez-vous privé</p>
@@ -165,8 +170,8 @@ export default function Footer() {
               </p>
               <p className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-[#C5A880]" />
-                <a href="mailto:koncept.morocco@gmail.com" className="hover:text-[#C5A880] transition-colors">
-                  koncept.morocco@gmail.com
+                <a href="mailto:oikosmaison@gmail.com" className="hover:text-[#C5A880] transition-colors">
+                  oikosmaison@gmail.com
                 </a>
               </p>
               <p className="text-[11px] text-[#8E877D] pt-1">

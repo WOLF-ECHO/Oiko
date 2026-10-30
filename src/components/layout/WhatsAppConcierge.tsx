@@ -9,20 +9,20 @@ export default function WhatsAppConcierge() {
 
   const quickPrompts = [
     {
-      title: "Visite Showroom Casablanca",
-      text: "Bonjour OÏKOS, je souhaite planifier une visite privée au showroom du Boulevard d'Anfa à Casablanca.",
+      title: "Visite Showroom & Atelier (Dar Bouazza)",
+      text: "Bonjour OÏKOS, je souhaite planifier une visite privée au showroom de Dar Bouazza (Errahma Bloc 80 N°112), Casablanca.",
     },
     {
-      title: "Devis Configurateur 3D",
-      text: "Bonjour OÏKOS, j'ai configuré un modèle sur votre studio 3D et je souhaite valider un devis personnalisé.",
+      title: "Projet Conception Globale (Clés en Main)",
+      text: "Bonjour OÏKOS, je souhaite être accompagné(e) pour un projet de Conception Globale clés en main.",
     },
     {
-      title: "Demande Échantillons (Architecte)",
-      text: "Bonjour l'équipe OÏKOS, je suis architecte d'intérieur et je souhaite recevoir votre matériauthèque sous 48h.",
+      title: "Demande Échantillons (Architecte / B2B)",
+      text: "Bonjour l'équipe OÏKOS, je suis professionnel et je souhaite recevoir votre matériauthèque sous 48h.",
     },
     {
-      title: "Catalogue Mobilier OÏKOS (PDF)",
-      text: "Bonjour, pourriez-vous me transmettre le catalogue complet OÏKOS en format PDF ?",
+      title: "Devis Chaises & Fauteuils (Réf CH)",
+      text: "Bonjour OÏKOS, je souhaite obtenir un tarif sur mesure pour des modèles de votre collection Chaises & Fauteuils.",
     },
   ];
 

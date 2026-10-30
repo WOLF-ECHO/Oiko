@@ -96,8 +96,8 @@ export default function HomePage() {
           <ScrollReveal delay={0.45} yOffset={15} duration={1}>
             <div className="pt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto text-left border-t border-[#282622]/60">
               <div className="space-y-1">
-                <span className="text-[10px] text-[#8E877D] uppercase tracking-wider block">Showroom Unique</span>
-                <span className="text-xs text-[#F9F6F0] font-medium block">Boulevard d&apos;Anfa, Casablanca</span>
+                <span className="text-[10px] text-[#8E877D] uppercase tracking-wider block">Showroom &amp; Atelier</span>
+                <span className="text-xs text-[#F9F6F0] font-medium block">Dar Bouazza, Casablanca</span>
               </div>
               <div className="space-y-1">
                 <span className="text-[10px] text-[#8E877D] uppercase tracking-wider block">Ligne Directe</span>
@@ -123,15 +123,15 @@ export default function HomePage() {
         <div className="animate-marquee whitespace-nowrap flex items-center gap-8 text-xs uppercase tracking-[0.3em] text-[#8E877D]">
           <span>Maison Marocaine de Mobilier d&apos;Art</span>
           <span className="text-[#C5A880]">•</span>
-          <span>Showroom Casablanca Triangle d&apos;Or</span>
+          <span>Showroom &amp; Atelier Dar Bouazza, Casablanca</span>
           <span className="text-[#C5A880]">•</span>
-          <span>Studio de Conception &amp; Matériauthèque</span>
+          <span>Conception Globale &amp; Projets Clés en Main</span>
           <span className="text-[#C5A880]">•</span>
-          <span>Travertin Romain &amp; Marbre Noir Marquina</span>
+          <span>Collection Chaises &amp; Fauteuils Sur Mesure</span>
           <span className="text-[#C5A880]">•</span>
-          <span>Tissus Italiens Bouclé d&apos;Alpaga</span>
+          <span>Tissus Bouclés, Velours &amp; Bois Nobles</span>
           <span className="text-[#C5A880]">•</span>
-          <span>Éditions d&apos;Art Numérotées</span>
+          <span>Garantie Atelier 6 Mois</span>
           <span className="text-[#C5A880]">•</span>
           <span>Confection sur Mesure</span>
           <span className="text-[#C5A880]">•</span>
@@ -201,9 +201,9 @@ export default function HomePage() {
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
               <SectionHeading
                 chapter="02"
-                eyebrow="Première Collection"
-                title="Chapitre 01 : Géométrie Douce"
-                subtitle="Des silhouettes fluides, des arrondis bienveillants et des contrastes minéraux pour un salon harmonieux et apaisé."
+                eyebrow="Catalogue Officiel"
+                title="Chaises &amp; Fauteuils Signature"
+                subtitle="Des silhouettes sculpturales façonnées sur mesure dans notre atelier de Casablanca (Dar Bouazza), alliant bois nobles massifs et tapisserie haute couture."
                 align="left"
               />
 
@@ -211,7 +211,7 @@ export default function HomePage() {
                 href="/collections"
                 className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#C5A880] hover:text-[#DEC5A5] transition-colors group shrink-0"
               >
-                <span>Voir toute la collection (12 pièces)</span>
+                <span>Voir toute la collection ({PRODUCTS.length} modèles)</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -228,92 +228,92 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. THE 4 UNIVERSES */}
+      {/* 5. PILLARS & CATEGORIES */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0C0B0A]">
         <div className="max-w-7xl mx-auto space-y-16">
           <ScrollReveal>
             <SectionHeading
               chapter="03"
               eyebrow="Architecture de Gamme"
-              title="Quatre Univers, Une Même Exigence"
-              subtitle="Une partition équilibrée entre pièces d'ancrage pour le quotidien, expressions sculpturales et œuvres d'art exclusives."
+              title="Nos Collections &amp; Services Clés en Main"
+              subtitle="Explorez nos créations réelles par catégorie ou confiez-nous la Conception Globale de votre résidence ou établissement professionnel."
             />
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Living */}
+            {/* Collection Chaises */}
             <ScrollReveal delay={0.1}>
               <Link
-                href="/collections?universe=Living"
-                className="group relative h-[420px] rounded-2xl overflow-hidden border border-[#282622] hover:border-[#C5A880] transition-all duration-500 block"
+                href="/collections?category=Chaises"
+                className="group relative h-[420px] rounded-2xl overflow-hidden border border-[#282622] hover:border-[#C5A880] transition-all duration-500 block bg-[radial-gradient(circle_at_50%_45%,#2B2822_0%,#141311_75%)]"
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=800&auto=format&fit=crop"
-                  alt="OÏKOS Living"
+                  src="/images/chairs/ch2-lucca.png"
+                  alt="Collection Chaises OÏKOS"
                   fill
                   unoptimized
-                  className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-65 group-hover:opacity-85"
+                  className="object-contain p-10 pb-28 transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0C0B0A] via-[#0C0B0A]/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0C0B0A] via-[#0C0B0A]/50 to-transparent" />
                 <div className="absolute inset-0 p-6 flex flex-col justify-end">
                   <span className="text-[10px] uppercase tracking-[0.3em] text-[#C5A880] font-medium">
-                    70% de la Maison
+                    Salle à Manger &amp; Réception
                   </span>
                   <h3 className="font-serif text-2xl text-[#F9F6F0] mt-1 group-hover:text-[#C5A880] transition-colors">
-                    OÏKOS Living
+                    Collection Chaises
                   </h3>
                   <p className="text-xs text-[#C4BEB4] mt-2 line-clamp-3 leading-relaxed">
-                    Canapés modulaires enveloppants, tables basses en travertin, consoles et miroirs dessinés pour habiter vos réceptions.
+                    Chaises d&apos;apparat en noyer et chêne massif, dossiers cintrés ou ajourés, tabourets de bar et assises sur mesure.
                   </p>
                   <div className="mt-4 flex items-center gap-1.5 text-xs text-[#C5A880] font-medium tracking-wider uppercase">
-                    <span>Explorer Living</span>
+                    <span>Voir les Chaises</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
               </Link>
             </ScrollReveal>
 
-            {/* Signature */}
+            {/* Collection Fauteuils */}
             <ScrollReveal delay={0.2}>
               <Link
-                href="/collections?universe=Signature"
-                className="group relative h-[420px] rounded-2xl overflow-hidden border border-[#282622] hover:border-[#C5A880] transition-all duration-500 block"
+                href="/collections?category=Fauteuils"
+                className="group relative h-[420px] rounded-2xl overflow-hidden border border-[#282622] hover:border-[#C5A880] transition-all duration-500 block bg-[radial-gradient(circle_at_50%_45%,#2B2822_0%,#141311_75%)]"
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?q=80&w=800&auto=format&fit=crop"
-                  alt="OÏKOS Signature"
+                  src="/images/chairs/ch31-cosmo.png"
+                  alt="Collection Fauteuils OÏKOS"
                   fill
                   unoptimized
-                  className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-65 group-hover:opacity-85"
+                  className="object-contain p-10 pb-28 transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0C0B0A] via-[#0C0B0A]/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0C0B0A] via-[#0C0B0A]/50 to-transparent" />
                 <div className="absolute inset-0 p-6 flex flex-col justify-end">
                   <span className="text-[10px] uppercase tracking-[0.3em] text-[#C5A880] font-medium">
-                    20% Différenciation
+                    Lounge &amp; Détente
                   </span>
                   <h3 className="font-serif text-2xl text-[#F9F6F0] mt-1 group-hover:text-[#C5A880] transition-colors">
-                    OÏKOS Signature
+                    Collection Fauteuils
                   </h3>
                   <p className="text-xs text-[#C4BEB4] mt-2 line-clamp-3 leading-relaxed">
-                    Pièces sculpturales monumentales, marbres taillés d&apos;un bloc, finitions laiton et sur-mesure de prestige.
+                    Fauteuils sculpturaux, bergères organiques en bouclette, fauteuils club et pièces maîtresses de salon.
                   </p>
                   <div className="mt-4 flex items-center gap-1.5 text-xs text-[#C5A880] font-medium tracking-wider uppercase">
-                    <span>Explorer Signature</span>
+                    <span>Voir les Fauteuils</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
               </Link>
             </ScrollReveal>
 
-            {/* Art */}
+            {/* Conception Globale (Clés en Main) */}
             <ScrollReveal delay={0.3}>
               <Link
-                href="/art"
+                href="/conception-globale"
                 className="group relative h-[420px] rounded-2xl overflow-hidden border border-[#282622] hover:border-[#C5A880] transition-all duration-500 block"
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=800&auto=format&fit=crop"
-                  alt="OÏKOS Art"
+                  src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=800&auto=format&fit=crop"
+                  alt="Conception Globale OÏKOS"
                   fill
                   unoptimized
                   className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-65 group-hover:opacity-85"
@@ -321,31 +321,31 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0C0B0A] via-[#0C0B0A]/40 to-transparent" />
                 <div className="absolute inset-0 p-6 flex flex-col justify-end">
                   <span className="text-[10px] uppercase tracking-[0.3em] text-[#C5A880] font-medium">
-                    10% Identité Culturelle
+                    Projets Clés en Main
                   </span>
                   <h3 className="font-serif text-2xl text-[#F9F6F0] mt-1 group-hover:text-[#C5A880] transition-colors">
-                    OÏKOS Art
+                    Conception Globale
                   </h3>
                   <p className="text-xs text-[#C4BEB4] mt-2 line-clamp-3 leading-relaxed">
-                    Bas-reliefs en chaux naturelle, toiles texturées aux ocres de l&apos;Ourika et grands formats muraux certifiés.
+                    Aménagement intégral de villas, appartements et salons sur mesure : étude 2D/3D, fabrication d&apos;atelier et installation complète.
                   </p>
                   <div className="mt-4 flex items-center gap-1.5 text-xs text-[#C5A880] font-medium tracking-wider uppercase">
-                    <span>Découvrir la Galerie</span>
+                    <span>Lancer mon Projet</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
               </Link>
             </ScrollReveal>
 
-            {/* Éditions */}
+            {/* Espace B2B & Hospitality */}
             <ScrollReveal delay={0.4}>
               <Link
-                href="/collections?universe=Éditions"
+                href="/b2b"
                 className="group relative h-[420px] rounded-2xl overflow-hidden border border-[#282622] hover:border-[#C5A880] transition-all duration-500 block"
               >
                 <Image
                   src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop"
-                  alt="OÏKOS Éditions"
+                  alt="OÏKOS B2B & Hospitality"
                   fill
                   unoptimized
                   className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-65 group-hover:opacity-85"
@@ -353,16 +353,16 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0C0B0A] via-[#0C0B0A]/40 to-transparent" />
                 <div className="absolute inset-0 p-6 flex flex-col justify-end">
                   <span className="text-[10px] uppercase tracking-[0.3em] text-[#C5A880] font-medium">
-                    Rareté &amp; Collaboration
+                    Professionnels &amp; Prescripteurs
                   </span>
                   <h3 className="font-serif text-2xl text-[#F9F6F0] mt-1 group-hover:text-[#C5A880] transition-colors">
-                    OÏKOS Éditions
+                    Hôtels, Restaurants &amp; B2B
                   </h3>
                   <p className="text-xs text-[#C4BEB4] mt-2 line-clamp-3 leading-relaxed">
-                    Objets d&apos;art et paravents produits en séries limitées numérotées, nés de résidences de créateurs au Maroc.
+                    Solutions d&apos;ameublement sur mesure en série pour hôtels, restaurants, bureaux de direction et cabinets d&apos;architecture.
                   </p>
                   <div className="mt-4 flex items-center gap-1.5 text-xs text-[#C5A880] font-medium tracking-wider uppercase">
-                    <span>Explorer les Éditions</span>
+                    <span>Programme Partenaires</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
@@ -379,9 +379,9 @@ export default function HomePage() {
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
               <SectionHeading
                 chapter="04"
-                eyebrow="Showroom Casablanca"
+                eyebrow="Showroom &amp; Atelier Casablanca"
                 title="La Galerie Habitable"
-                subtitle="Notre showroom &amp; studio au Boulevard d'Anfa, pensé comme un appartement idéal où chaque angle est une inspiration."
+                subtitle="Notre showroom, atelier et studio de conception à Dar Bouazza (Errahma Bloc 80 N°112, Casablanca), pensé pour découvrir nos créations et sélectionner vos matières."
                 align="left"
               />
 
@@ -629,7 +629,7 @@ export default function HomePage() {
                 </span>
               </summary>
               <p className="mt-4 text-xs text-[#C4BEB4] leading-relaxed">
-                Notre showroom « La Galerie Habitable » et studio de conception se situent au Boulevard d&apos;Anfa à Casablanca. Les visites privées se font sur rendez-vous pour vous dédier un conseiller en aménagement et un accès tactile complet à notre matériauthèque. Vous pouvez réserver au 07 22 03 33 26 ou par email à koncept.morocco@gmail.com.
+                Notre showroom « La Galerie Habitable », notre atelier et notre studio de conception se situent à Errahma Bloc 80 N°112, Dar Bouazza, Casablanca. Les visites privées se font sur rendez-vous pour vous dédier un conseiller en aménagement et un accès tactile complet à notre matériauthèque. Vous pouvez réserver au 07 22 03 33 26 ou par email à oikosmaison@gmail.com.
               </p>
             </details>
 

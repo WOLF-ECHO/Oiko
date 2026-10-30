@@ -14,7 +14,7 @@ export default function AnnouncementBar() {
           </span>
           <span className="text-[#6E675E]">&bull;</span>
           <span className="text-[#8E877D]">
-            Showroom &amp; Studio au Boulevard d&apos;Anfa, Casablanca
+            Showroom &amp; Atelier : Errahma Bloc 80 N°112, Dar Bouazza, Casablanca
           </span>
         </div>
 

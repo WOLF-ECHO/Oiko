@@ -20,7 +20,8 @@ export default function QuickViewModal({ product, onClose }: QuickViewModalProps
 
   const currentImg = product.images[selectedImage] || product.images[0];
   const isCutout =
-    currentImg?.startsWith("/images/chairs/") && !currentImg?.includes("/chairs-staged/");
+    (currentImg?.startsWith("/images/chairs/") && !currentImg?.includes("/chairs-staged/")) ||
+    Boolean(currentImg?.includes("-isolated."));
 
   const currentFabric = product.fabricOptions ? product.fabricOptions[selectedFabric] : null;
   const currentMaterial = product.materialOptions ? product.materialOptions[selectedMaterial] : null;

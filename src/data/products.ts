@@ -1,4 +1,5 @@
 import { CHAIR_PRODUCTS } from "./chairs";
+import { BED_PRODUCTS } from "./beds";
 
 export interface Product {
   id: string;
@@ -6,7 +7,7 @@ export interface Product {
   name: string;
   subtitle: string;
   universe: "Living" | "Signature" | "Art" | "Éditions";
-  category: "Chaises" | "Fauteuils" | "Canapés" | "Tables basses" | "Consoles & Miroirs" | "Luminaires" | "Art mural";
+  category: "Chaises" | "Fauteuils" | "Lits" | "Canapés" | "Tables basses" | "Consoles & Miroirs" | "Luminaires" | "Art mural";
   price: number; // in MAD (DH)
   formattedPrice: string;
   leadTime: string;
@@ -27,12 +28,11 @@ export interface Product {
 }
 
 /**
- * Catalogue officiel OÏKOS — Uniquement les produits réels de la Maison
- * (Chaises & Fauteuils — Références CH1 à CH55).
- * Les autres catégories (Canapés, Tables basses, Consoles, Luminaires, Art mural)
- * sont vidées des produits génériques en attendant l'intégration de leurs catalogues réels.
+ * Catalogue officiel OÏKOS — Produits réels de la Maison :
+ * - Chaises & Fauteuils (Références CH1 à CH55)
+ * - Lits & Suites (Références L001 à L008)
  */
-export const PRODUCTS: Product[] = CHAIR_PRODUCTS;
+export const PRODUCTS: Product[] = [...CHAIR_PRODUCTS, ...BED_PRODUCTS];
 
 export const SHOWROOM_ZONES = [
   {

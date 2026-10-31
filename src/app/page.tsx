@@ -305,8 +305,40 @@ export default function HomePage() {
               </Link>
             </ScrollReveal>
 
-            {/* Conception Globale (Clés en Main) */}
+            {/* Collection Lits */}
             <ScrollReveal delay={0.3}>
+              <Link
+                href="/collections?category=Lits"
+                className="group relative h-[420px] rounded-2xl overflow-hidden border border-[#282622] hover:border-[#C5A880] transition-all duration-500 block"
+              >
+                <Image
+                  src="/images/beds/l001-piano-staged.png"
+                  alt="Collection Lits & Suites OÏKOS"
+                  fill
+                  unoptimized
+                  className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0C0B0A] via-[#0C0B0A]/50 to-transparent" />
+                <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#C5A880] font-medium">
+                    Chambre &amp; Suites Parentales
+                  </span>
+                  <h3 className="font-serif text-2xl text-[#F9F6F0] mt-1 group-hover:text-[#C5A880] transition-colors">
+                    Collection Lits
+                  </h3>
+                  <p className="text-xs text-[#C4BEB4] mt-2 line-clamp-3 leading-relaxed">
+                    Lits capitonnés sur mesure, têtes de lit monumentales, options coffre de rangement et choix illimité de couleurs et matières.
+                  </p>
+                  <div className="mt-4 flex items-center gap-1.5 text-xs text-[#C5A880] font-medium tracking-wider uppercase">
+                    <span>Voir les Lits</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </Link>
+            </ScrollReveal>
+
+            {/* Conception Globale (Clés en Main) */}
+            <ScrollReveal delay={0.4}>
               <Link
                 href="/conception-globale"
                 className="group relative h-[420px] rounded-2xl overflow-hidden border border-[#282622] hover:border-[#C5A880] transition-all duration-500 block"
@@ -331,38 +363,6 @@ export default function HomePage() {
                   </p>
                   <div className="mt-4 flex items-center gap-1.5 text-xs text-[#C5A880] font-medium tracking-wider uppercase">
                     <span>Lancer mon Projet</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </Link>
-            </ScrollReveal>
-
-            {/* Espace B2B & Hospitality */}
-            <ScrollReveal delay={0.4}>
-              <Link
-                href="/b2b"
-                className="group relative h-[420px] rounded-2xl overflow-hidden border border-[#282622] hover:border-[#C5A880] transition-all duration-500 block"
-              >
-                <Image
-                  src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop"
-                  alt="OÏKOS B2B & Hospitality"
-                  fill
-                  unoptimized
-                  className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-65 group-hover:opacity-85"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0C0B0A] via-[#0C0B0A]/40 to-transparent" />
-                <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#C5A880] font-medium">
-                    Professionnels &amp; Prescripteurs
-                  </span>
-                  <h3 className="font-serif text-2xl text-[#F9F6F0] mt-1 group-hover:text-[#C5A880] transition-colors">
-                    Hôtels, Restaurants &amp; B2B
-                  </h3>
-                  <p className="text-xs text-[#C4BEB4] mt-2 line-clamp-3 leading-relaxed">
-                    Solutions d&apos;ameublement sur mesure en série pour hôtels, restaurants, bureaux de direction et cabinets d&apos;architecture.
-                  </p>
-                  <div className="mt-4 flex items-center gap-1.5 text-xs text-[#C5A880] font-medium tracking-wider uppercase">
-                    <span>Programme Partenaires</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>

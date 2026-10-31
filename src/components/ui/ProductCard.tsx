@@ -18,7 +18,8 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
   const [quickViewOpen, setQuickViewOpen] = useState(false);
   const [imgSrc, setImgSrc] = useState(product.images[0] || FALLBACK_IMAGE);
   const isCutout =
-    imgSrc.startsWith("/images/chairs/") && !imgSrc.includes("/chairs-staged/");
+    (imgSrc.startsWith("/images/chairs/") && !imgSrc.includes("/chairs-staged/")) ||
+    imgSrc.includes("-isolated.");
 
   return (
     <>

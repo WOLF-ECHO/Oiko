@@ -30,6 +30,7 @@ function CollectionsContent() {
     "All",
     "Chaises",
     "Fauteuils",
+    "Lits",
     "Canapés",
     "Tables basses",
     "Consoles & Miroirs",
@@ -63,9 +64,7 @@ function CollectionsContent() {
     }).sort((a, b) => {
       if (sortBy === "name-asc") return a.name.localeCompare(b.name);
       if (sortBy === "ref-asc") {
-        const numA = parseInt(a.id.replace(/\D/g, ""), 10) || 0;
-        const numB = parseInt(b.id.replace(/\D/g, ""), 10) || 0;
-        return numA - numB;
+        return a.id.localeCompare(b.id, undefined, { numeric: true, sensitivity: "base" });
       }
       // featured first, then bestseller, then ref order
       if (a.featured && !b.featured) return -1;
@@ -93,39 +92,39 @@ function CollectionsContent() {
             chapter="Catalogue Officiel"
             eyebrow="Manufacture OÏKOS &bull; Pièces Référencées"
             title="Les Collections OÏKOS"
-            subtitle="Découvrez nos collections de Chaises et Fauteuils façonnés sur mesure dans notre atelier de Casablanca (Dar Bouazza). Chaque modèle est personnalisable dans nos tissus, cuirs et essences de bois nobles."
+            subtitle="Découvrez nos collections de Chaises, Fauteuils et Lits façonnés sur mesure dans notre atelier de Casablanca (Dar Bouazza). Chaque modèle est personnalisable selon les matières, finitions et teintes de votre choix."
           />
         </div>
 
-        {/* Quick Category Highlight Cards (Chaises vs Fauteuils) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Quick Category Highlight Cards (Chaises, Fauteuils & Lits) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <button
             type="button"
             onClick={() =>
               setSelectedCategory(selectedCategory === "Chaises" ? "All" : "Chaises")
             }
-            className={`group text-left p-6 sm:p-8 rounded-2xl border transition-all flex items-center justify-between gap-6 ${
+            className={`group text-left p-6 sm:p-7 rounded-2xl border transition-all flex items-center justify-between gap-4 ${
               selectedCategory === "Chaises"
                 ? "bg-[#1E1D1A] border-[#C5A880] shadow-[0_10px_30px_rgba(197,168,128,0.15)]"
                 : "bg-[#161513] border-[#282622] hover:border-[#C5A880]/50"
             }`}
           >
-            <div className="space-y-2">
+            <div className="space-y-1.5">
               <span className="text-[10px] uppercase tracking-[0.25em] text-[#C5A880] font-semibold block">
-                Collection Salle à Manger &amp; Réception
+                Salle à Manger &amp; Réception
               </span>
-              <h3 className="font-serif text-2xl sm:text-3xl text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">
-                Chaises &amp; Assises Hautes
+              <h3 className="font-serif text-xl sm:text-2xl text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">
+                Chaises d&apos;Apparat
               </h3>
-              <p className="text-xs text-[#8E877D] leading-relaxed max-w-md">
-                Silhouettes architecturales en bois massif, dossiers ajourés ou enveloppants, tabourets de bar et chaises de table sur mesure.
+              <p className="text-xs text-[#8E877D] leading-relaxed line-clamp-2">
+                Silhouettes en bois massif, dossiers ajourés ou enveloppants et tabourets sur mesure.
               </p>
             </div>
             <div className="shrink-0 text-right">
-              <span className="font-serif text-3xl sm:text-4xl text-[#C5A880] block">
+              <span className="font-serif text-2xl sm:text-3xl text-[#C5A880] block">
                 {categoryCounts["Chaises"] || 0}
               </span>
-              <span className="text-[10px] uppercase tracking-widest text-[#8E877D]">
+              <span className="text-[9px] uppercase tracking-widest text-[#8E877D]">
                 Modèles
               </span>
             </div>
@@ -136,28 +135,60 @@ function CollectionsContent() {
             onClick={() =>
               setSelectedCategory(selectedCategory === "Fauteuils" ? "All" : "Fauteuils")
             }
-            className={`group text-left p-6 sm:p-8 rounded-2xl border transition-all flex items-center justify-between gap-6 ${
+            className={`group text-left p-6 sm:p-7 rounded-2xl border transition-all flex items-center justify-between gap-4 ${
               selectedCategory === "Fauteuils"
                 ? "bg-[#1E1D1A] border-[#C5A880] shadow-[0_10px_30px_rgba(197,168,128,0.15)]"
                 : "bg-[#161513] border-[#282622] hover:border-[#C5A880]/50"
             }`}
           >
-            <div className="space-y-2">
+            <div className="space-y-1.5">
               <span className="text-[10px] uppercase tracking-[0.25em] text-[#C5A880] font-semibold block">
-                Collection Lounge &amp; Détente
+                Lounge &amp; Détente
               </span>
-              <h3 className="font-serif text-2xl sm:text-3xl text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">
+              <h3 className="font-serif text-xl sm:text-2xl text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">
                 Fauteuils Sculpturaux
               </h3>
-              <p className="text-xs text-[#8E877D] leading-relaxed max-w-md">
-                Fauteuils club organiques, bergères contemporaines, assises bouclette capitonnées et pièces maîtresses de salon.
+              <p className="text-xs text-[#8E877D] leading-relaxed line-clamp-2">
+                Fauteuils club organiques, bergères contemporaines et assises bouclette capitonnées.
               </p>
             </div>
             <div className="shrink-0 text-right">
-              <span className="font-serif text-3xl sm:text-4xl text-[#C5A880] block">
+              <span className="font-serif text-2xl sm:text-3xl text-[#C5A880] block">
                 {categoryCounts["Fauteuils"] || 0}
               </span>
-              <span className="text-[10px] uppercase tracking-widest text-[#8E877D]">
+              <span className="text-[9px] uppercase tracking-widest text-[#8E877D]">
+                Modèles
+              </span>
+            </div>
+          </button>
+
+          <button
+            type="button"
+            onClick={() =>
+              setSelectedCategory(selectedCategory === "Lits" ? "All" : "Lits")
+            }
+            className={`group text-left p-6 sm:p-7 rounded-2xl border transition-all flex items-center justify-between gap-4 ${
+              selectedCategory === "Lits"
+                ? "bg-[#1E1D1A] border-[#C5A880] shadow-[0_10px_30px_rgba(197,168,128,0.15)]"
+                : "bg-[#161513] border-[#282622] hover:border-[#C5A880]/50"
+            }`}
+          >
+            <div className="space-y-1.5">
+              <span className="text-[10px] uppercase tracking-[0.25em] text-[#C5A880] font-semibold block">
+                Chambre &amp; Suites
+              </span>
+              <h3 className="font-serif text-xl sm:text-2xl text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">
+                Lits &amp; Têtes de Lit
+              </h3>
+              <p className="text-xs text-[#8E877D] leading-relaxed line-clamp-2">
+                Têtes de lit cannelées, silhouettes organiques douces et options coffre de rangement.
+              </p>
+            </div>
+            <div className="shrink-0 text-right">
+              <span className="font-serif text-2xl sm:text-3xl text-[#C5A880] block">
+                {categoryCounts["Lits"] || 0}
+              </span>
+              <span className="text-[9px] uppercase tracking-widest text-[#8E877D]">
                 Modèles
               </span>
             </div>
@@ -306,6 +337,12 @@ function CollectionsContent() {
                 className="px-6 py-3 rounded-full bg-[#1E1D1A] border border-[#C5A880]/50 text-[#F9F6F0] text-xs font-semibold uppercase tracking-wider hover:border-[#C5A880] transition-colors"
               >
                 Voir les Fauteuils ({categoryCounts["Fauteuils"]})
+              </button>
+              <button
+                onClick={() => setSelectedCategory("Lits")}
+                className="px-6 py-3 rounded-full bg-[#1E1D1A] border border-[#C5A880]/50 text-[#F9F6F0] text-xs font-semibold uppercase tracking-wider hover:border-[#C5A880] transition-colors"
+              >
+                Voir les Lits ({categoryCounts["Lits"]})
               </button>
               <Link
                 href="/conception-globale"

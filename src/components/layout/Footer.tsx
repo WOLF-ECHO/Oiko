@@ -98,6 +98,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/collections?category=Lits" className="hover:text-[#C5A880] transition-colors">
+                  Collection Lits &amp; Suites
+                </Link>
+              </li>
+              <li>
                 <Link href="/collections?universe=Signature" className="hover:text-[#C5A880] transition-colors">
                   OÏKOS Signature
                 </Link>
@@ -109,7 +114,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/collections" className="hover:text-[#C5A880] transition-colors">
-                  Tout le Catalogue (55 modèles)
+                  Tout le Catalogue (63 modèles)
                 </Link>
               </li>
             </ul>

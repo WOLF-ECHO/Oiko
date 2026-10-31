@@ -34,7 +34,8 @@ export default function ProductDetailClient({
   const [copied, setCopied] = useState(false);
   const currentImg = product.images[activeImage] || product.images[0];
   const isCutout =
-    currentImg?.startsWith("/images/chairs/") && !currentImg?.includes("/chairs-staged/");
+    (currentImg?.startsWith("/images/chairs/") && !currentImg?.includes("/chairs-staged/")) ||
+    Boolean(currentImg?.includes("-isolated."));
 
   const currentFabric = product.fabricOptions ? product.fabricOptions[selectedFabric] : null;
   const currentMaterial = product.materialOptions ? product.materialOptions[selectedMaterial] : null;
@@ -167,6 +168,23 @@ Pourriez-vous me transmettre la fiche technique et les disponibilités de livrai
               <span className="text-[#F9F6F0] font-medium block">Dimensions &amp; Encombrement :</span>
               <p className="text-[#C4BEB4]">{product.dimensions}</p>
             </div>
+
+            {/* Custom Bespoke Color Callout when no colors are pre-fixed */}
+            {(!product.fabricOptions || product.fabricOptions.length === 0) && (
+              <div className="p-5 rounded-2xl bg-[#1B1916] border border-[#C5A880]/40 space-y-2">
+                <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#C5A880]">
+                  <Sparkles className="w-4 h-4 text-[#C5A880]" />
+                  <span>Teinte &amp; Revêtement 100% sur mesure</span>
+                </div>
+                <p className="text-xs text-[#C4BEB4] leading-relaxed">
+                  Notre atelier de confection réalise ce lit dans la couleur exacte de votre choix. Aucune couleur n&apos;est imposée : notre atelier est capable de créer le produit avec la couleur souhaitée (bouclettes, lins, velours ou nuances spécifiques sur nuancier client).
+                </p>
+                <div className="pt-1 flex items-center gap-2 text-[11px] text-[#8E877D]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C5A880]" />
+                  <span>Nuanciers velours, bouclettes d&apos;alpaga, lins lavés et toiles nattées consultables au showroom</span>
+                </div>
+              </div>
+            )}
 
             {/* Fabric Selector */}
             {product.fabricOptions && product.fabricOptions.length > 0 && (

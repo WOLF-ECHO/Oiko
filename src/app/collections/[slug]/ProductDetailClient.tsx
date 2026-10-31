@@ -31,11 +31,12 @@ export default function ProductDetailClient({
   const [activeImage, setActiveImage] = useState(0);
   const [selectedFabric, setSelectedFabric] = useState(0);
   const [selectedMaterial, setSelectedMaterial] = useState(0);
+  const [selectedDimension, setSelectedDimension] = useState("160 × 200 cm");
+  const [hasStorage, setHasStorage] = useState(false);
   const [copied, setCopied] = useState(false);
   const currentImg = product.images[activeImage] || product.images[0];
-  const isCutout =
-    (currentImg?.startsWith("/images/chairs/") && !currentImg?.includes("/chairs-staged/")) ||
-    Boolean(currentImg?.includes("-isolated."));
+  const isWhiteBgBed = Boolean(currentImg?.includes("/beds/") && currentImg?.includes("-isolated."));
+  const isCutout = Boolean(currentImg?.startsWith("/images/chairs/") && !currentImg?.includes("/chairs-staged/"));
 
   const currentFabric = product.fabricOptions ? product.fabricOptions[selectedFabric] : null;
   const currentMaterial = product.materialOptions ? product.materialOptions[selectedMaterial] : null;
@@ -49,9 +50,15 @@ export default function ProductDetailClient({
   };
 
   const handleWhatsApp = () => {
+    let details = "";
+    if (product.category === "Lits") {
+      details = `Dimension souhaitée : ${selectedDimension} • Configuration : ${hasStorage ? "Avec coffre escamotable hydraulique" : "Standard (sans coffre)"} • Teinte : au choix du client`;
+    } else {
+      details = `Finition : ${currentFabric?.name || currentMaterial?.name || "Standard"}`;
+    }
     const text = `Bonjour OÏKOS, je suis intéressé(e) par la pièce ${product.name} (${product.formattedPrice}).
-Finition souhaitée : ${currentFabric?.name || currentMaterial?.name || "Standard"}.
-Pourriez-vous me transmettre la fiche technique et les disponibilités de livraison ?`;
+${details}.
+Pourriez-vous me transmettre la confirmation de faisabilité d'atelier et les délais de livraison ?`;
     window.open(`https://wa.me/212722033326?text=${encodeURIComponent(text)}`, "_blank");
   };
 
@@ -82,7 +89,9 @@ Pourriez-vous me transmettre la fiche technique et les disponibilités de livrai
             {/* Main Featured Image */}
             <div
               className={`relative aspect-[4/3] w-full rounded-2xl overflow-hidden border border-[#282622] ${
-                isCutout
+                isWhiteBgBed
+                  ? "bg-white"
+                  : isCutout
                   ? "bg-[radial-gradient(circle_at_50%_55%,#2B2822_0%,#171614_65%,#0E0D0C_100%)]"
                   : "bg-[#161513]"
               }`}
@@ -93,7 +102,7 @@ Pourriez-vous me transmettre la fiche technique et les disponibilités de livrai
                 fill
                 priority
                 unoptimized
-                className={`${isCutout ? "object-contain p-8 sm:p-12" : "object-cover"} transition-transform duration-700 hover:scale-105`}
+                className={`${isWhiteBgBed ? "object-contain p-6" : isCutout ? "object-contain p-8 sm:p-12" : "object-cover"} transition-transform duration-700 hover:scale-105`}
               />
               <div className="absolute top-4 left-4 bg-[#0C0B0A]/85 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-[#282622] text-[11px] text-[#C5A880] uppercase tracking-wider font-medium">
                 {product.universe}
@@ -114,12 +123,20 @@ Pourriez-vous me transmettre la fiche technique et les disponibilités de livrai
                     key={idx}
                     onClick={() => setActiveImage(idx)}
                     className={`relative aspect-[4/3] rounded-xl overflow-hidden border transition-all ${
+                      img.includes("-isolated.") ? "bg-white" : "bg-[#161513]"
+                    } ${
                       activeImage === idx
                         ? "border-[#C5A880] ring-1 ring-[#C5A880] opacity-100"
                         : "border-[#282622] opacity-60 hover:opacity-100"
                     }`}
                   >
-                    <Image src={img} alt="" fill unoptimized className="object-cover" />
+                    <Image
+                      src={img}
+                      alt={`${product.name} vue ${idx + 1}`}
+                      fill
+                      unoptimized
+                      className={img.includes("-isolated.") ? "object-contain p-1" : "object-cover"}
+                    />
                   </button>
                 ))}
               </div>
@@ -182,6 +199,86 @@ Pourriez-vous me transmettre la fiche technique et les disponibilités de livrai
                 <div className="pt-1 flex items-center gap-2 text-[11px] text-[#8E877D]">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#C5A880]" />
                   <span>Nuanciers velours, bouclettes d&apos;alpaga, lins lavés et toiles nattées consultables au showroom</span>
+                </div>
+              </div>
+            )}
+
+            {/* Interactive Customizer for Beds: Dimensions & Storage Box */}
+            {product.category === "Lits" && (
+              <div className="space-y-6 border-t border-[#282622] pt-6">
+                {/* Dimensions Selector */}
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="text-[#8E877D] uppercase tracking-wider">
+                      Sélectionnez votre dimension :
+                    </span>
+                    <span className="text-[#C5A880] font-medium font-serif text-sm">
+                      {selectedDimension}
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2.5">
+                    {["90 × 190 cm", "140 × 190 cm", "160 × 200 cm", "Sur mesure"].map((dim) => (
+                      <button
+                        key={dim}
+                        type="button"
+                        onClick={() => setSelectedDimension(dim)}
+                        className={`p-3 rounded-xl border text-xs text-left transition-all ${
+                          selectedDimension === dim
+                            ? "border-[#C5A880] bg-[#C5A880]/15 text-[#F9F6F0] font-semibold ring-1 ring-[#C5A880]"
+                            : "border-[#282622] bg-[#161513] text-[#A69F93] hover:border-[#6E675E]"
+                        }`}
+                      >
+                        <span className="block font-medium">{dim}</span>
+                        <span className="text-[10px] text-[#8E877D] block mt-0.5">
+                          {dim === "90 × 190 cm"
+                            ? "1 Place"
+                            : dim === "140 × 190 cm"
+                            ? "2 Places standard"
+                            : dim === "160 × 200 cm"
+                            ? "Queen size"
+                            : "King size / Spécial"}
+                        </span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Storage Box Option */}
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="text-[#8E877D] uppercase tracking-wider">
+                      Option Coffre de Rangement :
+                    </span>
+                    <span className="text-[#C5A880] font-medium">
+                      {hasStorage ? "Avec sommier coffre" : "Standard (sans coffre)"}
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2.5">
+                    <button
+                      type="button"
+                      onClick={() => setHasStorage(false)}
+                      className={`p-3 rounded-xl border text-xs text-left transition-all ${
+                        !hasStorage
+                          ? "border-[#C5A880] bg-[#C5A880]/15 text-[#F9F6F0] font-semibold ring-1 ring-[#C5A880]"
+                          : "border-[#282622] bg-[#161513] text-[#A69F93] hover:border-[#6E675E]"
+                      }`}
+                    >
+                      <span className="block font-medium">Standard</span>
+                      <span className="text-[10px] text-[#8E877D] block mt-0.5">Sans coffre de rangement</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setHasStorage(true)}
+                      className={`p-3 rounded-xl border text-xs text-left transition-all ${
+                        hasStorage
+                          ? "border-[#C5A880] bg-[#C5A880]/15 text-[#F9F6F0] font-semibold ring-1 ring-[#C5A880]"
+                          : "border-[#282622] bg-[#161513] text-[#A69F93] hover:border-[#6E675E]"
+                      }`}
+                    >
+                      <span className="block font-medium">Coffre Hydraulique</span>
+                      <span className="text-[10px] text-[#8E877D] block mt-0.5">Sommier relevable intégré</span>
+                    </button>
+                  </div>
                 </div>
               </div>
             )}

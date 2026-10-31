@@ -241,40 +241,8 @@ export default function HomePage() {
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Collection Chaises */}
-            <ScrollReveal delay={0.1}>
-              <Link
-                href="/collections?category=Chaises"
-                className="group relative h-[420px] rounded-2xl overflow-hidden border border-[#282622] hover:border-[#C5A880] transition-all duration-500 block"
-              >
-                <Image
-                  src="/images/backgrounds/bg-salle-manger.jpg"
-                  alt="Collection Chaises OÏKOS"
-                  fill
-                  unoptimized
-                  className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0C0B0A] via-[#0C0B0A]/50 to-transparent" />
-                <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#C5A880] font-medium">
-                    Salle à Manger &amp; Réception
-                  </span>
-                  <h3 className="font-serif text-2xl text-[#F9F6F0] mt-1 group-hover:text-[#C5A880] transition-colors">
-                    Collection Chaises
-                  </h3>
-                  <p className="text-xs text-[#C4BEB4] mt-2 line-clamp-3 leading-relaxed">
-                    Chaises d&apos;apparat en noyer et chêne massif, dossiers cintrés ou ajourés, tabourets de bar et assises sur mesure.
-                  </p>
-                  <div className="mt-4 flex items-center gap-1.5 text-xs text-[#C5A880] font-medium tracking-wider uppercase">
-                    <span>Voir les Chaises</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </Link>
-            </ScrollReveal>
-
             {/* Collection Fauteuils */}
-            <ScrollReveal delay={0.2}>
+            <ScrollReveal delay={0.1}>
               <Link
                 href="/collections?category=Fauteuils"
                 className="group relative h-[420px] rounded-2xl overflow-hidden border border-[#282622] hover:border-[#C5A880] transition-all duration-500 block"
@@ -299,6 +267,38 @@ export default function HomePage() {
                   </p>
                   <div className="mt-4 flex items-center gap-1.5 text-xs text-[#C5A880] font-medium tracking-wider uppercase">
                     <span>Voir les Fauteuils</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </Link>
+            </ScrollReveal>
+
+            {/* Collection Chaises */}
+            <ScrollReveal delay={0.2}>
+              <Link
+                href="/collections?category=Chaises"
+                className="group relative h-[420px] rounded-2xl overflow-hidden border border-[#282622] hover:border-[#C5A880] transition-all duration-500 block"
+              >
+                <Image
+                  src="/images/backgrounds/bg-salle-manger.jpg"
+                  alt="Collection Chaises OÏKOS"
+                  fill
+                  unoptimized
+                  className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0C0B0A] via-[#0C0B0A]/50 to-transparent" />
+                <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#C5A880] font-medium">
+                    Salle à Manger &amp; Réception
+                  </span>
+                  <h3 className="font-serif text-2xl text-[#F9F6F0] mt-1 group-hover:text-[#C5A880] transition-colors">
+                    Collection Chaises
+                  </h3>
+                  <p className="text-xs text-[#C4BEB4] mt-2 line-clamp-3 leading-relaxed">
+                    Chaises d&apos;apparat en noyer et chêne massif, dossiers cintrés ou ajourés, tabourets de bar et assises sur mesure.
+                  </p>
+                  <div className="mt-4 flex items-center gap-1.5 text-xs text-[#C5A880] font-medium tracking-wider uppercase">
+                    <span>Voir les Chaises</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>

@@ -28,8 +28,8 @@ function CollectionsContent() {
   const universes = ["All", "Signature", "Living", "Éditions"];
   const categories = [
     "All",
-    "Chaises",
     "Fauteuils",
+    "Chaises",
     "Lits",
     "Canapés",
     "Tables basses",
@@ -37,6 +37,12 @@ function CollectionsContent() {
     "Luminaires",
     "Art mural",
   ];
+
+  const CATEGORY_ORDER: Record<string, number> = {
+    Fauteuils: 1,
+    Chaises: 2,
+    Lits: 3,
+  };
 
   // Count products per category
   const categoryCounts = useMemo(() => {
@@ -62,14 +68,23 @@ function CollectionsContent() {
         product.materials.some((m) => m.toLowerCase().includes(q));
       return matchUniverse && matchCategory && matchSearch;
     }).sort((a, b) => {
+      // Dans 'Toutes les pièces', organiser strictement : Fauteuils -> Chaises -> Lits
+      if (selectedCategory === "All") {
+        const orderA = CATEGORY_ORDER[a.category] ?? 99;
+        const orderB = CATEGORY_ORDER[b.category] ?? 99;
+        if (orderA !== orderB) {
+          return orderA - orderB;
+        }
+      }
+
       if (sortBy === "name-asc") return a.name.localeCompare(b.name);
       if (sortBy === "ref-asc") {
         return a.id.localeCompare(b.id, undefined, { numeric: true, sensitivity: "base" });
       }
-      // featured first, then bestseller, then ref order
+      // featured first, then bestseller, then natural order
       if (a.featured && !b.featured) return -1;
       if (!a.featured && b.featured) return 1;
-      return 0;
+      return a.id.localeCompare(b.id, undefined, { numeric: true, sensitivity: "base" });
     });
   }, [selectedUniverse, selectedCategory, searchQuery, sortBy]);
 
@@ -96,40 +111,8 @@ function CollectionsContent() {
           />
         </div>
 
-        {/* Quick Category Highlight Cards (Chaises, Fauteuils & Lits) */}
+        {/* Quick Category Highlight Cards (Fauteuils, Chaises & Lits) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <button
-            type="button"
-            onClick={() =>
-              setSelectedCategory(selectedCategory === "Chaises" ? "All" : "Chaises")
-            }
-            className={`group text-left p-6 sm:p-7 rounded-2xl border transition-all flex items-center justify-between gap-4 ${
-              selectedCategory === "Chaises"
-                ? "bg-[#1E1D1A] border-[#C5A880] shadow-[0_10px_30px_rgba(197,168,128,0.15)]"
-                : "bg-[#161513] border-[#282622] hover:border-[#C5A880]/50"
-            }`}
-          >
-            <div className="space-y-1.5">
-              <span className="text-[10px] uppercase tracking-[0.25em] text-[#C5A880] font-semibold block">
-                Salle à Manger &amp; Réception
-              </span>
-              <h3 className="font-serif text-xl sm:text-2xl text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">
-                Chaises d&apos;Apparat
-              </h3>
-              <p className="text-xs text-[#8E877D] leading-relaxed line-clamp-2">
-                Silhouettes en bois massif, dossiers ajourés ou enveloppants et tabourets sur mesure.
-              </p>
-            </div>
-            <div className="shrink-0 text-right">
-              <span className="font-serif text-2xl sm:text-3xl text-[#C5A880] block">
-                {categoryCounts["Chaises"] || 0}
-              </span>
-              <span className="text-[9px] uppercase tracking-widest text-[#8E877D]">
-                Modèles
-              </span>
-            </div>
-          </button>
-
           <button
             type="button"
             onClick={() =>
@@ -155,6 +138,38 @@ function CollectionsContent() {
             <div className="shrink-0 text-right">
               <span className="font-serif text-2xl sm:text-3xl text-[#C5A880] block">
                 {categoryCounts["Fauteuils"] || 0}
+              </span>
+              <span className="text-[9px] uppercase tracking-widest text-[#8E877D]">
+                Modèles
+              </span>
+            </div>
+          </button>
+
+          <button
+            type="button"
+            onClick={() =>
+              setSelectedCategory(selectedCategory === "Chaises" ? "All" : "Chaises")
+            }
+            className={`group text-left p-6 sm:p-7 rounded-2xl border transition-all flex items-center justify-between gap-4 ${
+              selectedCategory === "Chaises"
+                ? "bg-[#1E1D1A] border-[#C5A880] shadow-[0_10px_30px_rgba(197,168,128,0.15)]"
+                : "bg-[#161513] border-[#282622] hover:border-[#C5A880]/50"
+            }`}
+          >
+            <div className="space-y-1.5">
+              <span className="text-[10px] uppercase tracking-[0.25em] text-[#C5A880] font-semibold block">
+                Salle à Manger &amp; Réception
+              </span>
+              <h3 className="font-serif text-xl sm:text-2xl text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">
+                Chaises d&apos;Apparat
+              </h3>
+              <p className="text-xs text-[#8E877D] leading-relaxed line-clamp-2">
+                Silhouettes en bois massif, dossiers ajourés ou enveloppants et tabourets sur mesure.
+              </p>
+            </div>
+            <div className="shrink-0 text-right">
+              <span className="font-serif text-2xl sm:text-3xl text-[#C5A880] block">
+                {categoryCounts["Chaises"] || 0}
               </span>
               <span className="text-[9px] uppercase tracking-widest text-[#8E877D]">
                 Modèles
@@ -327,16 +342,16 @@ function CollectionsContent() {
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
               <button
-                onClick={() => setSelectedCategory("Chaises")}
+                onClick={() => setSelectedCategory("Fauteuils")}
                 className="px-6 py-3 rounded-full bg-[#C5A880] text-[#0C0B0A] text-xs font-bold uppercase tracking-wider hover:bg-[#DEC5A5] transition-colors"
               >
-                Voir les Chaises ({categoryCounts["Chaises"]})
+                Voir les Fauteuils ({categoryCounts["Fauteuils"]})
               </button>
               <button
-                onClick={() => setSelectedCategory("Fauteuils")}
+                onClick={() => setSelectedCategory("Chaises")}
                 className="px-6 py-3 rounded-full bg-[#1E1D1A] border border-[#C5A880]/50 text-[#F9F6F0] text-xs font-semibold uppercase tracking-wider hover:border-[#C5A880] transition-colors"
               >
-                Voir les Fauteuils ({categoryCounts["Fauteuils"]})
+                Voir les Chaises ({categoryCounts["Chaises"]})
               </button>
               <button
                 onClick={() => setSelectedCategory("Lits")}

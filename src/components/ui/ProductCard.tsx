@@ -18,8 +18,8 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
   const [quickViewOpen, setQuickViewOpen] = useState(false);
   const [imgSrc, setImgSrc] = useState(product.images[0] || FALLBACK_IMAGE);
   const isCutout =
-    (imgSrc.startsWith("/images/chairs/") && !imgSrc.includes("/chairs-staged/")) ||
-    imgSrc.includes("-isolated.");
+    imgSrc.startsWith("/images/chairs/") && !imgSrc.includes("/chairs-staged/");
+  const isWhiteBgBed = imgSrc.includes("-isolated.");
 
   return (
     <>
@@ -27,7 +27,9 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
         {/* Image Container with Aspect Ratio */}
         <div
           className={`relative aspect-[4/5] w-full overflow-hidden ${
-            isCutout
+            isWhiteBgBed
+              ? "bg-white"
+              : isCutout
               ? "bg-[radial-gradient(circle_at_50%_55%,#2B2822_0%,#171614_65%,#0E0D0C_100%)]"
               : "bg-[#1E1D1A]"
           }`}
@@ -40,7 +42,13 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
             unoptimized
             onError={() => setImgSrc(FALLBACK_IMAGE)}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className={`${isCutout ? "object-contain p-6" : "object-cover"} transition-transform duration-700 ease-out group-hover:scale-105`}
+            className={`${
+              isWhiteBgBed
+                ? "object-contain p-4"
+                : isCutout
+                ? "object-contain p-6"
+                : "object-cover"
+            } transition-transform duration-700 ease-out group-hover:scale-105`}
           />
 
           {/* Badges */}
@@ -105,12 +113,17 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
               </span>
             </div>
 
-            <Link
-              href={`/collections/${product.slug}`}
-              className="text-xs text-[#C5A880] hover:text-[#DEC5A5] font-medium tracking-wider uppercase underline underline-offset-4"
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                setQuickViewOpen(true);
+              }}
+              className="text-xs text-[#C5A880] hover:text-[#DEC5A5] font-medium tracking-wider uppercase underline underline-offset-4 cursor-pointer transition-colors"
             >
               Personnaliser
-            </Link>
+            </button>
           </div>
         </div>
       </div>

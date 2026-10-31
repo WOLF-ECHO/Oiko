@@ -88,13 +88,13 @@ export default function Footer() {
             </h5>
             <ul className="space-y-2.5 text-xs text-[#8E877D]">
               <li>
-                <Link href="/collections?category=Chaises" className="hover:text-[#C5A880] transition-colors">
-                  Collection Chaises
+                <Link href="/collections?category=Fauteuils" className="hover:text-[#C5A880] transition-colors">
+                  Collection Fauteuils
                 </Link>
               </li>
               <li>
-                <Link href="/collections?category=Fauteuils" className="hover:text-[#C5A880] transition-colors">
-                  Collection Fauteuils
+                <Link href="/collections?category=Chaises" className="hover:text-[#C5A880] transition-colors">
+                  Collection Chaises
                 </Link>
               </li>
               <li>

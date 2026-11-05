@@ -17,9 +17,8 @@ const FALLBACK_IMAGE = "https://images.unsplash.com/photo-1618221195710-dd6b41fa
 export default function ProductCard({ product, priority = false }: ProductCardProps) {
   const [quickViewOpen, setQuickViewOpen] = useState(false);
   const [imgSrc, setImgSrc] = useState(product.images[0] || FALLBACK_IMAGE);
-  const isCutout =
-    imgSrc.startsWith("/images/chairs/") && !imgSrc.includes("/chairs-staged/");
-  const isWhiteBgBed = imgSrc.includes("-isolated.");
+  const isWhiteBgPoster =
+    imgSrc.includes("-studio.") || imgSrc.includes("-isolated.");
 
   return (
     <>
@@ -27,11 +26,7 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
         {/* Image Container with Aspect Ratio */}
         <div
           className={`relative aspect-[4/5] w-full overflow-hidden ${
-            isWhiteBgBed
-              ? "bg-white"
-              : isCutout
-              ? "bg-[radial-gradient(circle_at_50%_55%,#2B2822_0%,#171614_65%,#0E0D0C_100%)]"
-              : "bg-[#1E1D1A]"
+            isWhiteBgPoster ? "bg-white" : "bg-[#1E1D1A]"
           }`}
         >
           <Image
@@ -43,11 +38,7 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
             onError={() => setImgSrc(FALLBACK_IMAGE)}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className={`${
-              isWhiteBgBed
-                ? "object-contain p-4"
-                : isCutout
-                ? "object-contain p-6"
-                : "object-cover"
+              isWhiteBgPoster ? "object-contain p-2" : "object-cover"
             } transition-transform duration-700 ease-out group-hover:scale-105`}
           />
 

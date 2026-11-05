@@ -26,7 +26,12 @@ import { JsonLdFaq } from "@/components/seo/JsonLd";
 
 export default function HomePage() {
   const [activeZone, setActiveZone] = useState(0);
-  const featuredProducts = PRODUCTS.filter((p) => p.featured).slice(0, 4);
+  const featuredProducts = [
+    PRODUCTS.find((p) => p.slug.includes("ch009")),
+    PRODUCTS.find((p) => p.slug.includes("ch001")),
+    PRODUCTS.find((p) => p.slug.includes("l001")),
+    PRODUCTS.find((p) => p.slug.includes("s0001")),
+  ].filter((p): p is NonNullable<typeof p> => Boolean(p));
   const currentZone = SHOWROOM_ZONES[activeZone];
 
   return (
@@ -202,8 +207,8 @@ export default function HomePage() {
               <SectionHeading
                 chapter="02"
                 eyebrow="Catalogue Officiel"
-                title="Chaises &amp; Fauteuils Signature"
-                subtitle="Des silhouettes sculpturales façonnées sur mesure dans notre atelier de Casablanca (Dar Bouazza), alliant bois nobles massifs et tapisserie haute couture."
+                title="Créations Signature OÏKOS"
+                subtitle="Fauteuils sculpturaux, chaises d'apparat, lits sur mesure et grands salons façonnés dans notre atelier de Casablanca (Dar Bouazza)."
                 align="left"
               />
 
@@ -240,7 +245,39 @@ export default function HomePage() {
             />
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+            {/* Collection Salons */}
+            <ScrollReveal delay={0.05}>
+              <Link
+                href="/collections?category=Salons"
+                className="group relative h-[420px] rounded-2xl overflow-hidden border border-[#282622] hover:border-[#C5A880] transition-all duration-500 block"
+              >
+                <Image
+                  src="/images/salons/s0001-ambiance-1.jpg"
+                  alt="Collection Salons OÏKOS"
+                  fill
+                  unoptimized
+                  className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0C0B0A] via-[#0C0B0A]/50 to-transparent" />
+                <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#C5A880] font-medium">
+                    Grands Séjours
+                  </span>
+                  <h3 className="font-serif text-2xl text-[#F9F6F0] mt-1 group-hover:text-[#C5A880] transition-colors">
+                    Collection Salons
+                  </h3>
+                  <p className="text-xs text-[#C4BEB4] mt-2 line-clamp-3 leading-relaxed">
+                    Canapés d&apos;angle panoramiques, salons modulables en U et créations sur mesure aux dimensions de votre espace.
+                  </p>
+                  <div className="mt-4 flex items-center gap-1.5 text-xs text-[#C5A880] font-medium tracking-wider uppercase">
+                    <span>Voir les Salons</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </Link>
+            </ScrollReveal>
+
             {/* Collection Fauteuils */}
             <ScrollReveal delay={0.1}>
               <Link

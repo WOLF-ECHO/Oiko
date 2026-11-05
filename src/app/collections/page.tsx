@@ -25,13 +25,13 @@ function CollectionsContent() {
     if (c) setSelectedCategory(c);
   }, [searchParams]);
 
-  const universes = ["All", "Signature", "Living", "Éditions"];
+  const universes = ["All", "Signature", "Living", "Art", "Éditions"];
   const categories = [
     "All",
     "Fauteuils",
     "Chaises",
     "Lits",
-    "Canapés",
+    "Salons",
     "Tables basses",
     "Consoles & Miroirs",
     "Luminaires",
@@ -42,6 +42,7 @@ function CollectionsContent() {
     Fauteuils: 1,
     Chaises: 2,
     Lits: 3,
+    Salons: 4,
   };
 
   // Count products per category
@@ -68,7 +69,7 @@ function CollectionsContent() {
         product.materials.some((m) => m.toLowerCase().includes(q));
       return matchUniverse && matchCategory && matchSearch;
     }).sort((a, b) => {
-      // Dans 'Toutes les pièces', organiser strictement : Fauteuils -> Chaises -> Lits
+      // Dans 'Toutes les pièces', organiser strictement : Fauteuils -> Chaises -> Lits -> Salons
       if (selectedCategory === "All") {
         const orderA = CATEGORY_ORDER[a.category] ?? 99;
         const orderB = CATEGORY_ORDER[b.category] ?? 99;
@@ -107,18 +108,18 @@ function CollectionsContent() {
             chapter="Catalogue Officiel"
             eyebrow="Manufacture OÏKOS &bull; Pièces Référencées"
             title="Les Collections OÏKOS"
-            subtitle="Découvrez nos collections de Chaises, Fauteuils et Lits façonnés sur mesure dans notre atelier de Casablanca (Dar Bouazza). Chaque modèle est personnalisable selon les matières, finitions et teintes de votre choix."
+            subtitle="Découvrez nos collections de Fauteuils, Chaises, Lits et Salons façonnés sur mesure dans notre atelier de Casablanca (Dar Bouazza). Chaque modèle est personnalisable selon les dimensions, matières, finitions et teintes de votre choix."
           />
         </div>
 
-        {/* Quick Category Highlight Cards (Fauteuils, Chaises & Lits) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Quick Category Highlight Cards (Fauteuils, Chaises, Lits & Salons) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           <button
             type="button"
             onClick={() =>
               setSelectedCategory(selectedCategory === "Fauteuils" ? "All" : "Fauteuils")
             }
-            className={`group text-left p-6 sm:p-7 rounded-2xl border transition-all flex items-center justify-between gap-4 ${
+            className={`group text-left p-5 sm:p-6 rounded-2xl border transition-all flex items-center justify-between gap-4 cursor-pointer ${
               selectedCategory === "Fauteuils"
                 ? "bg-[#1E1D1A] border-[#C5A880] shadow-[0_10px_30px_rgba(197,168,128,0.15)]"
                 : "bg-[#161513] border-[#282622] hover:border-[#C5A880]/50"
@@ -128,11 +129,11 @@ function CollectionsContent() {
               <span className="text-[10px] uppercase tracking-[0.25em] text-[#C5A880] font-semibold block">
                 Lounge &amp; Détente
               </span>
-              <h3 className="font-serif text-xl sm:text-2xl text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">
-                Fauteuils Sculpturaux
+              <h3 className="font-serif text-xl text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">
+                Fauteuils
               </h3>
               <p className="text-xs text-[#8E877D] leading-relaxed line-clamp-2">
-                Fauteuils club organiques, bergères contemporaines et assises bouclette capitonnées.
+                Fauteuils club organiques, bergères et pièces sculpturales (CH005–CH034).
               </p>
             </div>
             <div className="shrink-0 text-right">
@@ -150,7 +151,7 @@ function CollectionsContent() {
             onClick={() =>
               setSelectedCategory(selectedCategory === "Chaises" ? "All" : "Chaises")
             }
-            className={`group text-left p-6 sm:p-7 rounded-2xl border transition-all flex items-center justify-between gap-4 ${
+            className={`group text-left p-5 sm:p-6 rounded-2xl border transition-all flex items-center justify-between gap-4 cursor-pointer ${
               selectedCategory === "Chaises"
                 ? "bg-[#1E1D1A] border-[#C5A880] shadow-[0_10px_30px_rgba(197,168,128,0.15)]"
                 : "bg-[#161513] border-[#282622] hover:border-[#C5A880]/50"
@@ -158,13 +159,13 @@ function CollectionsContent() {
           >
             <div className="space-y-1.5">
               <span className="text-[10px] uppercase tracking-[0.25em] text-[#C5A880] font-semibold block">
-                Salle à Manger &amp; Réception
+                Salle à Manger
               </span>
-              <h3 className="font-serif text-xl sm:text-2xl text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">
-                Chaises d&apos;Apparat
+              <h3 className="font-serif text-xl text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">
+                Chaises
               </h3>
               <p className="text-xs text-[#8E877D] leading-relaxed line-clamp-2">
-                Silhouettes en bois massif, dossiers ajourés ou enveloppants et tabourets sur mesure.
+                Silhouettes en bois massif, dossiers enveloppants et tabourets (CH001–CH037).
               </p>
             </div>
             <div className="shrink-0 text-right">
@@ -182,7 +183,7 @@ function CollectionsContent() {
             onClick={() =>
               setSelectedCategory(selectedCategory === "Lits" ? "All" : "Lits")
             }
-            className={`group text-left p-6 sm:p-7 rounded-2xl border transition-all flex items-center justify-between gap-4 ${
+            className={`group text-left p-5 sm:p-6 rounded-2xl border transition-all flex items-center justify-between gap-4 cursor-pointer ${
               selectedCategory === "Lits"
                 ? "bg-[#1E1D1A] border-[#C5A880] shadow-[0_10px_30px_rgba(197,168,128,0.15)]"
                 : "bg-[#161513] border-[#282622] hover:border-[#C5A880]/50"
@@ -192,16 +193,48 @@ function CollectionsContent() {
               <span className="text-[10px] uppercase tracking-[0.25em] text-[#C5A880] font-semibold block">
                 Chambre &amp; Suites
               </span>
-              <h3 className="font-serif text-xl sm:text-2xl text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">
-                Lits &amp; Têtes de Lit
+              <h3 className="font-serif text-xl text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">
+                Lits &amp; Suites
               </h3>
               <p className="text-xs text-[#8E877D] leading-relaxed line-clamp-2">
-                Têtes de lit cannelées, silhouettes organiques douces et options coffre de rangement.
+                Têtes de lit cannelées, silhouettes organiques et option coffre (L001–L008).
               </p>
             </div>
             <div className="shrink-0 text-right">
               <span className="font-serif text-2xl sm:text-3xl text-[#C5A880] block">
                 {categoryCounts["Lits"] || 0}
+              </span>
+              <span className="text-[9px] uppercase tracking-widest text-[#8E877D]">
+                Modèles
+              </span>
+            </div>
+          </button>
+
+          <button
+            type="button"
+            onClick={() =>
+              setSelectedCategory(selectedCategory === "Salons" ? "All" : "Salons")
+            }
+            className={`group text-left p-5 sm:p-6 rounded-2xl border transition-all flex items-center justify-between gap-4 cursor-pointer ${
+              selectedCategory === "Salons"
+                ? "bg-[#1E1D1A] border-[#C5A880] shadow-[0_10px_30px_rgba(197,168,128,0.15)]"
+                : "bg-[#161513] border-[#282622] hover:border-[#C5A880]/50"
+            }`}
+          >
+            <div className="space-y-1.5">
+              <span className="text-[10px] uppercase tracking-[0.25em] text-[#C5A880] font-semibold block">
+                Grands Séjours
+              </span>
+              <h3 className="font-serif text-xl text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">
+                Salons
+              </h3>
+              <p className="text-xs text-[#8E877D] leading-relaxed line-clamp-2">
+                Canapés d&apos;angle, panoramiques en U et salons modulaires (S0001–S0021).
+              </p>
+            </div>
+            <div className="shrink-0 text-right">
+              <span className="font-serif text-2xl sm:text-3xl text-[#C5A880] block">
+                {categoryCounts["Salons"] || 0}
               </span>
               <span className="text-[9px] uppercase tracking-widest text-[#8E877D]">
                 Modèles
@@ -222,7 +255,7 @@ function CollectionsContent() {
                 <button
                   key={u}
                   onClick={() => setSelectedUniverse(u)}
-                  className={`px-4 py-2 rounded-full text-xs uppercase tracking-wider transition-all shrink-0 ${
+                  className={`px-4 py-2 rounded-full text-xs uppercase tracking-wider transition-all shrink-0 cursor-pointer ${
                     selectedUniverse === u
                       ? "bg-[#C5A880] text-[#0C0B0A] font-semibold"
                       : "bg-[#0C0B0A] text-[#C4BEB4] hover:text-[#F9F6F0] hover:bg-[#1E1D1A]"
@@ -242,7 +275,7 @@ function CollectionsContent() {
                 className="bg-[#0C0B0A] border border-[#282622] rounded-full px-3 py-1.5 text-xs text-[#F9F6F0] focus:outline-none focus:border-[#C5A880]"
               >
                 <option value="featured">Sélection signature</option>
-                <option value="ref-asc">Ordre catalogue (CH1 → CH55)</option>
+                <option value="ref-asc">Ordre catalogue (CH, L &amp; S)</option>
                 <option value="name-asc">Ordre alphabétique (A → Z)</option>
               </select>
             </div>
@@ -258,7 +291,7 @@ function CollectionsContent() {
                   <button
                     key={cat}
                     onClick={() => setSelectedCategory(cat)}
-                    className={`px-3.5 py-1.5 rounded-full text-[11px] uppercase tracking-wider transition-colors shrink-0 flex items-center gap-1.5 ${
+                    className={`px-3.5 py-1.5 rounded-full text-[11px] uppercase tracking-wider transition-colors shrink-0 flex items-center gap-1.5 cursor-pointer ${
                       selectedCategory === cat
                         ? "bg-[#DEC5A5]/20 text-[#DEC5A5] border border-[#DEC5A5]/40 font-semibold"
                         : count > 0
@@ -278,10 +311,10 @@ function CollectionsContent() {
             </div>
 
             {/* Search Input */}
-            <div className="relative w-full md:w-64">
+            <div className="relative w-full md:w-72">
               <input
                 type="text"
-                placeholder="Rechercher réf (CH12), modèle, bois..."
+                placeholder="Rechercher réf (CH001, S0001, L001)..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full bg-[#0C0B0A] border border-[#282622] rounded-full pl-9 pr-4 py-2 text-xs text-[#F9F6F0] placeholder-[#6E675E] focus:outline-none focus:border-[#C5A880]"
@@ -308,7 +341,7 @@ function CollectionsContent() {
           {(selectedUniverse !== "All" || selectedCategory !== "All" || searchQuery) && (
             <button
               onClick={resetFilters}
-              className="text-[#C5A880] hover:underline flex items-center gap-1"
+              className="text-[#C5A880] hover:underline flex items-center gap-1 cursor-pointer"
             >
               <span>Réinitialiser les filtres</span>
               <X className="w-3 h-3" />
@@ -337,33 +370,39 @@ function CollectionsContent() {
               </h3>
               <p className="text-xs sm:text-sm text-[#C4BEB4] max-w-xl mx-auto leading-relaxed">
                 Nous présentons exclusivement nos véritables réalisations d&apos;atelier. Les pièces de la catégorie{" "}
-                <strong>{selectedCategory}</strong> sont actuellement en cours d&apos;intégration photographique et sont disponibles sur mesure dans notre atelier de Dar Bouazza ou via notre service de <strong>Conception Globale</strong>.
+                <strong>{selectedCategory}</strong> sont disponibles sur mesure dans notre atelier de Dar Bouazza ou via notre service de <strong>Conception Globale</strong>.
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+            <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
               <button
                 onClick={() => setSelectedCategory("Fauteuils")}
-                className="px-6 py-3 rounded-full bg-[#C5A880] text-[#0C0B0A] text-xs font-bold uppercase tracking-wider hover:bg-[#DEC5A5] transition-colors"
+                className="px-5 py-2.5 rounded-full bg-[#C5A880] text-[#0C0B0A] text-xs font-bold uppercase tracking-wider hover:bg-[#DEC5A5] transition-colors cursor-pointer"
               >
-                Voir les Fauteuils ({categoryCounts["Fauteuils"]})
+                Fauteuils ({categoryCounts["Fauteuils"]})
               </button>
               <button
                 onClick={() => setSelectedCategory("Chaises")}
-                className="px-6 py-3 rounded-full bg-[#1E1D1A] border border-[#C5A880]/50 text-[#F9F6F0] text-xs font-semibold uppercase tracking-wider hover:border-[#C5A880] transition-colors"
+                className="px-5 py-2.5 rounded-full bg-[#1E1D1A] border border-[#C5A880]/50 text-[#F9F6F0] text-xs font-semibold uppercase tracking-wider hover:border-[#C5A880] transition-colors cursor-pointer"
               >
-                Voir les Chaises ({categoryCounts["Chaises"]})
+                Chaises ({categoryCounts["Chaises"]})
               </button>
               <button
                 onClick={() => setSelectedCategory("Lits")}
-                className="px-6 py-3 rounded-full bg-[#1E1D1A] border border-[#C5A880]/50 text-[#F9F6F0] text-xs font-semibold uppercase tracking-wider hover:border-[#C5A880] transition-colors"
+                className="px-5 py-2.5 rounded-full bg-[#1E1D1A] border border-[#C5A880]/50 text-[#F9F6F0] text-xs font-semibold uppercase tracking-wider hover:border-[#C5A880] transition-colors cursor-pointer"
               >
-                Voir les Lits ({categoryCounts["Lits"]})
+                Lits ({categoryCounts["Lits"]})
+              </button>
+              <button
+                onClick={() => setSelectedCategory("Salons")}
+                className="px-5 py-2.5 rounded-full bg-[#1E1D1A] border border-[#C5A880]/50 text-[#F9F6F0] text-xs font-semibold uppercase tracking-wider hover:border-[#C5A880] transition-colors cursor-pointer"
+              >
+                Salons ({categoryCounts["Salons"]})
               </button>
               <Link
                 href="/conception-globale"
-                className="px-6 py-3 rounded-full border border-[#282622] text-[#C5A880] text-xs font-medium uppercase tracking-wider hover:bg-[#1E1D1A] transition-colors flex items-center gap-2"
+                className="px-5 py-2.5 rounded-full border border-[#282622] text-[#C5A880] text-xs font-medium uppercase tracking-wider hover:bg-[#1E1D1A] transition-colors flex items-center gap-2"
               >
-                <span>Projet Conception Globale</span>
+                <span>Conception Globale</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
@@ -377,7 +416,7 @@ function CollectionsContent() {
             </p>
             <button
               onClick={resetFilters}
-              className="px-6 py-2.5 rounded-full bg-[#C5A880] text-[#0C0B0A] text-xs font-semibold uppercase tracking-wider"
+              className="px-6 py-2.5 rounded-full bg-[#C5A880] text-[#0C0B0A] text-xs font-semibold uppercase tracking-wider cursor-pointer"
             >
               Réinitialiser
             </button>
@@ -394,7 +433,7 @@ function CollectionsContent() {
               Une création sur mesure ou un projet d&apos;aménagement complet ?
             </h3>
             <p className="text-xs sm:text-sm text-[#8E877D] max-w-xl leading-relaxed">
-              Chacune de nos assises est confectionnée sur mesure au sein de notre atelier de Casablanca, selon les essences de bois nobles et les étoffes de votre choix. Découvrez également notre accompagnement en Conception Globale pour vos résidences et projets d&apos;exception.
+              Chacune de nos créations (fauteuils, chaises, lits et salons) est confectionnée sur mesure au sein de notre atelier de Casablanca, selon les dimensions, essences de bois nobles et étoffes de votre choix. Découvrez également notre accompagnement en Conception Globale pour vos résidences et projets d&apos;exception.
             </p>
           </div>
 

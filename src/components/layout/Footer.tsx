@@ -88,6 +88,11 @@ export default function Footer() {
             </h5>
             <ul className="space-y-2.5 text-xs text-[#8E877D]">
               <li>
+                <Link href="/collections?category=Salons" className="hover:text-[#C5A880] transition-colors">
+                  Collection Salons
+                </Link>
+              </li>
+              <li>
                 <Link href="/collections?category=Fauteuils" className="hover:text-[#C5A880] transition-colors">
                   Collection Fauteuils
                 </Link>
@@ -108,13 +113,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/collections?universe=Living" className="hover:text-[#C5A880] transition-colors">
-                  OÏKOS Living
-                </Link>
-              </li>
-              <li>
                 <Link href="/collections" className="hover:text-[#C5A880] transition-colors">
-                  Tout le Catalogue (63 modèles)
+                  Tout le Catalogue (57 modèles)
                 </Link>
               </li>
             </ul>

@@ -61,8 +61,12 @@ export default function ConceptionGlobalePage() {
     // Step 3: Aesthetic Atmosphere & Noble Materials
     styleAtmosphere: "Quiet Luxury & Minéral (Travertin, Bouclette, Noyer)",
     selectedMaterials: ["Noyer massif", "Tissu bouclé", "Travertin", "Laiton brossé"],
-    // Step 4: Selected Favorite Catalog Models (CH1 to CH55)
-    selectedProductSlugs: ["fauteuil-nelly-ch1", "chaise-lucca-ch2"],
+    // Step 4: Selected Favorite Catalog Models (CH001..CH037, L001..L008, S0001..S0021)
+    selectedProductSlugs: [
+      "chaise-medaillon-siena-ch001",
+      "fauteuil-sculptural-galet-ch009",
+      "salon-d-angle-panoramique-bellini-s0001",
+    ],
     // Step 5: Deliverables, Budget, Timing
     servicesNeeded: [
       "Étude d'implantation & Plans 2D/3D",
@@ -891,13 +895,25 @@ export default function ConceptionGlobalePage() {
                               : "bg-[#0C0B0A] border-[#282622] hover:border-[#6E675E]"
                           }`}
                         >
-                          <div className="relative aspect-square w-full rounded-lg overflow-hidden bg-[#161513] mb-2">
+                          <div
+                            className={`relative aspect-square w-full rounded-lg overflow-hidden mb-2 ${
+                              product.images[0]?.includes("-studio.") ||
+                              product.images[0]?.includes("-isolated.")
+                                ? "bg-white"
+                                : "bg-[#161513]"
+                            }`}
+                          >
                             <Image
                               src={product.images[0]}
                               alt={product.name}
                               fill
                               unoptimized
-                              className="object-contain p-2 group-hover:scale-105 transition-transform"
+                              className={`${
+                                product.images[0]?.includes("-studio.") ||
+                                product.images[0]?.includes("-isolated.")
+                                  ? "object-contain p-1.5"
+                                  : "object-cover"
+                              } group-hover:scale-105 transition-transform`}
                             />
                             {active && (
                               <div className="absolute top-1.5 right-1.5 w-5 h-5 rounded-full bg-[#C5A880] text-[#0C0B0A] flex items-center justify-center">

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { X, ArrowRight, Check, Sparkles, MessageCircle, ShieldCheck, Clock } from "lucide-react";
+import { X, ArrowRight, Sparkles, MessageCircle, ShieldCheck, Clock } from "lucide-react";
 import { Product } from "@/data/products";
 
 interface QuickViewModalProps {
@@ -13,28 +13,31 @@ interface QuickViewModalProps {
 
 export default function QuickViewModal({ product, onClose }: QuickViewModalProps) {
   const [selectedImage, setSelectedImage] = useState(0);
-  const [selectedFabric, setSelectedFabric] = useState(0);
-  const [selectedMaterial, setSelectedMaterial] = useState(0);
   const [selectedDimension, setSelectedDimension] = useState("160 × 200 cm");
   const [hasStorage, setHasStorage] = useState(false);
+  const [salonConfig, setSalonConfig] = useState("Angle Droit");
+  const [selectedTexture, setSelectedTexture] = useState("Bouclette d'alpaga");
+  const [selectedWood, setSelectedWood] = useState("Noyer chaud");
 
   if (!product) return null;
 
   const currentImg = product.images[selectedImage] || product.images[0];
-  const isWhiteBgBed = Boolean(currentImg?.includes("/beds/") && currentImg?.includes("-isolated."));
-  const isCutout = Boolean(currentImg?.startsWith("/images/chairs/") && !currentImg?.includes("/chairs-staged/"));
-
-  const currentFabric = product.fabricOptions ? product.fabricOptions[selectedFabric] : null;
-  const currentMaterial = product.materialOptions ? product.materialOptions[selectedMaterial] : null;
+  const isWhiteBgPoster = Boolean(
+    currentImg?.includes("-studio.") || currentImg?.includes("-isolated.")
+  );
 
   const handleWhatsAppQuote = () => {
     let details = "";
     if (product.category === "Lits") {
-      details = `Dimension souhaitée : ${selectedDimension} • Configuration : ${hasStorage ? "Avec coffre escamotable hydraulique" : "Standard (sans coffre)"} • Teinte : au choix du client`;
+      details = `Dimension souhaitée : ${selectedDimension} • Configuration : ${
+        hasStorage ? "Avec coffre escamotable hydraulique" : "Standard (sans coffre)"
+      } • Teinte & Tissu : ${selectedTexture} (couleur au choix)`;
+    } else if (product.category === "Salons") {
+      details = `Configuration : ${salonConfig} • Revêtement : ${selectedTexture} (couleur sur mesure au choix)`;
     } else {
-      details = `Finition : ${currentFabric?.name || currentMaterial?.name || "Standard"}`;
+      details = `Revêtement : ${selectedTexture} • Finition structure/bois : ${selectedWood} (couleur sur mesure au choix)`;
     }
-    const text = `Bonjour OÏKOS, je souhaite recevoir un devis personnalisé pour la pièce ${product.name} (${product.formattedPrice}).
+    const text = `Bonjour OÏKOS, je souhaite recevoir un devis personnalisé pour la pièce ${product.name} (${product.subtitle}).
 ${details}.
 Pourriez-vous me confirmer les disponibilités d'atelier et les délais de livraison ?`;
     window.open(`https://wa.me/212722033326?text=${encodeURIComponent(text)}`, "_blank");
@@ -56,24 +59,16 @@ Pourriez-vous me confirmer les disponibilités d'atelier et les délais de livra
         <div className="w-full md:w-1/2 p-6 flex flex-col justify-between bg-[#0C0B0A] border-b md:border-b-0 md:border-r border-[#282622]">
           <div
             className={`relative aspect-[4/3] w-full rounded-xl overflow-hidden ${
-              isWhiteBgBed
-                ? "bg-white"
-                : isCutout
-                ? "bg-[radial-gradient(circle_at_50%_55%,#2B2822_0%,#171614_65%,#0E0D0C_100%)]"
-                : "bg-[#1E1D1A]"
+              isWhiteBgPoster ? "bg-white" : "bg-[#1E1D1A]"
             }`}
           >
             <Image
-              src={product.images[selectedImage] || product.images[0]}
+              src={currentImg}
               alt={product.name}
               fill
               unoptimized
               className={`${
-                isWhiteBgBed
-                  ? "object-contain p-4"
-                  : isCutout
-                  ? "object-contain p-8"
-                  : "object-cover"
+                isWhiteBgPoster ? "object-contain p-3" : "object-cover"
               } transition-transform duration-500 hover:scale-105`}
             />
             <div className="absolute top-3 left-3 bg-[#0C0B0A]/85 backdrop-blur-md px-3 py-1 rounded-full border border-[#282622] text-[10px] uppercase tracking-wider text-[#C5A880] font-medium">
@@ -84,26 +79,30 @@ Pourriez-vous me confirmer les disponibilités d'atelier et les délais de livra
           {/* Thumbnail row */}
           {product.images.length > 1 && (
             <div className="flex gap-2 mt-4 overflow-x-auto pb-1">
-              {product.images.map((img, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setSelectedImage(idx)}
-                  className={`relative w-16 h-16 rounded-lg overflow-hidden shrink-0 border transition-all ${
-                    img.includes("-isolated.") ? "bg-white" : "bg-[#1E1D1A]"
-                  } ${
-                    selectedImage === idx
-                      ? "border-[#C5A880] ring-1 ring-[#C5A880]"
-                      : "border-[#282622] opacity-60 hover:opacity-100"
-                  }`}
-                >
-                  <Image
-                    src={img}
-                    alt=""
-                    fill
-                    className={img.includes("-isolated.") ? "object-contain p-1" : "object-cover"}
-                  />
-                </button>
-              ))}
+              {product.images.map((img, idx) => {
+                const thumbWhite = img.includes("-studio.") || img.includes("-isolated.");
+                return (
+                  <button
+                    key={idx}
+                    onClick={() => setSelectedImage(idx)}
+                    className={`relative w-16 h-16 rounded-lg overflow-hidden shrink-0 border transition-all ${
+                      thumbWhite ? "bg-white" : "bg-[#1E1D1A]"
+                    } ${
+                      selectedImage === idx
+                        ? "border-[#C5A880] ring-1 ring-[#C5A880]"
+                        : "border-[#282622] opacity-60 hover:opacity-100"
+                    }`}
+                  >
+                    <Image
+                      src={img}
+                      alt=""
+                      fill
+                      unoptimized
+                      className={thumbWhite ? "object-contain p-1" : "object-cover"}
+                    />
+                  </button>
+                );
+              })}
             </div>
           )}
 
@@ -141,148 +140,157 @@ Pourriez-vous me confirmer les disponibilités d'atelier et les délais de livra
               {product.description}
             </p>
 
-            {/* If product is a Bed: show interactive Dimension and Storage options */}
-            {product.category === "Lits" && (
-              <div className="space-y-4 pt-2 border-t border-[#282622]">
-                {/* Dimensions selector */}
-                <div className="space-y-2">
-                  <div className="flex justify-between text-xs">
-                    <span className="text-[#8E877D] uppercase tracking-wider">Dimension au choix :</span>
-                    <span className="text-[#C5A880] font-medium">{selectedDimension}</span>
+            {/* Interactive Configurator per Category */}
+            <div className="space-y-4 pt-2 border-t border-[#282622]">
+              {product.category === "Lits" && (
+                <>
+                  {/* Dimensions selector */}
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-xs">
+                      <span className="text-[#8E877D] uppercase tracking-wider">Dimension au choix :</span>
+                      <span className="text-[#C5A880] font-medium">{selectedDimension}</span>
+                    </div>
+                    <div className="grid grid-cols-2 gap-2">
+                      {["90 × 190 cm", "140 × 190 cm", "160 × 200 cm", "Sur mesure"].map((dim) => (
+                        <button
+                          key={dim}
+                          type="button"
+                          onClick={() => setSelectedDimension(dim)}
+                          className={`p-2.5 rounded-xl border text-xs text-left transition-all cursor-pointer ${
+                            selectedDimension === dim
+                              ? "border-[#C5A880] bg-[#C5A880]/15 text-[#F9F6F0] font-semibold"
+                              : "border-[#282622] bg-[#0C0B0A] text-[#A69F93] hover:border-[#6E675E]"
+                          }`}
+                        >
+                          {dim}
+                        </button>
+                      ))}
+                    </div>
                   </div>
-                  <div className="grid grid-cols-2 gap-2">
-                    {["90 × 190 cm", "140 × 190 cm", "160 × 200 cm", "Sur mesure"].map((dim) => (
+
+                  {/* Storage option */}
+                  <div className="space-y-2">
+                    <span className="text-[11px] uppercase tracking-wider text-[#8E877D] block">
+                      Option Coffre de Rangement :
+                    </span>
+                    <div className="grid grid-cols-2 gap-2">
                       <button
-                        key={dim}
                         type="button"
-                        onClick={() => setSelectedDimension(dim)}
-                        className={`p-2.5 rounded-xl border text-xs text-left transition-all ${
-                          selectedDimension === dim
+                        onClick={() => setHasStorage(false)}
+                        className={`p-2.5 rounded-xl border text-xs text-left transition-all cursor-pointer ${
+                          !hasStorage
                             ? "border-[#C5A880] bg-[#C5A880]/15 text-[#F9F6F0] font-semibold"
                             : "border-[#282622] bg-[#0C0B0A] text-[#A69F93] hover:border-[#6E675E]"
                         }`}
                       >
-                        {dim}
+                        Sans coffre (Standard)
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setHasStorage(true)}
+                        className={`p-2.5 rounded-xl border text-xs text-left transition-all cursor-pointer ${
+                          hasStorage
+                            ? "border-[#C5A880] bg-[#C5A880]/15 text-[#F9F6F0] font-semibold"
+                            : "border-[#282622] bg-[#0C0B0A] text-[#A69F93] hover:border-[#6E675E]"
+                        }`}
+                      >
+                        Avec sommier coffre
+                      </button>
+                    </div>
+                  </div>
+                </>
+              )}
+
+              {product.category === "Salons" && (
+                <div className="space-y-2">
+                  <div className="flex justify-between text-xs">
+                    <span className="text-[#8E877D] uppercase tracking-wider">Configuration &amp; Sens :</span>
+                    <span className="text-[#C5A880] font-medium">{salonConfig}</span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2">
+                    {["Angle Droit", "Angle Gauche", "Panoramique en U", "Dimensions sur mesure"].map((cfg) => (
+                      <button
+                        key={cfg}
+                        type="button"
+                        onClick={() => setSalonConfig(cfg)}
+                        className={`p-2.5 rounded-xl border text-xs text-left transition-all cursor-pointer ${
+                          salonConfig === cfg
+                            ? "border-[#C5A880] bg-[#C5A880]/15 text-[#F9F6F0] font-semibold"
+                            : "border-[#282622] bg-[#0C0B0A] text-[#A69F93] hover:border-[#6E675E]"
+                        }`}
+                      >
+                        {cfg}
                       </button>
                     ))}
                   </div>
                 </div>
+              )}
 
-                {/* Storage option */}
-                <div className="space-y-2">
-                  <span className="text-[11px] uppercase tracking-wider text-[#8E877D] block">
-                    Option Coffre de Rangement :
-                  </span>
-                  <div className="grid grid-cols-2 gap-2">
-                    <button
-                      type="button"
-                      onClick={() => setHasStorage(false)}
-                      className={`p-2.5 rounded-xl border text-xs text-left transition-all ${
-                        !hasStorage
-                          ? "border-[#C5A880] bg-[#C5A880]/15 text-[#F9F6F0] font-semibold"
-                          : "border-[#282622] bg-[#0C0B0A] text-[#A69F93] hover:border-[#6E675E]"
-                      }`}
-                    >
-                      Sans coffre (Standard)
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setHasStorage(true)}
-                      className={`p-2.5 rounded-xl border text-xs text-left transition-all ${
-                        hasStorage
-                          ? "border-[#C5A880] bg-[#C5A880]/15 text-[#F9F6F0] font-semibold"
-                          : "border-[#282622] bg-[#0C0B0A] text-[#A69F93] hover:border-[#6E675E]"
-                      }`}
-                    >
-                      Avec sommier coffre
-                    </button>
-                  </div>
-                </div>
-
-                {/* Bespoke color note */}
-                <div className="p-3 rounded-xl bg-[#0C0B0A] border border-[#282622] text-xs space-y-1">
-                  <div className="flex items-center gap-1.5 text-[#C5A880] font-medium text-[11px] uppercase tracking-wider">
-                    <Sparkles className="w-3.5 h-3.5" />
-                    <span>Teinte &amp; Tissu à votre convenance</span>
-                  </div>
-                  <p className="text-[11px] text-[#8E877D] leading-relaxed">
-                    Atelier capable de créer le lit dans la couleur exacte de votre choix (bouclette, velours, lin ou nuancier RAL).
-                  </p>
-                </div>
-              </div>
-            )}
-
-            {/* Fabric Swatch Options for Seating */}
-            {product.category !== "Lits" && product.fabricOptions && product.fabricOptions.length > 0 && (
+              {/* Texture selector for all products */}
               <div className="space-y-2">
                 <div className="flex justify-between text-xs">
-                  <span className="text-[#8E877D]">Sélection Tissu &amp; Matière :</span>
-                  <span className="text-[#C5A880] font-medium">
-                    {currentFabric?.name}
-                  </span>
+                  <span className="text-[#8E877D] uppercase tracking-wider">Texture de revêtement :</span>
+                  <span className="text-[#C5A880] font-medium">{selectedTexture}</span>
                 </div>
-                <div className="flex gap-2">
-                  {product.fabricOptions.map((item, idx) => (
+                <div className="grid grid-cols-2 gap-2">
+                  {[
+                    "Bouclette d'alpaga",
+                    "Velours soyeux",
+                    "Chenille texturée",
+                    "Lin lavé antitache",
+                  ].map((tex) => (
                     <button
-                      key={idx}
-                      onClick={() => setSelectedFabric(idx)}
-                      className={`group relative p-1 rounded-full border transition-all ${
-                        selectedFabric === idx
-                          ? "border-[#C5A880] scale-110"
-                          : "border-[#282622] hover:border-[#6E675E]"
+                      key={tex}
+                      type="button"
+                      onClick={() => setSelectedTexture(tex)}
+                      className={`p-2 rounded-xl border text-xs text-left transition-all cursor-pointer ${
+                        selectedTexture === tex
+                          ? "border-[#C5A880] bg-[#C5A880]/15 text-[#F9F6F0] font-semibold"
+                          : "border-[#282622] bg-[#0C0B0A] text-[#A69F93] hover:border-[#6E675E]"
                       }`}
-                      title={item.name}
                     >
-                      <span
-                        className="block w-6 h-6 rounded-full border border-black/30"
-                        style={{ backgroundColor: item.hex }}
-                      />
-                      {selectedFabric === idx && (
-                        <span className="absolute inset-0 flex items-center justify-center text-[#0C0B0A]">
-                          <Check className="w-3 h-3 stroke-[3]" />
-                        </span>
-                      )}
+                      {tex}
                     </button>
                   ))}
                 </div>
               </div>
-            )}
 
-            {/* Material / Wood Options for Seating */}
-            {product.category !== "Lits" && product.materialOptions && product.materialOptions.length > 0 && (
-              <div className="space-y-2 pt-1">
-                <div className="flex justify-between text-xs">
-                  <span className="text-[#8E877D]">Finition Bois &amp; Pierre :</span>
-                  <span className="text-[#C5A880] font-medium">
-                    {currentMaterial?.name}
-                  </span>
+              {(product.category === "Chaises" || product.category === "Fauteuils") && (
+                <div className="space-y-2">
+                  <div className="flex justify-between text-xs">
+                    <span className="text-[#8E877D] uppercase tracking-wider">Teinte Bois / Piétement :</span>
+                    <span className="text-[#C5A880] font-medium">{selectedWood}</span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2">
+                    {["Noyer chaud", "Chêne miel naturel", "Chêne noir mat", "Laiton / Sur mesure"].map((wood) => (
+                      <button
+                        key={wood}
+                        type="button"
+                        onClick={() => setSelectedWood(wood)}
+                        className={`p-2 rounded-xl border text-xs text-left transition-all cursor-pointer ${
+                          selectedWood === wood
+                            ? "border-[#C5A880] bg-[#C5A880]/15 text-[#F9F6F0] font-semibold"
+                            : "border-[#282622] bg-[#0C0B0A] text-[#A69F93] hover:border-[#6E675E]"
+                        }`}
+                      >
+                        {wood}
+                      </button>
+                    ))}
+                  </div>
                 </div>
-                <div className="flex gap-2">
-                  {product.materialOptions.map((item, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => setSelectedMaterial(idx)}
-                      className={`relative p-1 rounded-full border transition-all ${
-                        selectedMaterial === idx
-                          ? "border-[#C5A880] scale-110"
-                          : "border-[#282622] hover:border-[#6E675E]"
-                      }`}
-                      title={item.name}
-                    >
-                      <span
-                        className="block w-6 h-6 rounded-full border border-black/30"
-                        style={{ backgroundColor: item.hex }}
-                      />
-                      {selectedMaterial === idx && (
-                        <span className="absolute inset-0 flex items-center justify-center text-white">
-                          <Check className="w-3 h-3 stroke-[3]" />
-                        </span>
-                      )}
-                    </button>
-                  ))}
+              )}
+
+              {/* Bespoke color note */}
+              <div className="p-3 rounded-xl bg-[#0C0B0A] border border-[#282622] text-xs space-y-1">
+                <div className="flex items-center gap-1.5 text-[#C5A880] font-medium text-[11px] uppercase tracking-wider">
+                  <Sparkles className="w-3.5 h-3.5" />
+                  <span>Couleur 100% au choix du client</span>
                 </div>
+                <p className="text-[11px] text-[#8E877D] leading-relaxed">
+                  Notre atelier confectionne cette pièce dans la couleur exacte que vous souhaitez à partir de notre matériauthèque (plus de 120 nuances disponibles).
+                </p>
               </div>
-            )}
+            </div>
           </div>
 
           {/* Action CTAs */}

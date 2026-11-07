@@ -21,6 +21,7 @@ import {
 import SectionHeading from "@/components/ui/SectionHeading";
 import ProductCard from "@/components/ui/ProductCard";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import LivingCatalogVideoSection from "@/components/ui/LivingCatalogVideoSection";
 import { PRODUCTS, SHOWROOM_ZONES } from "@/data/products";
 import { JsonLdFaq } from "@/components/seo/JsonLd";
 
@@ -198,6 +199,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* 3B. LE LIVRE DE COLLECTION PREND VIE (VIDEO 3D INTERACTIVE) */}
+      <LivingCatalogVideoSection />
 
       {/* 4. CHAPITRE 01 : GÉOMÉTRIE DOUCE (FEATURED PIECES) */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#11100E] border-t border-[#282622]">

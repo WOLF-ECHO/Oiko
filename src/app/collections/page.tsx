@@ -32,6 +32,7 @@ function CollectionsContent() {
     "Chaises",
     "Lits",
     "Salons",
+    "Tables à manger",
     "Tables basses",
     "Consoles & Miroirs",
     "Luminaires",
@@ -43,6 +44,7 @@ function CollectionsContent() {
     Chaises: 2,
     Lits: 3,
     Salons: 4,
+    "Tables à manger": 5,
   };
 
   // Count products per category
@@ -108,36 +110,36 @@ function CollectionsContent() {
             chapter="Catalogue Officiel"
             eyebrow="Manufacture OÏKOS &bull; Pièces Référencées"
             title="Les Collections OÏKOS"
-            subtitle="Découvrez nos collections de Fauteuils, Chaises, Lits et Salons façonnés sur mesure dans notre atelier de Casablanca (Dar Bouazza). Chaque modèle est personnalisable selon les dimensions, matières, finitions et teintes de votre choix."
+            subtitle="Découvrez nos collections de Fauteuils, Chaises, Lits, Salons et Tables à manger façonnés sur mesure dans notre atelier de Casablanca (Dar Bouazza). Chaque modèle est personnalisable selon les dimensions, matières, finitions et teintes de votre choix."
           />
         </div>
 
-        {/* Quick Category Highlight Cards (Fauteuils, Chaises, Lits & Salons) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        {/* Quick Category Highlight Cards (Fauteuils, Chaises, Lits, Salons & Tables à manger) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           <button
             type="button"
             onClick={() =>
               setSelectedCategory(selectedCategory === "Fauteuils" ? "All" : "Fauteuils")
             }
-            className={`group text-left p-5 sm:p-6 rounded-2xl border transition-all flex items-center justify-between gap-4 cursor-pointer ${
+            className={`group text-left p-5 rounded-2xl border transition-all flex items-center justify-between gap-3 cursor-pointer ${
               selectedCategory === "Fauteuils"
                 ? "bg-[#1E1D1A] border-[#C5A880] shadow-[0_10px_30px_rgba(197,168,128,0.15)]"
                 : "bg-[#161513] border-[#282622] hover:border-[#C5A880]/50"
             }`}
           >
-            <div className="space-y-1.5">
+            <div className="space-y-1">
               <span className="text-[10px] uppercase tracking-[0.25em] text-[#C5A880] font-semibold block">
                 Lounge &amp; Détente
               </span>
-              <h3 className="font-serif text-xl text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">
+              <h3 className="font-serif text-lg sm:text-xl text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">
                 Fauteuils
               </h3>
               <p className="text-xs text-[#8E877D] leading-relaxed line-clamp-2">
-                Fauteuils club organiques, bergères et pièces sculpturales (CH005–CH034).
+                Fauteuils club, bergères et pièces sculpturales (CH005–CH034).
               </p>
             </div>
             <div className="shrink-0 text-right">
-              <span className="font-serif text-2xl sm:text-3xl text-[#C5A880] block">
+              <span className="font-serif text-2xl text-[#C5A880] block">
                 {categoryCounts["Fauteuils"] || 0}
               </span>
               <span className="text-[9px] uppercase tracking-widest text-[#8E877D]">
@@ -151,25 +153,25 @@ function CollectionsContent() {
             onClick={() =>
               setSelectedCategory(selectedCategory === "Chaises" ? "All" : "Chaises")
             }
-            className={`group text-left p-5 sm:p-6 rounded-2xl border transition-all flex items-center justify-between gap-4 cursor-pointer ${
+            className={`group text-left p-5 rounded-2xl border transition-all flex items-center justify-between gap-3 cursor-pointer ${
               selectedCategory === "Chaises"
                 ? "bg-[#1E1D1A] border-[#C5A880] shadow-[0_10px_30px_rgba(197,168,128,0.15)]"
                 : "bg-[#161513] border-[#282622] hover:border-[#C5A880]/50"
             }`}
           >
-            <div className="space-y-1.5">
+            <div className="space-y-1">
               <span className="text-[10px] uppercase tracking-[0.25em] text-[#C5A880] font-semibold block">
                 Salle à Manger
               </span>
-              <h3 className="font-serif text-xl text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">
+              <h3 className="font-serif text-lg sm:text-xl text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">
                 Chaises
               </h3>
               <p className="text-xs text-[#8E877D] leading-relaxed line-clamp-2">
-                Silhouettes en bois massif, dossiers enveloppants et tabourets (CH001–CH037).
+                Silhouettes bois massif, dossiers enveloppants et tabourets (CH001–CH037).
               </p>
             </div>
             <div className="shrink-0 text-right">
-              <span className="font-serif text-2xl sm:text-3xl text-[#C5A880] block">
+              <span className="font-serif text-2xl text-[#C5A880] block">
                 {categoryCounts["Chaises"] || 0}
               </span>
               <span className="text-[9px] uppercase tracking-widest text-[#8E877D]">
@@ -183,17 +185,17 @@ function CollectionsContent() {
             onClick={() =>
               setSelectedCategory(selectedCategory === "Lits" ? "All" : "Lits")
             }
-            className={`group text-left p-5 sm:p-6 rounded-2xl border transition-all flex items-center justify-between gap-4 cursor-pointer ${
+            className={`group text-left p-5 rounded-2xl border transition-all flex items-center justify-between gap-3 cursor-pointer ${
               selectedCategory === "Lits"
                 ? "bg-[#1E1D1A] border-[#C5A880] shadow-[0_10px_30px_rgba(197,168,128,0.15)]"
                 : "bg-[#161513] border-[#282622] hover:border-[#C5A880]/50"
             }`}
           >
-            <div className="space-y-1.5">
+            <div className="space-y-1">
               <span className="text-[10px] uppercase tracking-[0.25em] text-[#C5A880] font-semibold block">
                 Chambre &amp; Suites
               </span>
-              <h3 className="font-serif text-xl text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">
+              <h3 className="font-serif text-lg sm:text-xl text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">
                 Lits &amp; Suites
               </h3>
               <p className="text-xs text-[#8E877D] leading-relaxed line-clamp-2">
@@ -201,7 +203,7 @@ function CollectionsContent() {
               </p>
             </div>
             <div className="shrink-0 text-right">
-              <span className="font-serif text-2xl sm:text-3xl text-[#C5A880] block">
+              <span className="font-serif text-2xl text-[#C5A880] block">
                 {categoryCounts["Lits"] || 0}
               </span>
               <span className="text-[9px] uppercase tracking-widest text-[#8E877D]">
@@ -215,17 +217,17 @@ function CollectionsContent() {
             onClick={() =>
               setSelectedCategory(selectedCategory === "Salons" ? "All" : "Salons")
             }
-            className={`group text-left p-5 sm:p-6 rounded-2xl border transition-all flex items-center justify-between gap-4 cursor-pointer ${
+            className={`group text-left p-5 rounded-2xl border transition-all flex items-center justify-between gap-3 cursor-pointer ${
               selectedCategory === "Salons"
                 ? "bg-[#1E1D1A] border-[#C5A880] shadow-[0_10px_30px_rgba(197,168,128,0.15)]"
                 : "bg-[#161513] border-[#282622] hover:border-[#C5A880]/50"
             }`}
           >
-            <div className="space-y-1.5">
+            <div className="space-y-1">
               <span className="text-[10px] uppercase tracking-[0.25em] text-[#C5A880] font-semibold block">
                 Grands Séjours
               </span>
-              <h3 className="font-serif text-xl text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">
+              <h3 className="font-serif text-lg sm:text-xl text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">
                 Salons
               </h3>
               <p className="text-xs text-[#8E877D] leading-relaxed line-clamp-2">
@@ -233,8 +235,42 @@ function CollectionsContent() {
               </p>
             </div>
             <div className="shrink-0 text-right">
-              <span className="font-serif text-2xl sm:text-3xl text-[#C5A880] block">
+              <span className="font-serif text-2xl text-[#C5A880] block">
                 {categoryCounts["Salons"] || 0}
+              </span>
+              <span className="text-[9px] uppercase tracking-widest text-[#8E877D]">
+                Modèles
+              </span>
+            </div>
+          </button>
+
+          <button
+            type="button"
+            onClick={() =>
+              setSelectedCategory(
+                selectedCategory === "Tables à manger" ? "All" : "Tables à manger"
+              )
+            }
+            className={`group text-left p-5 rounded-2xl border transition-all flex items-center justify-between gap-3 cursor-pointer ${
+              selectedCategory === "Tables à manger"
+                ? "bg-[#1E1D1A] border-[#C5A880] shadow-[0_10px_30px_rgba(197,168,128,0.15)]"
+                : "bg-[#161513] border-[#282622] hover:border-[#C5A880]/50"
+            }`}
+          >
+            <div className="space-y-1">
+              <span className="text-[10px] uppercase tracking-[0.25em] text-[#C5A880] font-semibold block">
+                Art de Recevoir
+              </span>
+              <h3 className="font-serif text-lg sm:text-xl text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">
+                Tables à manger
+              </h3>
+              <p className="text-xs text-[#8E877D] leading-relaxed line-clamp-2">
+                Tables rondes, ovales et rectangulaires en noyer, marbre et verre (TM001–TM012).
+              </p>
+            </div>
+            <div className="shrink-0 text-right">
+              <span className="font-serif text-2xl text-[#C5A880] block">
+                {categoryCounts["Tables à manger"] || 0}
               </span>
               <span className="text-[9px] uppercase tracking-widest text-[#8E877D]">
                 Modèles

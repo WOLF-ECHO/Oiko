@@ -93,6 +93,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/collections?category=Tables%20%C3%A0%20manger" className="hover:text-[#C5A880] transition-colors">
+                  Collection Tables à Manger
+                </Link>
+              </li>
+              <li>
                 <Link href="/collections?category=Fauteuils" className="hover:text-[#C5A880] transition-colors">
                   Collection Fauteuils
                 </Link>
@@ -108,13 +113,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/collections?universe=Signature" className="hover:text-[#C5A880] transition-colors">
-                  OÏKOS Signature
-                </Link>
-              </li>
-              <li>
                 <Link href="/collections" className="hover:text-[#C5A880] transition-colors">
-                  Tout le Catalogue (57 modèles)
+                  Tout le Catalogue (69 modèles)
                 </Link>
               </li>
             </ul>

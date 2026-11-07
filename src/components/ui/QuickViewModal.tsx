@@ -16,6 +16,7 @@ export default function QuickViewModal({ product, onClose }: QuickViewModalProps
   const [selectedDimension, setSelectedDimension] = useState("160 × 200 cm");
   const [hasStorage, setHasStorage] = useState(false);
   const [salonConfig, setSalonConfig] = useState("Angle Droit");
+  const [tableSeats, setTableSeats] = useState("6 Couverts");
   const [selectedTexture, setSelectedTexture] = useState("Bouclette d'alpaga");
   const [selectedWood, setSelectedWood] = useState("Noyer chaud");
 
@@ -34,6 +35,8 @@ export default function QuickViewModal({ product, onClose }: QuickViewModalProps
       } • Teinte & Tissu : ${selectedTexture} (couleur au choix)`;
     } else if (product.category === "Salons") {
       details = `Configuration : ${salonConfig} • Revêtement : ${selectedTexture} (couleur sur mesure au choix)`;
+    } else if (product.category === "Tables à manger") {
+      details = `Capacité souhaitée : ${tableSeats} • Finition plateau/bois : ${selectedWood} • Tissu chaises : ${selectedTexture}`;
     } else {
       details = `Revêtement : ${selectedTexture} • Finition structure/bois : ${selectedWood} (couleur sur mesure au choix)`;
     }
@@ -226,6 +229,31 @@ Pourriez-vous me confirmer les disponibilités d'atelier et les délais de livra
                 </div>
               )}
 
+              {product.category === "Tables à manger" && (
+                <div className="space-y-2">
+                  <div className="flex justify-between text-xs">
+                    <span className="text-[#8E877D] uppercase tracking-wider">Capacité &amp; Format :</span>
+                    <span className="text-[#C5A880] font-medium">{tableSeats}</span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2">
+                    {["4 Couverts", "6 Couverts", "8 Couverts", "Dimensions sur mesure"].map((cap) => (
+                      <button
+                        key={cap}
+                        type="button"
+                        onClick={() => setTableSeats(cap)}
+                        className={`p-2.5 rounded-xl border text-xs text-left transition-all cursor-pointer ${
+                          tableSeats === cap
+                            ? "border-[#C5A880] bg-[#C5A880]/15 text-[#F9F6F0] font-semibold"
+                            : "border-[#282622] bg-[#0C0B0A] text-[#A69F93] hover:border-[#6E675E]"
+                        }`}
+                      >
+                        {cap}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {/* Texture selector for all products */}
               <div className="space-y-2">
                 <div className="flex justify-between text-xs">
@@ -255,14 +283,16 @@ Pourriez-vous me confirmer les disponibilités d'atelier et les délais de livra
                 </div>
               </div>
 
-              {(product.category === "Chaises" || product.category === "Fauteuils") && (
+              {(product.category === "Chaises" ||
+                product.category === "Fauteuils" ||
+                product.category === "Tables à manger") && (
                 <div className="space-y-2">
                   <div className="flex justify-between text-xs">
-                    <span className="text-[#8E877D] uppercase tracking-wider">Teinte Bois / Piétement :</span>
+                    <span className="text-[#8E877D] uppercase tracking-wider">Teinte Bois / Plateau :</span>
                     <span className="text-[#C5A880] font-medium">{selectedWood}</span>
                   </div>
                   <div className="grid grid-cols-2 gap-2">
-                    {["Noyer chaud", "Chêne miel naturel", "Chêne noir mat", "Laiton / Sur mesure"].map((wood) => (
+                    {["Noyer chaud", "Chêne miel naturel", "Marbre / Verre & Bois", "Chêne noir / Laiton"].map((wood) => (
                       <button
                         key={wood}
                         type="button"

@@ -245,7 +245,7 @@ export default function HomePage() {
             />
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Collection Salons */}
             <ScrollReveal delay={0.05}>
               <Link
@@ -272,6 +272,38 @@ export default function HomePage() {
                   </p>
                   <div className="mt-4 flex items-center gap-1.5 text-xs text-[#C5A880] font-medium tracking-wider uppercase">
                     <span>Voir les Salons</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </Link>
+            </ScrollReveal>
+
+            {/* Collection Tables à manger */}
+            <ScrollReveal delay={0.08}>
+              <Link
+                href="/collections?category=Tables%20%C3%A0%20manger"
+                className="group relative h-[420px] rounded-2xl overflow-hidden border border-[#282622] hover:border-[#C5A880] transition-all duration-500 block"
+              >
+                <Image
+                  src="/images/tables/tm002-ambiance-1.jpg"
+                  alt="Collection Tables à Manger OÏKOS"
+                  fill
+                  unoptimized
+                  className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0C0B0A] via-[#0C0B0A]/50 to-transparent" />
+                <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#C5A880] font-medium">
+                    Art de Recevoir
+                  </span>
+                  <h3 className="font-serif text-2xl text-[#F9F6F0] mt-1 group-hover:text-[#C5A880] transition-colors">
+                    Collection Tables à Manger
+                  </h3>
+                  <p className="text-xs text-[#C4BEB4] mt-2 line-clamp-3 leading-relaxed">
+                    Tables rondes, ovales et rectangulaires à fûts cannelés en noyer massif, plateaux marbre ou verre trempé sur mesure.
+                  </p>
+                  <div className="mt-4 flex items-center gap-1.5 text-xs text-[#C5A880] font-medium tracking-wider uppercase">
+                    <span>Voir les Tables à Manger</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>

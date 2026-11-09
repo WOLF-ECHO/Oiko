@@ -29,8 +29,7 @@ export function JsonLdOrganization() {
       },
     ],
     sameAs: [
-      "https://www.instagram.com/oikos.ma",
-      "https://www.pinterest.com/oikosdesign",
+      "https://www.instagram.com/oikos.ma?xtok=MWlhZ2h1cmhtdTR4eQ==",
     ],
   };
 

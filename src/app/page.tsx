@@ -321,7 +321,7 @@ export default function HomePage() {
                 className="group relative h-[420px] rounded-2xl overflow-hidden border border-[#282622] hover:border-[#C5A880] transition-all duration-500 block"
               >
                 <Image
-                  src="/images/backgrounds/bg-lounge-suite.jpg"
+                  src="/images/chairs/collection-fauteuils-cover.jpg"
                   alt="Collection Fauteuils OÏKOS"
                   fill
                   unoptimized
@@ -353,7 +353,7 @@ export default function HomePage() {
                 className="group relative h-[420px] rounded-2xl overflow-hidden border border-[#282622] hover:border-[#C5A880] transition-all duration-500 block"
               >
                 <Image
-                  src="/images/backgrounds/bg-salle-manger.jpg"
+                  src="/images/chairs/collection-chaises-cover.jpg"
                   alt="Collection Chaises OÏKOS"
                   fill
                   unoptimized
@@ -442,6 +442,58 @@ export default function HomePage() {
               </Link>
             </ScrollReveal>
           </div>
+
+          {/* Coming Soon Collections Row: Tables basses, Luminaires, Art mural */}
+          <ScrollReveal delay={0.45}>
+            <div className="pt-4 space-y-4">
+              <div className="flex items-center gap-3">
+                <span className="text-[10px] uppercase tracking-[0.3em] text-[#C5A880] font-semibold">
+                  Prochaines Éditions OÏKOS
+                </span>
+                <div className="h-[1px] flex-1 bg-gradient-to-r from-[#282622] to-transparent" />
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {[
+                  {
+                    title: "Collection Tables Basses",
+                    subtitle: "Tables gigognes & monolithiques en travertin, marbre et noyer massif",
+                    href: "/collections?category=Tables%20basses",
+                  },
+                  {
+                    title: "Collection Luminaires",
+                    subtitle: "Suspensions architecturales, lampadaires sculpturaux & appliques en laiton",
+                    href: "/collections?category=Luminaires",
+                  },
+                  {
+                    title: "Collection Art Mural",
+                    subtitle: "Œuvres texturées sur mesure, bas-reliefs minéraux & tableaux d'atelier",
+                    href: "/collections?category=Art%20mural",
+                  },
+                ].map((item) => (
+                  <Link
+                    key={item.title}
+                    href={item.href}
+                    className="group p-6 rounded-2xl bg-[#141311] border border-[#282622] hover:border-[#C5A880]/50 transition-all flex items-start justify-between gap-4"
+                  >
+                    <div className="space-y-1.5">
+                      <div className="flex items-center gap-2">
+                        <span className="px-2.5 py-0.5 rounded-full bg-[#C5A880]/15 border border-[#C5A880]/40 text-[9px] uppercase tracking-[0.2em] text-[#C5A880] font-semibold">
+                          Coming Soon
+                        </span>
+                      </div>
+                      <h4 className="font-serif text-lg text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">
+                        {item.title}
+                      </h4>
+                      <p className="text-xs text-[#8E877D] leading-relaxed">
+                        {item.subtitle}
+                      </p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 

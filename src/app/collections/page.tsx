@@ -34,7 +34,6 @@ function CollectionsContent() {
     "Salons",
     "Tables à manger",
     "Tables basses",
-    "Consoles & Miroirs",
     "Luminaires",
     "Art mural",
   ];
@@ -279,6 +278,60 @@ function CollectionsContent() {
           </button>
         </div>
 
+        {/* Coming Soon Highlight Cards (Tables basses, Luminaires, Art mural) */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {[
+            {
+              key: "Tables basses",
+              eyebrow: "Living & Réception",
+              title: "Tables basses",
+              desc: "Tables basses en travertin, marbre et noyer massif façonnées sur mesure.",
+            },
+            {
+              key: "Luminaires",
+              eyebrow: "Éclairage Architectural",
+              title: "Luminaires",
+              desc: "Suspensions sculpturales, lampadaires et appliques d'atelier.",
+            },
+            {
+              key: "Art mural",
+              eyebrow: "Galerie OÏKOS",
+              title: "Art mural",
+              desc: "Œuvres murales texturées, bas-reliefs et créations artistiques sur mesure.",
+            },
+          ].map((item) => (
+            <button
+              key={item.key}
+              type="button"
+              onClick={() =>
+                setSelectedCategory(selectedCategory === item.key ? "All" : item.key)
+              }
+              className={`group text-left p-4 rounded-2xl border transition-all flex items-center justify-between gap-3 cursor-pointer ${
+                selectedCategory === item.key
+                  ? "bg-[#1E1D1A] border-[#C5A880] shadow-[0_10px_30px_rgba(197,168,128,0.15)]"
+                  : "bg-[#141311] border-[#282622] hover:border-[#C5A880]/40"
+              }`}
+            >
+              <div className="space-y-1">
+                <span className="text-[9px] uppercase tracking-[0.25em] text-[#8E877D] font-semibold block">
+                  {item.eyebrow}
+                </span>
+                <h3 className="font-serif text-base sm:text-lg text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-[11px] text-[#8E877D] leading-relaxed line-clamp-1">
+                  {item.desc}
+                </p>
+              </div>
+              <div className="shrink-0 text-right">
+                <span className="inline-block px-2.5 py-1 rounded-full bg-[#C5A880]/15 border border-[#C5A880]/40 text-[9px] uppercase tracking-[0.18em] text-[#C5A880] font-semibold">
+                  Coming Soon
+                </span>
+              </div>
+            </button>
+          ))}
+        </div>
+
         {/* Filter Controls Bar */}
         <div className="bg-[#161513] border border-[#282622] rounded-2xl p-4 sm:p-6 space-y-6">
           {/* Universe Tabs */}
@@ -323,6 +376,7 @@ function CollectionsContent() {
             <div className="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-1">
               {categories.map((cat) => {
                 const count = categoryCounts[cat] ?? 0;
+                const isComingSoon = cat !== "All" && count === 0;
                 return (
                   <button
                     key={cat}
@@ -332,13 +386,18 @@ function CollectionsContent() {
                         ? "bg-[#DEC5A5]/20 text-[#DEC5A5] border border-[#DEC5A5]/40 font-semibold"
                         : count > 0
                         ? "text-[#EFECE6] bg-[#0C0B0A] border border-[#282622] hover:border-[#C5A880]/50"
-                        : "text-[#6E675E] hover:text-[#8E877D]"
+                        : "text-[#8E877D] bg-[#0C0B0A]/60 border border-[#282622]/70 hover:border-[#C5A880]/40 hover:text-[#EFECE6]"
                     }`}
                   >
                     <span>{cat === "All" ? "Toutes les pièces" : cat}</span>
                     {count > 0 && (
                       <span className="text-[10px] px-1.5 py-0.2 rounded-full bg-[#C5A880]/20 text-[#C5A880]">
                         {count}
+                      </span>
+                    )}
+                    {isComingSoon && (
+                      <span className="text-[9px] px-1.5 py-0.5 rounded-full bg-[#C5A880]/15 text-[#C5A880] border border-[#C5A880]/30 font-semibold tracking-widest">
+                        Coming Soon
                       </span>
                     )}
                   </button>
@@ -394,19 +453,16 @@ function CollectionsContent() {
           </div>
         ) : isUnintegratedCategory ? (
           <div className="text-center py-20 px-6 bg-[#161513] rounded-3xl border border-[#282622] space-y-6 max-w-3xl mx-auto">
-            <div className="w-12 h-12 rounded-full bg-[#C5A880]/10 border border-[#C5A880]/30 flex items-center justify-center text-[#C5A880] mx-auto">
-              <Sparkles className="w-6 h-6" />
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#C5A880]/15 border border-[#C5A880]/40 text-[#C5A880] text-[10px] uppercase tracking-[0.25em] font-semibold mx-auto">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Coming Soon</span>
             </div>
             <div className="space-y-2">
-              <span className="text-[10px] uppercase tracking-[0.3em] text-[#C5A880] font-semibold block">
-                Catalogue Officiel en Cours de Numérisation
-              </span>
               <h3 className="font-serif text-2xl sm:text-3xl text-[#F9F6F0]">
-                Collection « {selectedCategory} » — Sur Commande &amp; Showroom
+                Collection « {selectedCategory} » — Coming Soon
               </h3>
               <p className="text-xs sm:text-sm text-[#C4BEB4] max-w-xl mx-auto leading-relaxed">
-                Nous présentons exclusivement nos véritables réalisations d&apos;atelier. Les pièces de la catégorie{" "}
-                <strong>{selectedCategory}</strong> sont disponibles sur mesure dans notre atelier de Dar Bouazza ou via notre service de <strong>Conception Globale</strong>.
+                La collection officielle <strong>{selectedCategory}</strong> est actuellement en cours de photographie et de mise en ligne. Nos créations sur mesure ({selectedCategory.toLowerCase()}) sont d&apos;ores et déjà réalisables sur commande dans notre atelier de Dar Bouazza ou via notre service de <strong>Conception Globale</strong>.
               </p>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
@@ -433,6 +489,12 @@ function CollectionsContent() {
                 className="px-5 py-2.5 rounded-full bg-[#1E1D1A] border border-[#C5A880]/50 text-[#F9F6F0] text-xs font-semibold uppercase tracking-wider hover:border-[#C5A880] transition-colors cursor-pointer"
               >
                 Salons ({categoryCounts["Salons"]})
+              </button>
+              <button
+                onClick={() => setSelectedCategory("Tables à manger")}
+                className="px-5 py-2.5 rounded-full bg-[#1E1D1A] border border-[#C5A880]/50 text-[#F9F6F0] text-xs font-semibold uppercase tracking-wider hover:border-[#C5A880] transition-colors cursor-pointer"
+              >
+                Tables à manger ({categoryCounts["Tables à manger"]})
               </button>
               <Link
                 href="/conception-globale"

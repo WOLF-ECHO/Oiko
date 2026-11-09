@@ -9,7 +9,7 @@ export interface Product {
   name: string;
   subtitle: string;
   universe: "Living" | "Signature" | "Art" | "Éditions";
-  category: "Chaises" | "Fauteuils" | "Lits" | "Salons" | "Tables à manger" | "Canapés" | "Tables basses" | "Consoles & Miroirs" | "Luminaires" | "Art mural";
+  category: "Chaises" | "Fauteuils" | "Lits" | "Salons" | "Tables à manger" | "Canapés" | "Tables basses" | "Luminaires" | "Art mural";
   price: number; // in MAD (DH)
   formattedPrice: string;
   leadTime: string;

@@ -31,7 +31,8 @@ export default function Navbar() {
 
   const navLinks: NavLinkItem[] = [
     { name: "Collections", href: "/collections" },
-    { name: "Conception Globale", href: "/conception-globale", isSpecial: true },
+    { name: "Offres Exclusives", href: "/collections?category=Offres%20exclusives", isSpecial: true },
+    { name: "Conception Globale", href: "/conception-globale" },
     { name: "Le Showroom", href: "/showroom" },
     { name: "L'Atelier", href: "/atelier" },
     { name: "Espace B2B", href: "/b2b" },

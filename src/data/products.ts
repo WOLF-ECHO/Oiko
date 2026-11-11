@@ -2,6 +2,7 @@ import { CHAIR_PRODUCTS } from "./chairs";
 import { BED_PRODUCTS } from "./beds";
 import { SALON_PRODUCTS } from "./salons";
 import { TABLE_PRODUCTS } from "./tables";
+import { PACK_PRODUCTS } from "./packs";
 
 export interface Product {
   id: string;
@@ -9,7 +10,7 @@ export interface Product {
   name: string;
   subtitle: string;
   universe: "Living" | "Signature" | "Art" | "Éditions";
-  category: "Chaises" | "Fauteuils" | "Lits" | "Salons" | "Tables à manger" | "Canapés" | "Tables basses" | "Luminaires" | "Art mural";
+  category: "Offres exclusives" | "Chaises" | "Fauteuils" | "Lits" | "Salons" | "Tables à manger" | "Canapés" | "Tables basses" | "Luminaires" | "Art mural";
   price: number; // in MAD (DH)
   formattedPrice: string;
   leadTime: string;
@@ -41,6 +42,7 @@ export const PRODUCTS: Product[] = [
   ...BED_PRODUCTS,
   ...SALON_PRODUCTS,
   ...TABLE_PRODUCTS,
+  ...PACK_PRODUCTS,
 ];
 
 export const SHOWROOM_ZONES = [

@@ -19,6 +19,7 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
   const [imgSrc, setImgSrc] = useState(product.images[0] || FALLBACK_IMAGE);
   const isWhiteBgPoster =
     imgSrc.includes("-studio.") || imgSrc.includes("-isolated.");
+  const isPackPoster = imgSrc.includes("/packs/");
 
   return (
     <>
@@ -26,7 +27,7 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
         {/* Image Container with Aspect Ratio */}
         <div
           className={`relative aspect-[4/5] w-full overflow-hidden ${
-            isWhiteBgPoster ? "bg-white" : "bg-[#1E1D1A]"
+            isWhiteBgPoster ? "bg-white" : isPackPoster ? "bg-[#0E0D0B]" : "bg-[#1E1D1A]"
           }`}
         >
           <Image
@@ -38,14 +39,18 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
             onError={() => setImgSrc(FALLBACK_IMAGE)}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className={`${
-              isWhiteBgPoster ? "object-contain p-2" : "object-cover"
+              isWhiteBgPoster
+                ? "object-contain p-2"
+                : isPackPoster
+                ? "object-contain p-1"
+                : "object-cover"
             } transition-transform duration-700 ease-out group-hover:scale-105`}
           />
 
           {/* Badges */}
           <div className="absolute top-3 left-3 flex flex-col gap-1 z-10">
             <span className="px-2.5 py-1 rounded-full bg-[#0C0B0A]/85 backdrop-blur-md text-[10px] tracking-wider uppercase text-[#C5A880] border border-[#282622]">
-              {product.universe}
+              {product.category === "Offres exclusives" ? "Offre Exclusive" : product.universe}
             </span>
             {product.limitedEdition && (
               <span className="px-2.5 py-0.5 rounded-full bg-[#C5A880] text-[#0C0B0A] text-[9px] tracking-widest uppercase font-bold">
@@ -97,9 +102,13 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
           <div className="mt-4 pt-3.5 border-t border-[#282622] flex items-center justify-between">
             <div>
               <span className="text-[10px] text-[#8E877D] uppercase tracking-wider block">
-                {product.price > 0 ? "Prix indicatif" : "Tarif"}
+                {product.category === "Offres exclusives"
+                  ? "Prix du Pack"
+                  : product.price > 0
+                  ? "Prix indicatif"
+                  : "Tarif"}
               </span>
-              <span className="text-sm font-semibold text-[#F9F6F0]">
+              <span className="text-sm font-semibold text-[#C5A880]">
                 {product.formattedPrice}
               </span>
             </div>

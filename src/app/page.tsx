@@ -23,6 +23,7 @@ import ProductCard from "@/components/ui/ProductCard";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import LivingCatalogVideoSection from "@/components/ui/LivingCatalogVideoSection";
 import { PRODUCTS, SHOWROOM_ZONES } from "@/data/products";
+import { PACK_PRODUCTS } from "@/data/packs";
 import { JsonLdFaq } from "@/components/seo/JsonLd";
 
 export default function HomePage() {
@@ -234,6 +235,56 @@ export default function HomePage() {
               </ScrollReveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* 4B. OFFRES EXCLUSIVES : PACKS INTÉRIEUR CLÉS EN MAIN */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0E0D0B] border-t border-[#282622]">
+        <div className="max-w-7xl mx-auto space-y-12">
+          <ScrollReveal>
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+              <SectionHeading
+                chapter="Offres Exclusives"
+                eyebrow="Packs Complets &bull; Dès 6 990 DH"
+                title="Nos Packs Intérieur Clé en Main"
+                subtitle="Découvrez nos 4 packs exclusifs (Pack Harmonie, Pack Duo Élégance, Pack Signature et Pack Complet Airbnb). Différentes gammes de matelas sont disponibles au choix — le prix du pack évoluera si le modèle de matelas est modifié."
+                align="left"
+              />
+
+              <Link
+                href="/collections?category=Offres%20exclusives"
+                className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#C5A880] hover:text-[#DEC5A5] transition-colors group shrink-0"
+              >
+                <span>Voir les 4 Offres Exclusives</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {PACK_PRODUCTS.map((pack, idx) => (
+              <ScrollReveal key={pack.id} delay={idx * 0.1} yOffset={30}>
+                <ProductCard product={pack} />
+              </ScrollReveal>
+            ))}
+          </div>
+
+          <ScrollReveal delay={0.3}>
+            <div className="p-4 sm:p-5 rounded-2xl bg-[#161513] border border-[#C5A880]/35 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+              <div className="flex items-start sm:items-center gap-3 text-[#C4BEB4]">
+                <Sparkles className="w-4 h-4 text-[#C5A880] shrink-0 mt-0.5 sm:mt-0" />
+                <span>
+                  <strong className="text-[#F9F6F0]">Note sur les matelas inclus :</strong> Chaque pack inclut un matelas double (160 × 200 cm). Différents modèles de matelas (orthopédique, mémoire de forme, hôtelier) sont disponibles au choix et le prix du pack changera si le matelas est modifié.
+                </span>
+              </div>
+              <Link
+                href="/collections?category=Offres%20exclusives"
+                className="px-5 py-2.5 rounded-full bg-[#C5A880] text-[#0C0B0A] font-bold uppercase tracking-wider shrink-0 hover:bg-[#DEC5A5] transition-colors"
+              >
+                Personnaliser un Pack
+              </Link>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 

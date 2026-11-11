@@ -34,12 +34,14 @@ export default function ProductDetailClient({
   const [tableSeats, setTableSeats] = useState("6 Couverts");
   const [selectedTexture, setSelectedTexture] = useState("Bouclette d'alpaga");
   const [selectedWood, setSelectedWood] = useState("Noyer chaud");
+  const [selectedMattress, setSelectedMattress] = useState("Matelas Standard (Inclus)");
   const [copied, setCopied] = useState(false);
 
   const currentImg = product.images[activeImage] || product.images[0];
   const isWhiteBgPoster = Boolean(
     currentImg?.includes("-studio.") || currentImg?.includes("-isolated.")
   );
+  const isPackPoster = Boolean(currentImg?.includes("/packs/"));
 
   const handleShare = () => {
     if (typeof navigator !== "undefined" && navigator.clipboard) {
@@ -51,7 +53,9 @@ export default function ProductDetailClient({
 
   const handleWhatsApp = () => {
     let details = "";
-    if (product.category === "Lits") {
+    if (product.category === "Offres exclusives") {
+      details = `Prix de base du pack : ${product.formattedPrice} • Matelas souhaité : ${selectedMattress} • Revêtement & Couleur : ${selectedTexture} (couleur sur mesure au choix)`;
+    } else if (product.category === "Lits") {
       details = `Dimension souhaitée : ${selectedDimension} • Configuration : ${
         hasStorage ? "Avec coffre escamotable hydraulique" : "Standard (sans coffre)"
       } • Texture : ${selectedTexture} (couleur sur mesure au choix)`;
@@ -94,8 +98,10 @@ Pourriez-vous me transmettre la confirmation de faisabilité d'atelier et les d�
           <div className="lg:col-span-7 space-y-4">
             {/* Main Featured Image */}
             <div
-              className={`relative aspect-[4/3] w-full rounded-2xl overflow-hidden border border-[#282622] ${
-                isWhiteBgPoster ? "bg-white" : "bg-[#161513]"
+              className={`relative ${
+                isPackPoster ? "aspect-[4/5]" : "aspect-[4/3]"
+              } w-full rounded-2xl overflow-hidden border border-[#282622] ${
+                isWhiteBgPoster ? "bg-white" : isPackPoster ? "bg-[#0E0D0B]" : "bg-[#161513]"
               }`}
             >
               <Image
@@ -105,7 +111,11 @@ Pourriez-vous me transmettre la confirmation de faisabilité d'atelier et les d�
                 priority
                 unoptimized
                 className={`${
-                  isWhiteBgPoster ? "object-contain p-4" : "object-cover"
+                  isWhiteBgPoster
+                    ? "object-contain p-4"
+                    : isPackPoster
+                    ? "object-contain p-2"
+                    : "object-cover"
                 } transition-transform duration-700 hover:scale-105`}
               />
               <div className="absolute top-4 left-4 bg-[#0C0B0A]/85 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-[#282622] text-[11px] text-[#C5A880] uppercase tracking-wider font-medium">
@@ -210,6 +220,50 @@ Pourriez-vous me transmettre la confirmation de faisabilité d'atelier et les d�
 
             {/* Interactive Customizer */}
             <div className="space-y-6 border-t border-[#282622] pt-6">
+              {product.category === "Offres exclusives" && (
+                <div className="space-y-4">
+                  <div className="p-4 rounded-2xl bg-[#C5A880]/10 border border-[#C5A880]/40 space-y-1.5">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-[#C5A880] block">
+                      Information Importante — Literie &amp; Matelas
+                    </span>
+                    <p className="text-xs text-[#F9F6F0] leading-relaxed">
+                      Un matelas (160 × 200 cm) est inclus dans le prix affiché du pack. <strong>Différents modèles et gammes de matelas sont disponibles au choix</strong> (orthopédique, mémoire de forme, ressorts ensachés, qualité hôtelière) : <strong>le prix du pack changera si le modèle de matelas est modifié</strong>.
+                    </p>
+                  </div>
+
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="text-[#8E877D] uppercase tracking-wider">
+                        Gamme de Matelas (160 × 200 cm) :
+                      </span>
+                      <span className="text-[#C5A880] font-medium">{selectedMattress}</span>
+                    </div>
+                    <div className="grid grid-cols-2 gap-2.5">
+                      {[
+                        { label: "Matelas Standard (Inclus)", sub: "Inclus dans le tarif du pack" },
+                        { label: "Matelas Orthopédique HR", sub: "Soutien ferme — Tarif ajusté" },
+                        { label: "Matelas Mémoire de Forme", sub: "Accueil enveloppant — Tarif ajusté" },
+                        { label: "Matelas Hôtelier Premium", sub: "Haute durabilité — Tarif ajusté" },
+                      ].map((mat) => (
+                        <button
+                          key={mat.label}
+                          type="button"
+                          onClick={() => setSelectedMattress(mat.label)}
+                          className={`p-3 rounded-xl border text-xs text-left transition-all cursor-pointer ${
+                            selectedMattress === mat.label
+                              ? "border-[#C5A880] bg-[#C5A880]/15 text-[#F9F6F0] font-semibold ring-1 ring-[#C5A880]"
+                              : "border-[#282622] bg-[#161513] text-[#A69F93] hover:border-[#6E675E]"
+                          }`}
+                        >
+                          <span className="block font-medium">{mat.label}</span>
+                          <span className="text-[10px] text-[#8E877D] block mt-0.5">{mat.sub}</span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {product.category === "Lits" && (
                 <>
                   {/* Dimensions Selector */}

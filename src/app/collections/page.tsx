@@ -28,6 +28,7 @@ function CollectionsContent() {
   const universes = ["All", "Signature", "Living", "Art", "Éditions"];
   const categories = [
     "All",
+    "Offres exclusives",
     "Fauteuils",
     "Chaises",
     "Lits",
@@ -39,6 +40,7 @@ function CollectionsContent() {
   ];
 
   const CATEGORY_ORDER: Record<string, number> = {
+    "Offres exclusives": 0,
     Fauteuils: 1,
     Chaises: 2,
     Lits: 3,
@@ -113,8 +115,42 @@ function CollectionsContent() {
           />
         </div>
 
-        {/* Quick Category Highlight Cards (Fauteuils, Chaises, Lits, Salons & Tables à manger) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        {/* Quick Category Highlight Cards (Offres exclusives, Fauteuils, Chaises, Lits, Salons & Tables à manger) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <button
+            type="button"
+            onClick={() =>
+              setSelectedCategory(
+                selectedCategory === "Offres exclusives" ? "All" : "Offres exclusives"
+              )
+            }
+            className={`group text-left p-5 rounded-2xl border transition-all flex items-center justify-between gap-3 cursor-pointer ${
+              selectedCategory === "Offres exclusives"
+                ? "bg-[#1E1D1A] border-[#C5A880] shadow-[0_10px_30px_rgba(197,168,128,0.2)]"
+                : "bg-gradient-to-r from-[#1D1A15] to-[#161513] border-[#C5A880]/50 hover:border-[#C5A880]"
+            }`}
+          >
+            <div className="space-y-1">
+              <span className="text-[10px] uppercase tracking-[0.25em] text-[#C5A880] font-semibold block">
+                Packs Clés en Main • Dès 6 990 DH
+              </span>
+              <h3 className="font-serif text-lg sm:text-xl text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">
+                Offres exclusives
+              </h3>
+              <p className="text-xs text-[#C4BEB4] leading-relaxed line-clamp-2">
+                Packs Harmonie, Duo Élégance, Signature &amp; Airbnb (différents matelas disponibles).
+              </p>
+            </div>
+            <div className="shrink-0 text-right">
+              <span className="font-serif text-2xl text-[#C5A880] block">
+                {categoryCounts["Offres exclusives"] || 0}
+              </span>
+              <span className="text-[9px] uppercase tracking-widest text-[#8E877D]">
+                Packs
+              </span>
+            </div>
+          </button>
+
           <button
             type="button"
             onClick={() =>

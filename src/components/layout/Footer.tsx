@@ -88,6 +88,11 @@ export default function Footer() {
             </h5>
             <ul className="space-y-2.5 text-xs text-[#8E877D]">
               <li>
+                <Link href="/collections?category=Offres%20exclusives" className="text-[#C5A880] hover:underline transition-colors font-semibold">
+                  Offres Exclusives (Packs)
+                </Link>
+              </li>
+              <li>
                 <Link href="/collections?category=Salons" className="hover:text-[#C5A880] transition-colors">
                   Collection Salons
                 </Link>

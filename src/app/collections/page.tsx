@@ -132,7 +132,7 @@ function CollectionsContent() {
           >
             <div className="space-y-1">
               <span className="text-[10px] uppercase tracking-[0.25em] text-[#C5A880] font-semibold block">
-                Packs Clés en Main • Dès 6 990 DH
+                Packs Clés en Main • Mobilier Coordonné
               </span>
               <h3 className="font-serif text-lg sm:text-xl text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">
                 Offres exclusives
@@ -580,7 +580,7 @@ function CollectionsContent() {
               <span>Conception Globale</span>
             </Link>
             <a
-              href="https://wa.me/212722033326?text=Bonjour%20OÏKOS,%20je%20souhaite%20un%20devis%20personnalisé%20sur%20vos%20collections."
+              href="https://wa.me/212698780330?text=Bonjour%20OÏKOS,%20je%20souhaite%20un%20devis%20personnalisé%20sur%20vos%20collections."
               target="_blank"
               rel="noopener noreferrer"
               className="px-7 py-3.5 rounded-full border border-[#C5A880]/50 text-[#C5A880] text-xs font-semibold tracking-wider uppercase hover:bg-[#C5A880]/10 transition-colors flex items-center justify-center gap-2"

@@ -37,7 +37,7 @@ export default function QuoteRequestModal({
 
   const handleOpenWhatsApp = () => {
     const text = ConfiguratorStorage.formatWhatsAppMessage(configuration, formData.fullName);
-    window.open(`https://wa.me/212722033326?text=${encodeURIComponent(text)}`, "_blank");
+    window.open(`https://wa.me/212698780330?text=${encodeURIComponent(text)}`, "_blank");
   };
 
   return (
@@ -88,7 +88,7 @@ export default function QuoteRequestModal({
                   className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#C5A880] text-[#0C0B0A] text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-[#DEC5A5] transition-colors"
                 >
                   <MessageCircle className="w-4 h-4" />
-                  <span>Transmettre sur WhatsApp (07 22 03 33 26)</span>
+                  <span>Transmettre sur WhatsApp (0698-780330)</span>
                 </button>
                 <button
                   onClick={onClose}

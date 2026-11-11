@@ -9,7 +9,7 @@ import { MapPin, Calendar, Clock, Phone, Sparkles, Compass, ArrowRight, ShieldCh
 export const metadata: Metadata = {
   title: "Le Showroom & Atelier Casablanca • La Galerie Habitable | OÏKOS",
   description:
-    "Découvrez 'La Galerie Habitable', l'Atelier et le Studio de Conception de OÏKOS à Dar Bouazza (Errahma Bloc 80 N°112), Casablanca. Visites privées sur rendez-vous au 07 22 03 33 26.",
+    "Découvrez 'La Galerie Habitable', l'Atelier et le Studio de Conception de OÏKOS à Dar Bouazza (Errahma Bloc 80 N°112), Casablanca. Visites privées sur rendez-vous au 0698-780330.",
 };
 
 export default function ShowroomPage() {
@@ -173,7 +173,7 @@ export default function ShowroomPage() {
               <div className="space-y-4">
                 <p className="flex items-center gap-3">
                   <Phone className="w-4 h-4 text-[#C5A880] shrink-0" />
-                  <span>Ligne Directe / WhatsApp : <strong className="text-[#F9F6F0]">07 22 03 33 26</strong></span>
+                  <span>Ligne Directe / WhatsApp : <strong className="text-[#F9F6F0]">0698-780330</strong></span>
                 </p>
                 <p className="flex items-center gap-3">
                   <Mail className="w-4 h-4 text-[#C5A880] shrink-0" />

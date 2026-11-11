@@ -119,13 +119,13 @@ export default function ContactPage() {
 
                 <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
                   <a
-                    href={`https://wa.me/212722033326?text=Bonjour%20OÏKOS,%20je%20viens%20de%20réserver%20un%20RDV%20pour%20${encodeURIComponent(formData.firstName)}%20au%20Showroom%20Casablanca.`}
+                    href={`https://wa.me/212698780330?text=Bonjour%20OÏKOS,%20je%20viens%20de%20réserver%20un%20RDV%20pour%20${encodeURIComponent(formData.firstName)}%20au%20Showroom%20Casablanca.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-8 py-3.5 rounded-full bg-gradient-to-r from-[#C5A880] to-[#DEC5A5] text-[#0C0B0A] text-xs font-bold uppercase tracking-wider flex items-center gap-2 hover:scale-105 transition-transform"
                   >
                     <MessageCircle className="w-4 h-4" />
-                    <span>Confirmer sur WhatsApp (07 22 03 33 26)</span>
+                    <span>Confirmer sur WhatsApp (0698-780330)</span>
                   </a>
 
                   <button
@@ -409,13 +409,13 @@ export default function ContactPage() {
                 Contactez notre studio directement par WhatsApp ou par téléphone pour un devis express ou caler un créneau en direct.
               </p>
               <a
-                href="https://wa.me/212722033326?text=Bonjour%20OÏKOS,%20je%20souhaite%20un%20conseil%20pour%20mon%20projet%20d'intérieur."
+                href="https://wa.me/212698780330?text=Bonjour%20OÏKOS,%20je%20souhaite%20un%20conseil%20pour%20mon%20projet%20d'intérieur."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-3.5 rounded-full bg-[#C5A880] text-[#0C0B0A] text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-[#DEC5A5] transition-colors"
               >
                 <MessageCircle className="w-4 h-4" />
-                <span>WhatsApp : 07 22 03 33 26</span>
+                <span>WhatsApp : 0698-780330</span>
               </a>
             </div>
 
@@ -441,8 +441,8 @@ export default function ContactPage() {
                 </p>
                 <p className="flex items-center gap-2.5 text-[#F9F6F0]">
                   <Phone className="w-4 h-4 text-[#C5A880] shrink-0" />
-                  <a href="tel:0722033326" className="hover:text-[#C5A880] transition-colors font-medium">
-                    07 22 03 33 26
+                  <a href="tel:0698780330" className="hover:text-[#C5A880] transition-colors font-medium">
+                    0698-780330
                   </a>
                 </p>
                 <p className="flex items-center gap-2.5 text-[#F9F6F0]">

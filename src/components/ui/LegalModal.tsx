@@ -132,7 +132,7 @@ export default function LegalModal({
                 <div className="p-4 rounded-xl bg-[#0E0D0C] border border-[#2B2822] space-y-1.5 text-xs">
                   <p><span className="text-[#8E877D]">Dénomination sociale :</span> <strong className="text-[#F9F6F0]">OÏKOS Maison de Design SARL</strong></p>
                   <p><span className="text-[#8E877D]">Siège Social, Showroom &amp; Atelier :</span> ERRAHMA BLOC 80 N°112, DAR BOUAZZA, CASABLANCA, MAROC</p>
-                  <p><span className="text-[#8E877D]">Téléphone Conciergerie :</span> +212 (0)7 22 03 33 26</p>
+                  <p><span className="text-[#8E877D]">Téléphone Conciergerie :</span> 0698-780330</p>
                   <p><span className="text-[#8E877D]">Adresse électronique :</span> oikosmaison@gmail.com</p>
                   <p><span className="text-[#8E877D]">Registre du Commerce :</span> Casablanca</p>
                   <p><span className="text-[#8E877D]">Tribunal compétent :</span> Tribunal de Commerce de Casablanca</p>

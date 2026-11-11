@@ -28,7 +28,7 @@ export default function WhatsAppConcierge() {
 
   const handleSendPrompt = (promptText: string) => {
     const encoded = encodeURIComponent(promptText);
-    window.open(`https://wa.me/212722033326?text=${encoded}`, "_blank");
+    window.open(`https://wa.me/212698780330?text=${encoded}`, "_blank");
     setIsOpen(false);
   };
 
@@ -36,7 +36,7 @@ export default function WhatsAppConcierge() {
     e.preventDefault();
     if (!customMsg.trim()) return;
     const encoded = encodeURIComponent(customMsg);
-    window.open(`https://wa.me/212722033326?text=${encoded}`, "_blank");
+    window.open(`https://wa.me/212698780330?text=${encoded}`, "_blank");
     setCustomMsg("");
     setIsOpen(false);
   };
@@ -134,7 +134,7 @@ export default function WhatsAppConcierge() {
           <div className="bg-[#0C0B0A] px-4 py-2.5 border-t border-[#282622] flex items-center justify-between text-[10px] text-[#8E877D]">
             <span className="flex items-center gap-1">
               <Clock className="w-3 h-3 text-[#C5A880]" />
-              7j/7 &bull; 07 22 03 33 26
+              7j/7 &bull; 0698-780330
             </span>
             <span>oikos.ma</span>
           </div>

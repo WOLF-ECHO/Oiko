@@ -22,7 +22,7 @@ export function JsonLdOrganization() {
     contactPoint: [
       {
         "@type": "ContactPoint",
-        telephone: "+212-722033326",
+        telephone: "+212-698780330",
         contactType: "customer service",
         areaServed: "MA",
         availableLanguage: ["French", "Arabic", "English"],
@@ -51,7 +51,7 @@ export function JsonLdLocalBusiness() {
     ],
     "@id": "https://oikos.ma/#casablanca-showroom",
     url: "https://oikos.ma/showroom",
-    telephone: "+212-722033326",
+    telephone: "+212-698780330",
     email: "oikosmaison@gmail.com",
     priceRange: "$$$$",
     address: {
@@ -147,7 +147,7 @@ export function JsonLdFaq() {
         name: "Où se trouve le showroom OÏKOS au Maroc ?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Notre showroom 'La Galerie Habitable', notre atelier et notre studio de conception se situent à Errahma Bloc 80 N°112, Dar Bouazza, Casablanca. Les visites privées se font sur rendez-vous en contactant le 07 22 03 33 26 ou par email à oikosmaison@gmail.com.",
+          text: "Notre showroom 'La Galerie Habitable', notre atelier et notre studio de conception se situent à Errahma Bloc 80 N°112, Dar Bouazza, Casablanca. Les visites privées se font sur rendez-vous en contactant le 0698-780330 ou par email à oikosmaison@gmail.com.",
         },
       },
       {

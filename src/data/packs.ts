@@ -21,20 +21,20 @@ export const PACK_PRODUCTS: Product[] = [
     ],
     finishes: [
       "Différents modèles de matelas disponibles au choix (le prix du pack changera si le matelas est modifié)",
-      "Option Lustre design multi-lumière disponible en supplément (+ 400 DH)",
       "Choix de couleurs de tissus et teintes de bois personnalisable en atelier",
-      "Fabrication soignée dans notre atelier de Dar Bouazza, Casablanca"
+      "Fabrication soignée dans notre atelier de Dar Bouazza, Casablanca",
+      "Garantie atelier de 6 mois"
     ],
     description:
-      "Le Pack Harmonie (16 490 DH) réunit l'essentiel d'un intérieur complet, élégant et harmonieux en 7 éléments coordonnés : un Salon d'angle spacieux (300 × 200 × 90 cm), une Table de salon sculpturale (120 × 80 × 45 cm), un Lit double capitonné (160 × 200 cm) avec Matelas inclus, une Table à manger accompagnée de ses 4 chaises, un Meuble TV coordonné (160 × 40 × 53 cm), ainsi qu'un Tapis et un Tableau décoratif. En option : ajoutez le Lustre design multi-lumière pour seulement + 400 DH. Note importante sur la literie : différents modèles et gammes de matelas sont disponibles au choix (orthopédique, mémoire de forme, ressorts ensachés, hôtelier), et le prix du pack changera si vous choisissez de modifier le matelas inclus.",
+      "Le Pack Harmonie réunit l'essentiel d'un intérieur complet, élégant et harmonieux en 7 éléments coordonnés : un Salon d'angle spacieux (300 × 200 × 90 cm), une Table de salon sculpturale (120 × 80 × 45 cm), un Lit double capitonné (160 × 200 cm) avec Matelas inclus, une Table à manger accompagnée de ses 4 chaises, un Meuble TV coordonné (160 × 40 × 53 cm), ainsi qu'un Tapis et un Tableau décoratif. Note importante sur la literie : différents modèles et gammes de matelas sont disponibles au choix (orthopédique, mémoire de forme, ressorts ensachés, hôtelier), et le prix du pack changera si le matelas est modifié.",
     story:
-      "Conçu par la Maison OÏKOS pour meubler intégralement votre séjour, votre salle à manger et votre chambre à coucher avec une cohérence esthétique irréprochable et un budget maîtrisé.",
+      "Conçu par la Maison OÏKOS pour meubler intégralement votre séjour, votre salle à manger et votre chambre à coucher avec une cohérence esthétique irréprochable.",
     details: [
-      "Référence officielle : PK001 — Pack Harmonie (16 490 DH)",
+      "Référence officielle : PK001 — Pack Harmonie",
       "Inclus : Salon d'angle (300/200/90 cm) + Table de salon (120/80/45 cm) + Meuble TV (160/40/53 cm)",
       "Inclus : Table à manger + 4 chaises + Tapis + Tableau décoratif",
       "Inclus : Lit double (160/200 cm) + Matelas inclus — différents matelas disponibles (le prix changera si le matelas est changé)",
-      "Supplément optionnel : Lustre design multi-lumière (+ 400 DH)"
+      "Couleurs et revêtements personnalisables selon votre intérieur"
     ],
     images: ["/images/packs/pack-harmonie.jpg"],
     featured: true,
@@ -65,11 +65,11 @@ export const PACK_PRODUCTS: Product[] = [
       "Garantie atelier de 6 mois"
     ],
     description:
-      "Le Pack Duo Élégance (6 990 DH) allie confort et modernité pour sublimer votre chambre à coucher. Ce pack comprend : un Lit double capitonné à tête de lit cannelée (160 × 200 cm), son Matelas inclus (160 × 200 cm), ainsi qu'une élégante Commode / Coiffeuse avec miroir LED intégré, rangements latéraux et pouf coordonné (Dimensions : 90 × 40 × 140 cm). Note importante sur la literie : différents modèles et conforts de matelas sont disponibles au choix en showroom ou sur commande, et le prix du pack changera si le matelas est changé.",
+      "Le Pack Duo Élégance allie confort et modernité pour sublimer votre chambre à coucher. Ce pack comprend : un Lit double capitonné à tête de lit cannelée (160 × 200 cm), son Matelas inclus (160 × 200 cm), ainsi qu'une élégante Commode / Coiffeuse avec miroir LED intégré, rangements latéraux et pouf coordonné (Dimensions : 90 × 40 × 140 cm). Note importante sur la literie : différents modèles et conforts de matelas sont disponibles au choix en showroom ou sur commande, et le prix du pack changera si le matelas est changé.",
     story:
       "Une formule pensée pour créer une véritable suite parentale contemporaine, associant une literie élégante à un espace beauté et rangement parfaitement coordonné.",
     details: [
-      "Référence officielle : PK002 — Pack Duo Élégance (6 990 DH)",
+      "Référence officielle : PK002 — Pack Duo Élégance",
       "Inclus : Lit double capitonné (160 / 200 cm)",
       "Inclus : Matelas (160 / 200 cm) — différents matelas disponibles (le prix changera si le matelas est changé)",
       "Inclus : Commode / Coiffeuse avec miroir et assise (90 / 40 / 140 cm)",
@@ -104,11 +104,11 @@ export const PACK_PRODUCTS: Product[] = [
       "Confection artisanale dans notre atelier de Dar Bouazza, Casablanca"
     ],
     description:
-      "Le Pack Signature (14 990 DH) a été imaginé pour offrir un intérieur complet, moderne et élégant. Il comprend : un grand Salon d'angle au galbe contemporain (300 × 200 cm), une Table à manger avec plateau en céramique accompagnée de ses 4 chaises, un Lit double capitonné (160 × 200 cm) avec son Matelas inclus, ainsi qu'un Lustre design multi-lumière. Note importante sur la literie : différents modèles et gammes de matelas sont disponibles au choix, et le prix du pack changera si le matelas est changé.",
+      "Le Pack Signature a été imaginé pour offrir un intérieur complet, moderne et élégant. Il comprend : un grand Salon d'angle au galbe contemporain (300 × 200 cm), une Table à manger avec plateau en céramique accompagnée de ses 4 chaises, un Lit double capitonné (160 × 200 cm) avec son Matelas inclus, ainsi qu'un Lustre design multi-lumière. Note importante sur la literie : différents modèles et gammes de matelas sont disponibles au choix, et le prix du pack changera si le matelas est changé.",
     story:
       "L'équilibre parfait entre design architectural et fonctionnalité : quatre univers clés (salon, salle à manger céramique, chambre complète et éclairage design) réunis dans une offre exclusive.",
     details: [
-      "Référence officielle : PK003 — Pack Signature (14 990 DH)",
+      "Référence officielle : PK003 — Pack Signature",
       "Inclus : Salon d'angle (300 / 200 cm)",
       "Inclus : Table à manger plateau en céramique + 4 chaises",
       "Inclus : Lit double (160 / 200 cm) + Matelas inclus — différents matelas disponibles (le prix changera si le matelas est changé)",
@@ -144,11 +144,11 @@ export const PACK_PRODUCTS: Product[] = [
       "Fabrication dans notre atelier de Dar Bouazza, Casablanca"
     ],
     description:
-      "Le Pack Complet Airbnb (21 490 DH) est la solution clé en main par excellence pour meubler intégralement un appartement locatif haut de gamme ou une résidence moderne avec des meubles 100 % coordonnés. Ce pack complet comprend : un Canapé d'angle (260 × 150 × 90 cm), une Table à manger avec 4 chaises, un Lit double (160 × 200 cm) avec Matelas inclus, un Meuble TV en bois cannelé et détails dorés, une Table basse assortie, 2 Tables d'appoint design blanc & or, ainsi qu'un Tableau décoratif. Note importante sur la literie : différents modèles de matelas sont disponibles au choix (orthopédique, mémoire de forme, qualité hôtelière intensive), et le prix du pack changera si le matelas est changé.",
+      "Le Pack Complet Airbnb est la solution clé en main par excellence pour meubler intégralement un appartement locatif haut de gamme ou une résidence moderne avec des meubles 100 % coordonnés. Ce pack complet comprend : un Canapé d'angle (260 × 150 × 90 cm), une Table à manger avec 4 chaises, un Lit double (160 × 200 cm) avec Matelas inclus, un Meuble TV en bois cannelé et détails dorés, une Table basse assortie, 2 Tables d'appoint design blanc & or, ainsi qu'un Tableau décoratif. Note importante sur la literie : différents modèles de matelas sont disponibles au choix (orthopédique, mémoire de forme, qualité hôtelière intensive), et le prix du pack changera si le matelas est changé.",
     story:
       "Spécialement étudié pour maximiser l'attractivité visuelle et le confort des appartements Airbnb et résidences contemporaines, avec un ensemble de mobilier parfaitement coordonné prêt à installer.",
     details: [
-      "Référence officielle : PK004 — Pack Complet Airbnb (21 490 DH)",
+      "Référence officielle : PK004 — Pack Complet Airbnb",
       "Inclus : Canapé d'angle (260 / 150 / 90 cm) + Table basse + Meuble TV coordonnés",
       "Inclus : Table à manger + 4 chaises",
       "Inclus : Lit double (160 / 200 cm) + Matelas inclus — différents matelas disponibles (le prix changera si le matelas est changé)",

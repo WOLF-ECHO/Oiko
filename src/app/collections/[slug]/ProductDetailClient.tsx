@@ -69,7 +69,7 @@ export default function ProductDetailClient({
     const text = `Bonjour OÏKOS, je suis intéressé(e) par la pièce ${product.name} (${product.subtitle}).
 ${details}.
 Pourriez-vous me transmettre la confirmation de faisabilité d'atelier et les délais de livraison ?`;
-    window.open(`https://wa.me/212722033326?text=${encodeURIComponent(text)}`, "_blank");
+    window.open(`https://wa.me/212698780330?text=${encodeURIComponent(text)}`, "_blank");
   };
 
   return (

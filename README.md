@@ -4,7 +4,7 @@
 
 - **Domaine officiel en production** : [https://www.oikos.ma](https://www.oikos.ma) / [https://oikos.ma](https://oikos.ma)
 - **Showroom & Atelier** : Errahma Bloc 80 N°112, Dar Bouazza, Casablanca
-- **Contact & Conciergerie WhatsApp** : `07 22 03 33 26`
+- **Contact & Conciergerie WhatsApp** : `0698-780330`
 - **Email officiel** : `oikosmaison@gmail.com`
 - **Instagram officiel** : [@oikos.ma](https://www.instagram.com/oikos.ma?xtok=MWlhZ2h1cmhtdTR4eQ==)
 

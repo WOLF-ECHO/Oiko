@@ -47,7 +47,7 @@ export default function QuickViewModal({ product, onClose }: QuickViewModalProps
     const text = `Bonjour OÏKOS, je souhaite recevoir un devis personnalisé pour la pièce ${product.name} (${product.subtitle}).
 ${details}.
 Pourriez-vous me confirmer les disponibilités d'atelier et les délais de livraison ?`;
-    window.open(`https://wa.me/212722033326?text=${encodeURIComponent(text)}`, "_blank");
+    window.open(`https://wa.me/212698780330?text=${encodeURIComponent(text)}`, "_blank");
   };
 
   return (

@@ -108,8 +108,8 @@ export default function HomePage() {
               </div>
               <div className="space-y-1">
                 <span className="text-[10px] text-[#8E877D] uppercase tracking-wider block">Ligne Directe</span>
-                <a href="tel:0722033326" className="text-xs text-[#C5A880] font-medium block hover:underline">
-                  07 22 03 33 26
+                <a href="tel:0698780330" className="text-xs text-[#C5A880] font-medium block hover:underline">
+                  0698-780330
                 </a>
               </div>
               <div className="space-y-1">
@@ -144,7 +144,7 @@ export default function HomePage() {
           <span className="text-[#C5A880]">•</span>
           <span>Livraison &amp; Installation soignée partout au Maroc</span>
           <span className="text-[#C5A880]">•</span>
-          <span>Conciergerie : 07 22 03 33 26</span>
+          <span>Conciergerie : 0698-780330</span>
           <span className="text-[#C5A880]">•</span>
         </div>
       </div>
@@ -245,7 +245,7 @@ export default function HomePage() {
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
               <SectionHeading
                 chapter="Offres Exclusives"
-                eyebrow="Packs Complets &bull; Dès 6 990 DH"
+                eyebrow="Packs Complets &bull; Intérieur Coordonné"
                 title="Nos Packs Intérieur Clé en Main"
                 subtitle="Découvrez nos 4 packs exclusifs (Pack Harmonie, Pack Duo Élégance, Pack Signature et Pack Complet Airbnb). Différentes gammes de matelas sont disponibles au choix — le prix du pack évoluera si le modèle de matelas est modifié."
                 align="left"
@@ -641,13 +641,13 @@ export default function HomePage() {
                   </Link>
 
                   <a
-                    href="https://wa.me/212722033326?text=Bonjour%20OÏKOS,%20je%20souhaite%20visiter%20la%20Galerie%20Habitable%20à%20Casablanca."
+                    href="https://wa.me/212698780330?text=Bonjour%20OÏKOS,%20je%20souhaite%20visiter%20la%20Galerie%20Habitable%20à%20Casablanca."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-6 py-3 rounded-full border border-[#C5A880]/40 text-[#C5A880] text-xs font-medium tracking-wider uppercase text-center hover:bg-[#C5A880]/10 transition-colors flex items-center justify-center gap-2"
                   >
                     <MessageCircle className="w-3.5 h-3.5" />
-                    <span>WhatsApp (07 22 03 33 26)</span>
+                    <span>WhatsApp (0698-780330)</span>
                   </a>
                 </div>
               </div>
@@ -805,7 +805,7 @@ export default function HomePage() {
                 </span>
               </summary>
               <p className="mt-4 text-xs text-[#C4BEB4] leading-relaxed">
-                Notre showroom « La Galerie Habitable », notre atelier et notre studio de conception se situent à Errahma Bloc 80 N°112, Dar Bouazza, Casablanca. Les visites privées se font sur rendez-vous pour vous dédier un conseiller en aménagement et un accès tactile complet à notre matériauthèque. Vous pouvez réserver au 07 22 03 33 26 ou par email à oikosmaison@gmail.com.
+                Notre showroom « La Galerie Habitable », notre atelier et notre studio de conception se situent à Errahma Bloc 80 N°112, Dar Bouazza, Casablanca. Les visites privées se font sur rendez-vous pour vous dédier un conseiller en aménagement et un accès tactile complet à notre matériauthèque. Vous pouvez réserver au 0698-780330 ou par email à oikosmaison@gmail.com.
               </p>
             </details>
 
@@ -867,7 +867,7 @@ export default function HomePage() {
             </h2>
 
             <p className="text-sm sm:text-base text-[#C4BEB4] max-w-xl mx-auto font-light leading-relaxed">
-              Prenez rendez-vous pour une visite privée de la Galerie Habitable à Casablanca ou sollicitez un entretien avec notre studio au <strong>07 22 03 33 26</strong>.
+              Prenez rendez-vous pour une visite privée de la Galerie Habitable à Casablanca ou sollicitez un entretien avec notre studio au <strong>0698-780330</strong>.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
@@ -880,13 +880,13 @@ export default function HomePage() {
               </Link>
 
               <a
-                href="https://wa.me/212722033326?text=Bonjour%20OÏKOS,%20je%20souhaite%20un%20rendez-vous%20personnalisé."
+                href="https://wa.me/212698780330?text=Bonjour%20OÏKOS,%20je%20souhaite%20un%20rendez-vous%20personnalisé."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-8 py-4 rounded-full border border-[#C5A880]/50 text-[#C5A880] hover:bg-[#C5A880]/10 text-xs font-semibold tracking-[0.2em] uppercase transition-colors flex items-center justify-center gap-2"
               >
                 <MessageCircle className="w-4 h-4" />
-                <span>WhatsApp : 07 22 03 33 26</span>
+                <span>WhatsApp : 0698-780330</span>
               </a>
             </div>
           </div>

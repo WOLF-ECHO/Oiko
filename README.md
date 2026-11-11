@@ -1,67 +1,70 @@
-# VELMORA • Maison Marocaine de Mobilier Contemporain & d'Art
+# OÏKOS — Maison de Design (`oikos.ma`)
 
-> **« L'Art d'Habiter »** — Chapitre 01 : Géométrie Douce  
-> Showroom Privé : Angle Boulevard d'Anfa & Rue Bab Mansour, Triangle d'Or, Casablanca, Maroc.
+**Site Web Officiel & Catalogue Digital Interactif — Livrable Complet**
 
----
-
-## 🏛️ À Propos de VELMORA
-
-VELMORA est une maison marocaine de mobilier contemporain d'exception, de pièces sculpturales et d'expression artistique. Conçue pour sublimer les intérieurs résidentiels et hôteliers au Maroc et à l'international, la marque réconcilie l'épure méditerranéenne et scandinave avec la noblesse des matières brutes : travertins romains, noyer massif de l'Atlas, marbres noirs Marquina, laiton dinandé, lins denses et bouclés italiens.
-
-### 🌟 Les Quatre Univers
-1. **VELMORA Living (70%)** : Pièces d'ancrage fonctionnelles — Canapés modulaires enveloppants, tables basses minérales, consoles et luminaires.
-2. **VELMORA Signature (20%)** : Pièces sculpturales d'apparat — Blocs de marbre monolithes, galbes audacieux et sur-mesure de prestige.
-3. **VELMORA Art (10%)** : Art mural — Bas-reliefs à la chaux naturelle marocaine, toiles texturées aux pigments d'ocre de l'Ourika.
-4. **VELMORA Éditions** : Séries confidentielles et limitées co-signées avec des plasticiens et maîtres artisans.
+- **Domaine officiel en production** : [https://www.oikos.ma](https://www.oikos.ma) / [https://oikos.ma](https://oikos.ma)
+- **Showroom & Atelier** : Errahma Bloc 80 N°112, Dar Bouazza, Casablanca
+- **Contact & Conciergerie WhatsApp** : `07 22 03 33 26`
+- **Email officiel** : `oikosmaison@gmail.com`
+- **Instagram officiel** : [@oikos.ma](https://www.instagram.com/oikos.ma?xtok=MWlhZ2h1cmhtdTR4eQ==)
 
 ---
 
-## 🚀 Architecture Technique & Performance
+## 📦 Contenu du Livrable (73 Références & Packs Officiels)
 
-- **Framework** : Next.js 16.3.4 (App Router, Turbopack, SSG/SSR)
-- **Langage** : TypeScript 5 & React 19
-- **Design & Styling** : Tailwind CSS v4 avec palette exclusive *Quiet Luxury* (Noir Absolu `#0C0B0A`, Ivoire `#F9F6F0`, Laiton Doré `#C5A880`)
-- **Motion & Interactions** : Framer Motion, micro-interactions, modalités d'aperçu rapide et configurateur de matières
-- **SEO & Google Maroc** :
-  - Métadonnées complètes avec indexation Googlebot optimisée
-  - Fichier `sitemap.xml` et `robots.txt` dynamiques
-  - Schémas JSON-LD `Organization`, `HomeGoodsStore` (Casablanca), `Product` (tarifs en MAD) et `FAQPage`
-  - Mots-clés stratégiques ciblés : *mobilier haut de gamme maroc, canapé sur mesure casablanca, table basse travertin maroc, décorateur intérieur rabat, meuble contemporain marrakech*
+1. **Offres Exclusives — Packs Clés en Main (`src/data/packs.ts` & `public/images/packs/`)** :
+   - **Pack Harmonie (`PK001`)** — `16 490 DH`
+   - **Pack Duo Élégance (`PK002`)** — `6 990 DH`
+   - **Pack Signature (`PK003`)** — `14 990 DH`
+   - **Pack Complet Airbnb (`PK004`)** — `21 490 DH`
+   - *Sélecteur de gamme de matelas intégré (Standard inclus, Orthopédique HR, Mémoire de Forme, Hôtelier Premium).*
+
+2. **Chaises & Fauteuils (`src/data/chairs.ts` & `public/images/chairs/`)** :
+   - 35 modèles officiels référencés (`CH001` à `CH037`) avec photos studio sur fond blanc et mises en situation.
+
+3. **Salons & Canapés sur Mesure (`src/data/salons.ts` & `public/images/salons/`)** :
+   - 14 modèles officiels référencés (`S0001` à `S0021`).
+
+4. **Tables à Manger (`src/data/tables.ts` & `public/images/tables/`)** :
+   - 12 modèles officiels référencés (`TM001` à `TM012`).
+
+5. **Lits & Suites Parentales (`src/data/beds.ts` & `public/images/beds/`)** :
+   - 8 modèles officiels référencés (`L001` à `L008`) avec choix des dimensions (`90×190`, `140×190`, `160×200`, `Sur mesure`) et option coffre de rangement.
+
+6. **Expérience Vidéo 3D Interactive (`src/components/ui/LivingCatalogVideoSection.tsx` & `public/videos/oikos-catalog-film.mp4`)** :
+   - Film 3D interactif synchronisé avec les références du catalogue (`CH017`, `L001`, `S0008`, `TM002`, `S0013`).
+
+7. **Pages & Services Clés** :
+   - Accueil (`/`)
+   - Catalogue & Filtres par Collection (`/collections` & `/collections/[slug]`)
+   - Conception Globale Clés en Main (`/conception-globale`)
+   - Configurateur 3D / Sur-Mesure (`/configurateur`)
+   - Le Showroom — La Galerie Habitable (`/showroom`)
+   - L'Atelier & Savoir-Faire (`/atelier`)
+   - Espace Professionnels & Architectes B2B (`/b2b`)
+   - Prise de Rendez-vous & Conciergerie (`/contact`)
 
 ---
 
-## 📱 Fonctionnalités Clés
+## 🚀 Installation & Lancement en Local
 
-- **Catalogue Interactif (`/collections`)** : Filtres en temps réel par univers, catégories, recherche textuelle et tri par prix.
-- **Fiches Produits Détaillées (`/collections/[slug]`)** : Sélecteur tactile d'échantillons de tissus et essences de bois, fiches techniques, demande de devis instantanée sur WhatsApp.
-- **La Galerie Habitable (`/showroom`)** : Visite interactive des 5 zones (La Galerie, Le Salon, La Matière, Le Studio, L'Édition du Moment).
-- **L'Atelier & Savoir-Faire (`/atelier`)** : Protocole qualité strict en 7 étapes, engagement $\ge 95\%$ de livraisons à l'heure, taux de défaut $< 3\%$ et SAV sous 48h.
-- **Espace Architectes & B2B (`/b2b`)** : Demande de matériauthèque gratuite expédiée sous 48h, fichiers 3D/CAD BIM et barème prescripteur (-15% à -25%).
-- **Formulaire de Prise de Rendez-vous & Appel (`/contact`)** : Planificateur de visites privées au showroom de Casablanca/Rabat, appel vidéo ou rappel téléphonique express.
-- **Conciergerie WhatsApp Flottante** : Connexion immédiate avec message pré-formaté pour un taux de conversion maximal.
-
----
-
-## 🛠️ Lancement Local
+Prérequis : **Node.js 18+** installé sur votre machine.
 
 ```bash
-# Se placer dans le dossier du projet
-cd "C:\Users\HP\Documents\Mehdi website\velmora"
+# 1. Installer les dépendances
+npm install
 
-# Lancer le serveur de développement
+# 2. Lancer le serveur de développement local (http://localhost:3000)
 npm run dev
 
-# Ou lancer en mode production ultra-rapide
+# 3. Compiler la version de production optimisée
 npm run build
-npm start -- -p 3000
+npm run start
 ```
-
-Le site est accessible à l'adresse : **[http://localhost:3000](http://localhost:3000)**
 
 ---
 
-## 📦 Déploiement GitHub
+## 🌐 Hébergement & Domaine (`oikos.ma`)
 
-- Repository : [https://github.com/rtr2803/Velmora](https://github.com/rtr2803/Velmora)
-- Branche principale : `main`
+- **Hébergement Cloud & CDN Global** : Vercel (déploiement continu connecté à GitHub, SSL HTTPS automatique).
+- **Nom de domaine (`oikos.ma`)** : Enregistré chez Heberjahiz et pointé vers les serveurs DNS de Vercel (`ns1.vercel-dns.com` / `ns2.vercel-dns.com`).

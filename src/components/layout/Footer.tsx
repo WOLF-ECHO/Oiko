@@ -118,6 +118,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/collections?category=Art%20mural" className="hover:text-[#C5A880] transition-colors">
+                  Collection Art Mural
+                </Link>
+              </li>
+              <li>
                 <Link href="/collections?category=Tables%20basses" className="hover:text-[#C5A880] transition-colors inline-flex items-center gap-1.5">
                   <span>Tables Basses</span>
                   <span className="text-[9px] px-1.5 py-0.5 rounded-full bg-[#C5A880]/15 text-[#C5A880] uppercase tracking-wider">Coming Soon</span>
@@ -130,14 +135,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/collections?category=Art%20mural" className="hover:text-[#C5A880] transition-colors inline-flex items-center gap-1.5">
-                  <span>Art Mural</span>
-                  <span className="text-[9px] px-1.5 py-0.5 rounded-full bg-[#C5A880]/15 text-[#C5A880] uppercase tracking-wider">Coming Soon</span>
-                </Link>
-              </li>
-              <li>
                 <Link href="/collections" className="hover:text-[#C5A880] transition-colors">
-                  Tout le Catalogue (69 modèles)
+                  Tout le Catalogue (75 modèles)
                 </Link>
               </li>
             </ul>

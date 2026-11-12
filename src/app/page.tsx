@@ -461,6 +461,38 @@ export default function HomePage() {
               </Link>
             </ScrollReveal>
 
+            {/* Collection Art Mural */}
+            <ScrollReveal delay={0.35}>
+              <Link
+                href="/collections?category=Art%20mural"
+                className="group relative h-[420px] rounded-2xl overflow-hidden border border-[#282622] hover:border-[#C5A880] transition-all duration-500 block"
+              >
+                <Image
+                  src="/images/art/collection-art-cover.jpg"
+                  alt="Collection Art Mural OÏKOS"
+                  fill
+                  unoptimized
+                  className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0C0B0A] via-[#0C0B0A]/50 to-transparent" />
+                <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#C5A880] font-medium">
+                    Galerie &amp; Tableaux
+                  </span>
+                  <h3 className="font-serif text-2xl text-[#F9F6F0] mt-1 group-hover:text-[#C5A880] transition-colors">
+                    Collection Art Mural
+                  </h3>
+                  <p className="text-xs text-[#C4BEB4] mt-2 line-clamp-3 leading-relaxed">
+                    Peintures texturées au couteau, bas-reliefs minéraux, diptyques abstraits et œuvres inspirées du patrimoine marocain.
+                  </p>
+                  <div className="mt-4 flex items-center gap-1.5 text-xs text-[#C5A880] font-medium tracking-wider uppercase">
+                    <span>Voir l&apos;Art Mural</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </Link>
+            </ScrollReveal>
+
             {/* Conception Globale (Clés en Main) */}
             <ScrollReveal delay={0.4}>
               <Link
@@ -494,7 +526,7 @@ export default function HomePage() {
             </ScrollReveal>
           </div>
 
-          {/* Coming Soon Collections Row: Tables basses, Luminaires, Art mural */}
+          {/* Coming Soon Collections Row: Tables basses, Luminaires */}
           <ScrollReveal delay={0.45}>
             <div className="pt-4 space-y-4">
               <div className="flex items-center gap-3">
@@ -504,7 +536,7 @@ export default function HomePage() {
                 <div className="h-[1px] flex-1 bg-gradient-to-r from-[#282622] to-transparent" />
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {[
                   {
                     title: "Collection Tables Basses",
@@ -515,11 +547,6 @@ export default function HomePage() {
                     title: "Collection Luminaires",
                     subtitle: "Suspensions architecturales, lampadaires sculpturaux & appliques en laiton",
                     href: "/collections?category=Luminaires",
-                  },
-                  {
-                    title: "Collection Art Mural",
-                    subtitle: "Œuvres texturées sur mesure, bas-reliefs minéraux & tableaux d'atelier",
-                    href: "/collections?category=Art%20mural",
                   },
                 ].map((item) => (
                   <Link

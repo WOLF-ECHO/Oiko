@@ -3,6 +3,7 @@ import { BED_PRODUCTS } from "./beds";
 import { SALON_PRODUCTS } from "./salons";
 import { TABLE_PRODUCTS } from "./tables";
 import { PACK_PRODUCTS } from "./packs";
+import { ART_PRODUCTS } from "./art";
 
 export interface Product {
   id: string;
@@ -43,6 +44,7 @@ export const PRODUCTS: Product[] = [
   ...SALON_PRODUCTS,
   ...TABLE_PRODUCTS,
   ...PACK_PRODUCTS,
+  ...ART_PRODUCTS,
 ];
 
 export const SHOWROOM_ZONES = [

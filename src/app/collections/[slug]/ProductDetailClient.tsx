@@ -35,6 +35,8 @@ export default function ProductDetailClient({
   const [selectedTexture, setSelectedTexture] = useState("Bouclette d'alpaga");
   const [selectedWood, setSelectedWood] = useState("Noyer chaud");
   const [selectedMattress, setSelectedMattress] = useState("Matelas Standard (Inclus)");
+  const [artFormat, setArtFormat] = useState("100 × 150 cm");
+  const [artFrame, setArtFrame] = useState("Cadre Doré Brossé");
   const [copied, setCopied] = useState(false);
 
   const currentImg = product.images[activeImage] || product.images[0];
@@ -55,6 +57,8 @@ export default function ProductDetailClient({
     let details = "";
     if (product.category === "Offres exclusives") {
       details = `Prix de base du pack : ${product.formattedPrice} • Matelas souhaité : ${selectedMattress} • Revêtement & Couleur : ${selectedTexture} (couleur sur mesure au choix)`;
+    } else if (product.category === "Art mural") {
+      details = `Format souhaité : ${artFormat} • Finition d'encadrement : ${artFrame}`;
     } else if (product.category === "Lits") {
       details = `Dimension souhaitée : ${selectedDimension} • Configuration : ${
         hasStorage ? "Avec coffre escamotable hydraulique" : "Standard (sans coffre)"
@@ -409,36 +413,101 @@ Pourriez-vous me transmettre la confirmation de faisabilité d'atelier et les d�
                 </div>
               )}
 
-              {/* Texture Selector */}
-              <div className="space-y-3">
-                <div className="flex items-center justify-between text-xs">
-                  <span className="text-[#8E877D] uppercase tracking-wider">
-                    Texture de revêtement souhaitée :
-                  </span>
-                  <span className="text-[#C5A880] font-medium">{selectedTexture}</span>
+              {product.category === "Art mural" ? (
+                <>
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="text-[#8E877D] uppercase tracking-wider">
+                        Dimensions &amp; Format de l&apos;Œuvre :
+                      </span>
+                      <span className="text-[#C5A880] font-medium">{artFormat}</span>
+                    </div>
+                    <div className="grid grid-cols-2 gap-2.5">
+                      {[
+                        { label: "80 × 120 cm", sub: "Format classique galerie" },
+                        { label: "100 × 150 cm", sub: "Format grand salon" },
+                        { label: "120 × 180 cm", sub: "Format monumental" },
+                        { label: "Format sur mesure", sub: "Selon les cotes de votre mur" },
+                      ].map((fmt) => (
+                        <button
+                          key={fmt.label}
+                          type="button"
+                          onClick={() => setArtFormat(fmt.label)}
+                          className={`p-3 rounded-xl border text-xs text-left transition-all cursor-pointer ${
+                            artFormat === fmt.label
+                              ? "border-[#C5A880] bg-[#C5A880]/15 text-[#F9F6F0] font-semibold ring-1 ring-[#C5A880]"
+                              : "border-[#282622] bg-[#161513] text-[#A69F93] hover:border-[#6E675E]"
+                          }`}
+                        >
+                          <span className="block font-medium">{fmt.label}</span>
+                          <span className="text-[10px] text-[#8E877D] block mt-0.5">{fmt.sub}</span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="text-[#8E877D] uppercase tracking-wider">
+                        Finition d&apos;Encadrement :
+                      </span>
+                      <span className="text-[#C5A880] font-medium">{artFrame}</span>
+                    </div>
+                    <div className="grid grid-cols-2 gap-2.5">
+                      {[
+                        "Cadre Doré Brossé",
+                        "Cadre Noir Mat",
+                        "Cadre Chêne Massif",
+                        "Toile Galerie sans cadre",
+                      ].map((frm) => (
+                        <button
+                          key={frm}
+                          type="button"
+                          onClick={() => setArtFrame(frm)}
+                          className={`p-3 rounded-xl border text-xs text-left transition-all cursor-pointer ${
+                            artFrame === frm
+                              ? "border-[#C5A880] bg-[#C5A880]/15 text-[#F9F6F0] font-semibold ring-1 ring-[#C5A880]"
+                              : "border-[#282622] bg-[#161513] text-[#A69F93] hover:border-[#6E675E]"
+                          }`}
+                        >
+                          {frm}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </>
+              ) : (
+                /* Texture Selector */
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="text-[#8E877D] uppercase tracking-wider">
+                      Texture de revêtement souhaitée :
+                    </span>
+                    <span className="text-[#C5A880] font-medium">{selectedTexture}</span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2.5">
+                    {[
+                      "Bouclette d'alpaga",
+                      "Velours soyeux",
+                      "Chenille texturée",
+                      "Lin lavé antitache",
+                    ].map((tex) => (
+                      <button
+                        key={tex}
+                        type="button"
+                        onClick={() => setSelectedTexture(tex)}
+                        className={`p-3 rounded-xl border text-xs text-left transition-all cursor-pointer ${
+                          selectedTexture === tex
+                            ? "border-[#C5A880] bg-[#C5A880]/15 text-[#F9F6F0] font-semibold ring-1 ring-[#C5A880]"
+                            : "border-[#282622] bg-[#161513] text-[#A69F93] hover:border-[#6E675E]"
+                        }`}
+                      >
+                        {tex}
+                      </button>
+                    ))}
+                  </div>
                 </div>
-                <div className="grid grid-cols-2 gap-2.5">
-                  {[
-                    "Bouclette d'alpaga",
-                    "Velours soyeux",
-                    "Chenille texturée",
-                    "Lin lavé antitache",
-                  ].map((tex) => (
-                    <button
-                      key={tex}
-                      type="button"
-                      onClick={() => setSelectedTexture(tex)}
-                      className={`p-3 rounded-xl border text-xs text-left transition-all cursor-pointer ${
-                        selectedTexture === tex
-                          ? "border-[#C5A880] bg-[#C5A880]/15 text-[#F9F6F0] font-semibold ring-1 ring-[#C5A880]"
-                          : "border-[#282622] bg-[#161513] text-[#A69F93] hover:border-[#6E675E]"
-                      }`}
-                    >
-                      {tex}
-                    </button>
-                  ))}
-                </div>
-              </div>
+              )}
 
               {(product.category === "Chaises" ||
                 product.category === "Fauteuils" ||

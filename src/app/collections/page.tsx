@@ -34,9 +34,9 @@ function CollectionsContent() {
     "Lits",
     "Salons",
     "Tables à manger",
+    "Art mural",
     "Tables basses",
     "Luminaires",
-    "Art mural",
   ];
 
   const CATEGORY_ORDER: Record<string, number> = {
@@ -46,6 +46,7 @@ function CollectionsContent() {
     Lits: 3,
     Salons: 4,
     "Tables à manger": 5,
+    "Art mural": 6,
   };
 
   // Count products per category
@@ -312,10 +313,44 @@ function CollectionsContent() {
               </span>
             </div>
           </button>
+
+          <button
+            type="button"
+            onClick={() =>
+              setSelectedCategory(
+                selectedCategory === "Art mural" ? "All" : "Art mural"
+              )
+            }
+            className={`group text-left p-5 rounded-2xl border transition-all flex items-center justify-between gap-3 cursor-pointer ${
+              selectedCategory === "Art mural"
+                ? "bg-[#1E1D1A] border-[#C5A880] shadow-[0_10px_30px_rgba(197,168,128,0.15)]"
+                : "bg-[#161513] border-[#282622] hover:border-[#C5A880]/50"
+            }`}
+          >
+            <div className="space-y-1">
+              <span className="text-[10px] uppercase tracking-[0.25em] text-[#C5A880] font-semibold block">
+                Galerie OÏKOS
+              </span>
+              <h3 className="font-serif text-lg sm:text-xl text-[#F9F6F0] group-hover:text-[#C5A880] transition-colors">
+                Art mural
+              </h3>
+              <p className="text-xs text-[#8E877D] leading-relaxed line-clamp-2">
+                Toiles texturées au couteau, bas-reliefs minéraux et diptyques d&apos;atelier (AM001–AM006).
+              </p>
+            </div>
+            <div className="shrink-0 text-right">
+              <span className="font-serif text-2xl text-[#C5A880] block">
+                {categoryCounts["Art mural"] || 0}
+              </span>
+              <span className="text-[9px] uppercase tracking-widest text-[#8E877D]">
+                Œuvres
+              </span>
+            </div>
+          </button>
         </div>
 
-        {/* Coming Soon Highlight Cards (Tables basses, Luminaires, Art mural) */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {/* Coming Soon Highlight Cards (Tables basses, Luminaires) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {[
             {
               key: "Tables basses",
@@ -328,12 +363,6 @@ function CollectionsContent() {
               eyebrow: "Éclairage Architectural",
               title: "Luminaires",
               desc: "Suspensions sculpturales, lampadaires et appliques d'atelier.",
-            },
-            {
-              key: "Art mural",
-              eyebrow: "Galerie OÏKOS",
-              title: "Art mural",
-              desc: "Œuvres murales texturées, bas-reliefs et créations artistiques sur mesure.",
             },
           ].map((item) => (
             <button
